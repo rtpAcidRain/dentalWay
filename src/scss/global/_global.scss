@@ -1,66 +1,44 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-}
-
-.flex {
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
-}
-
-.--just-space {
-	justify-content: space-between;
-}
-
-.--just-center {
-	justify-content: center;
-}
-
-.--just-end {
-	justify-content: flex-end;
-}
-
-.--align-str {
-	align-items: stretch;
-}
-
-.--align-center {
-	align-items: center;
-}
-
-.--align-end {
-	align-items: flex-end;
-}
-
-.--dir-col {
-	flex-direction: column;
+  box-sizing: border-box;
 }
 
 html {
-	font-size: 16px;
+  font-size: 16px;
 }
 
-html,
-body {
-	min-height: 100%;
-	position: relative;
+*,
+html {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  -ms-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  font-variant-ligatures: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-rendering: optimizeLegibility !important;
+  font-stretch: normal;
+  font-optical-sizing: auto;
 }
 
-body {
-	font-size: 1rem;
+// POTENTIAL
+
+html.has-scroll-smooth,
+html.has-scroll-smooth body {
+  width: 100vw;
+  height: 100vh;
 }
 
-ul,
-ol,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0;
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+.footer {
+  margin-top: auto;
+}
+
+// POTENTIAL---------------->
