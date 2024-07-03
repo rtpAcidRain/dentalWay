@@ -1,0 +1,85 @@
+.modal {
+    @apply transition-opacity;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: calc(var(--doc-height, 100vh) - var(--headerSummonHeight));
+    top: var(--headerSummonHeight);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    
+
+    .modal__container {
+        @apply bg-bg-white;
+        transition-duration: 450ms !important;
+    }
+
+    &.modal--left{
+        .modal__container {
+            @apply transition-transform;
+            width: 100%;
+            height: 100%;
+            transform: translateX(100%);
+        }
+    }
+
+    &.modal--top{
+        .modal__container {
+            @apply transition-transform;
+            width: 100%;
+            height: fit-content;
+            border-radius: 0 0 20px 20px;
+            transform: translateY(-100%);
+        }
+    }
+
+    &.modal--fade {
+        background: rgba(0, 0, 0, 0.0);
+        .modal__container {
+            @apply transition-opacity;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.modal--fit {
+        width: fit-content;
+        bottom: unset;
+        left: unset;
+        right: unset;
+        height: fit-content;
+        position: absolute;
+        top: 100%;
+    }
+
+    &.mounted {
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    &.opened {
+        &.modal--left{
+            .modal__container {
+                transform: translateX(0%);
+            }
+        }
+
+        &.modal--top{
+            .modal__container {
+                transform: translateY(0%);
+            }
+        }
+
+        &.modal--fade {
+            .modal__container {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "easy-webdev-startpack",
+  "name": "dental-way",
   "version": "3.1.1",
   "description": "HTML5+CSS3 template for easy start website project'",
   "main": "gulpfile.js",
@@ -8,7 +8,7 @@
     "start": "gulp",
     "build": "gulp libs_style && gulp svg_css && gulp ttf && gulp fonts && gulp style && gulp libs_js && gulp build_js && gulp rastr && gulp webp && gulp svg_sprite && gulp html"
   },
-  "author": "",
+  "author": "acid",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.2",
@@ -46,6 +46,7 @@
     "tailwindcss": "^3.4.3"
   },
   "dependencies": {
-    "sass": "^1.56.0"
+    "sass": "^1.56.0",
+    "swiper": "^11.1.4"
   }
 }

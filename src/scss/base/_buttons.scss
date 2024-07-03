@@ -1,0 +1,105 @@
+.button {
+    @apply transition-colors flex items-center justify-center;
+
+    &-main {
+        @apply text-but18m py-[10px] rounded-full px-[34px] md:py-[14px] md:px-9  text-bg-white bg-mcg-pg border-mcg-pg border-[3px] hover:bg-mcg-lg hover:border-mcg-lg focus:bg-mcg-pg focus:border-mcg-lg;
+
+        &--secondary {
+            @apply text-mcg-pg bg-mcg-bs border-mcg-bs hover:text-bg-white hover:bg-mcg-lg hover:border-mcg-lg focus:bg-mcg-bs focus:text-mcg-pg focus:border-mcg-pg;
+        }
+
+        &--small-on-tab {
+            @apply py-[10px] xl:py-[14px];
+        }
+    }
+
+    &-link {
+        @apply text-but18m;
+
+        span {
+            @apply border-b;
+        }
+
+        &:hover {
+            @apply text-mcg-lg;
+            span {
+                @apply border-mcg-lg;
+            }
+        }
+
+        &:focus {
+            @apply text-mcg-pg;
+            span {
+                @apply border-mcg-pg;
+            }
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        --tw-bg-opacity: 1;
+        background-color: rgb(219 219 219 / var(--tw-bg-opacity)) !important;
+        --tw-border-opacity: 1;
+        border-color: rgb(219 219 219 / var(--tw-border-opacity)) !important;
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+        cursor: default !important;
+
+        svg path{
+            stroke: #FFFFFF !important;
+            fill: #FFFFFF !important;
+        }
+    }
+}
+
+.swiper-controls {
+    @apply border border-el-lg bg-el-slider;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 200px;
+
+    .but {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        path {
+            @apply fill-el-ia transition-colors;
+        }
+
+        &.swiper-button-disabled {
+            path {
+                @apply fill-el-dg;
+            }
+        }
+    }
+
+    .pagination {
+        @apply text-body3 flex items-center gap-[2px];
+    }
+}
+
+.small-social-button {
+    @apply flex items-center justify-center w-[52px] h-[52px] border rounded-full bg-bg-beige border-bg-beige transition-colors hover:bg-trans hover:border-el-dg focus:bg-bg-beige focus:border-text-th;
+
+    path {
+        @apply transition-colors fill-text-d;
+    }
+
+    &:hover {
+        path {
+            @apply fill-el-dg;
+        }
+    }
+
+    &:focus {
+        path {
+            @apply fill-text-th;
+        }
+    }
+}

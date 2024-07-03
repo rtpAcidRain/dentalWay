@@ -1,25 +1,1254 @@
-<html lang="@@lang">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-				content="width=device-width, initial-scale=1.0">
-	<meta name="description"
-				content="@@description">
-	<meta name="keywords"
-				content="@@keywords">
-	<link rel="shortcut icon"
-				href="@@favicon.svg"
-				type="image/svg+xml">
-	<link rel="shortcut icon"
-				href="@@favicon.webp"
-				type="image/webp">
-	<link rel="shortcut icon"
-				href="@@favicon.png"
-				type="image/x-icon">
-	<link rel="stylesheet"
-				href="css/libs.min.css">
-	<link rel="stylesheet"
-				href="css/style.min.css">
-	<title>@@title</title>
-</head>
+<header >
+	<div class="header fixed w-screen md:relative">
+		<div class="header__top">
+			<div class="flex items-center h-full container">
+				<a href="/" class="block mr-4 md:mr-[28px]">
+					<picture>
+						<source media="(min-width: 1366px)" srcset="/img/svg/logo1366.svg">
+						<source media="(min-width: 768px)" srcset="/img/svg/logo678.svg">
+						<img
+							  src="/img/svg/logo375.svg"
+							  alt="Логотип" 
+						/>
+					</picture>
+				</a>
+				<div class="tabs site-theme-toggler mr-10">
+					<a href="/" class="tab selected">Взрослым</a>
+					<a href="/" class="tab">Детям</a>
+				</div>
+				<div class="ml-auto flex items-center">
+					<a class="text-but18r hidden md:block" href="tel:+74998775591">+7 (499) 877-55-91</a>
+					<a href="/" class="md:ml-6">
+						<span class="flex items-center justify-center w-10 h-10 rounded-full bg-mcg-bs xl:w-auto xl:h-auto xl:bg-trans gap-2">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="fill-mcg-pg xl:fill-black" fill-rule="evenodd" clip-rule="evenodd" d="M18.0978 5.58057C16.4364 3.91733 14.2271 3.00096 11.8732 3C7.02314 3 3.07569 6.94713 3.07379 11.7987C3.07312 13.3496 3.47831 14.8634 4.24837 16.1978L3 20.7575L7.66468 19.5339C8.94991 20.2349 10.397 20.6044 11.8697 20.6049H11.8733C11.8736 20.6049 11.873 20.6049 11.8733 20.6049C16.7228 20.6049 20.6706 16.6574 20.6726 11.8057C20.6735 9.45451 19.7591 7.24374 18.0978 5.58057ZM11.8732 19.1188H11.8703C10.558 19.1183 9.27077 18.7657 8.14785 18.0994L7.88082 17.9409L5.11272 18.667L5.8516 15.9682L5.67769 15.6914C4.9456 14.527 4.55894 13.1811 4.55951 11.7992C4.56109 7.76677 7.84206 4.48615 11.8762 4.48615C13.8297 4.48675 15.666 5.24853 17.0468 6.63095C18.4277 8.01337 19.1877 9.85092 19.1869 11.8051C19.1852 15.8379 15.9044 19.1188 11.8732 19.1188Z"/>
+								<path class="fill-mcg-pg xl:fill-black" fill-rule="evenodd" clip-rule="evenodd" d="M15.8849 13.6413C15.6651 13.5312 14.5841 12.9994 14.3826 12.926C14.1811 12.8526 14.0345 12.8159 13.8879 13.036C13.7414 13.2561 13.32 13.7514 13.1917 13.8981C13.0635 14.0448 12.9352 14.0633 12.7154 13.9531C12.4955 13.8431 11.7871 13.6109 10.9473 12.8619C10.2937 12.2788 9.85242 11.5589 9.72411 11.3387C9.59588 11.1186 9.71047 10.9997 9.82056 10.89C9.91946 10.7915 10.0404 10.6332 10.1504 10.5048C10.2603 10.3765 10.2969 10.2847 10.3702 10.1381C10.4435 9.99129 10.4069 9.86288 10.3519 9.75287C10.2969 9.64282 9.85724 8.56061 9.67404 8.12031C9.49552 7.69165 9.31428 7.74973 9.1793 7.74291C9.05125 7.73651 8.90448 7.73519 8.75792 7.73519C8.61137 7.73519 8.37313 7.79023 8.17164 8.0103C7.97011 8.23043 7.40208 8.76239 7.40208 9.84449C7.40208 10.9267 8.18993 11.9722 8.29987 12.1189C8.40977 12.2657 9.85024 14.4864 12.0558 15.4388C12.5804 15.6653 12.9899 15.8006 13.3092 15.9019C13.8359 16.0693 14.3152 16.0456 14.6941 15.989C15.1165 15.9259 15.9949 15.4572 16.1781 14.9437C16.3613 14.43 16.3613 13.9897 16.3063 13.8981C16.2514 13.8064 16.1048 13.7514 15.8849 13.6413Z" />
+							</svg>
+							<span class="hidden xl:block text-but18r">
+								Записаться по Whatsapp
+							</span>
+						</span>
+					</a>
+					<a href="#" class="ml-[2px] md:hidden burger-button" data-modal="mobileNav" data-modal-scrollblock="true">
+						<span class="flex items-center justify-center w-11 h-11 rounded-full ">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H20.25C20.6642 5.25 21 5.58579 21 6C21 6.41421 20.6642 6.75 20.25 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z" fill="#0A0A0A"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12Z" fill="#0A0A0A"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M3 18C3 17.5858 3.33579 17.25 3.75 17.25H20.25C20.6642 17.25 21 17.5858 21 18C21 18.4142 20.6642 18.75 20.25 18.75H3.75C3.33579 18.75 3 18.4142 3 18Z" fill="#0A0A0A"/>
+							</svg>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="fake-subheader"></div>
+		<div class="header__bot hidden md:block ">
+			<nav class="flex items-center h-full container relative">
+				<a href="#" class="ml-[2px] xl:hidden burger-button" data-modal="tabletNav" data-modal-scrollblock="true">
+					<span class="flex items-center justify-center w-11 h-11 rounded-full ">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H20.25C20.6642 5.25 21 5.58579 21 6C21 6.41421 20.6642 6.75 20.25 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z" fill="#0A0A0A"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12Z" fill="#0A0A0A"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M3 18C3 17.5858 3.33579 17.25 3.75 17.25H20.25C20.6642 17.25 21 17.5858 21 18C21 18.4142 20.6642 18.75 20.25 18.75H3.75C3.33579 18.75 3 18.4142 3 18Z" fill="#0A0A0A"/>
+						</svg>
+					</span>
+				</a>
+				<a href="#" class="h-full flex items-center justify-center gap-2 ml-6 text-but18r xl:ml-0 subheader-button" data-modal="grownUpNav" data-modal-scrollblock="true">
+					<span>Услуги взрослым</span>
+					<span>
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M3.30806 7.05806C3.55214 6.81398 3.94786 6.81398 4.19194 7.05806L10 12.8661L15.8081 7.05806C16.0521 6.81398 16.4479 6.81398 16.6919 7.05806C16.936 7.30214 16.936 7.69786 16.6919 7.94194L10.4419 14.1919C10.1979 14.436 9.80214 14.436 9.55806 14.1919L3.30806 7.94194C3.06398 7.69786 3.06398 7.30214 3.30806 7.05806Z" fill="#0A0A0A" />
+						</svg>
+					</span>
+				</a>
+				<a href="#" class="h-full flex items-center justify-center gap-2 ml-6 text-but18r xl:ml-10 subheader-button" data-modal="childNav" data-modal-scrollblock="true">
+					<span>Услуги детям</span>
+					<span>
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M3.30806 7.05806C3.55214 6.81398 3.94786 6.81398 4.19194 7.05806L10 12.8661L15.8081 7.05806C16.0521 6.81398 16.4479 6.81398 16.6919 7.05806C16.936 7.30214 16.936 7.69786 16.6919 7.94194L10.4419 14.1919C10.1979 14.436 9.80214 14.436 9.55806 14.1919L3.30806 7.94194C3.06398 7.69786 3.06398 7.30214 3.30806 7.05806Z" fill="#0A0A0A" />
+						</svg>
+					</span>
+				</a>
+				<a href="#" class="h-full xl:flex items-center justify-center gap-2 text-but18r ml-10 hidden">
+					<span>Врачи</span>
+				</a>
+				<a href="#" class="h-full xl:flex items-center justify-center gap-2 text-but18r ml-10 hidden">
+					<span>Цены</span>
+				</a>
+				<a href="#" class="h-full xl:flex items-center justify-center gap-2 text-but18r ml-10 hidden">
+					<span>Отзывы</span>
+				</a>
+				<a href="#" class="h-full xl:flex items-center justify-center gap-2 text-but18r ml-10 hidden">
+					<span>Наш блог</span>
+				</a>
+				<a href="#" class="h-full flex items-center justify-center gap-2 ml-6 text-but18r xl:ml-10 subheader-button" data-modal="clinickModal">
+					<span>3 клиники</span>
+					<span>
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M3.30806 7.05806C3.55214 6.81398 3.94786 6.81398 4.19194 7.05806L10 12.8661L15.8081 7.05806C16.0521 6.81398 16.4479 6.81398 16.6919 7.05806C16.936 7.30214 16.936 7.69786 16.6919 7.94194L10.4419 14.1919C10.1979 14.436 9.80214 14.436 9.55806 14.1919L3.30806 7.94194C3.06398 7.69786 3.06398 7.30214 3.30806 7.05806Z" fill="#0A0A0A" />
+						</svg>
+					</span>
+				</a>
+				<a href="#" class="flex items-center justify-center w-11 h-11 rounded-full ml-auto search-button" data-modal="modalSearch" data-modal-scrollblock="true">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75C6.93997 3.75 3.75 6.93997 3.75 10.875C3.75 14.81 6.93997 18 10.875 18C14.81 18 18 14.81 18 10.875C18 6.93997 14.81 3.75 10.875 3.75ZM2.25 10.875C2.25 6.11154 6.11154 2.25 10.875 2.25C15.6385 2.25 19.5 6.11154 19.5 10.875C19.5 15.6385 15.6385 19.5 10.875 19.5C6.11154 19.5 2.25 15.6385 2.25 10.875Z" fill="#0A0A0A"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9133 15.9135C16.2062 15.6206 16.681 15.6206 16.9739 15.9135L21.5302 20.4697C21.8231 20.7626 21.8231 21.2375 21.5302 21.5304C21.2373 21.8233 20.7624 21.8233 20.4695 21.5304L15.9133 16.9741C15.6204 16.6812 15.6204 16.2064 15.9133 15.9135Z" fill="#0A0A0A"/>
+					</svg>
+					<svg class="search-button--opened-show" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 5.57123C19.5732 5.86413 19.5732 6.339 19.2803 6.63189L5.78033 20.1319C5.48744 20.4248 5.01256 20.4248 4.71967 20.1319C4.42678 19.839 4.42678 19.3641 4.71967 19.0712L18.2197 5.57123C18.5126 5.27834 18.9874 5.27834 19.2803 5.57123Z" fill="#0A0A0A"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 5.57123C5.01256 5.27834 5.48744 5.27834 5.78033 5.57123L19.2803 19.0712C19.5732 19.3641 19.5732 19.839 19.2803 20.1319C18.9874 20.4248 18.5126 20.4248 18.2197 20.1319L4.71967 6.63189C4.42678 6.339 4.42678 5.86413 4.71967 5.57123Z" fill="#0A0A0A"/>
+					</svg>
+				</a>
+				<div class="modal modal--fade modal--fit hidden md:block " id="clinickModal">
+					<div class="modal__container">
+						<div class="flex items-center gap-10 mb-5">
+							<h4 class="flex-1 text-deskSubtitle w-[245px] xl:w-[356px]">Выберите клинику</h4>
+							<button class="rounded-full flex items-center justify-center bg-mcg-bs w-10 h-10 modal-close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+								</svg>
+							</button>
+						</div>
+						<div class="flex flex-wrap gap-x-10 gap-y-5 text-but16r xl:text-but18m">
+							<a href="/">Солнцево</a>
+							<a href="/">Мытищи</a>
+							<a href="/">Подольск</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div class="modal modal--top tablet-nav hidden md:block" id="modalSearch">
+		<div class="modal__container">
+			<div class="py-[30px] container">
+				
+				<h2 class="text-deskh3 mb-5">
+					Поиск по сайту
+				</h2>
+				<form action="" class="w-full mb-10">
+					<label class="relative rounded-full border border-el-lg flex items-center gap-[22px] py-[14.5px] pl-5 pr-[152px] ">
+						<svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75C6.93997 3.75 3.75 6.93997 3.75 10.875C3.75 14.81 6.93997 18 10.875 18C14.81 18 18 14.81 18 10.875C18 6.93997 14.81 3.75 10.875 3.75ZM2.25 10.875C2.25 6.11154 6.11154 2.25 10.875 2.25C15.6385 2.25 19.5 6.11154 19.5 10.875C19.5 15.6385 15.6385 19.5 10.875 19.5C6.11154 19.5 2.25 15.6385 2.25 10.875Z" fill="#797979"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9133 15.9135C16.2062 15.6206 16.681 15.6206 16.9739 15.9135L21.5302 20.4697C21.8231 20.7626 21.8231 21.2375 21.5302 21.5304C21.2373 21.8233 20.7624 21.8233 20.4695 21.5304L15.9133 16.9741C15.6204 16.6812 15.6204 16.2064 15.9133 15.9135Z" fill="#797979"/>
+						</svg>
+						<input type="text" placeholder="Введите текст" class="placeholder-el-it text-but18r h-[22px] w-full p-0 border-0 " id="searchOnSiteInput">
+						<button  class="button button-main absolute right-0 top-1/2 -translate-y-1/2 ">
+							<span>Найти</span>
+						</button>
+					</label>
+				</form>
+				<div class="grid gap-[30px] xl:grid-cols-2">
+					<div>
+						<h4 class="mb-5 text-el-it text-body1">Популярные запросы</h4>
+						<div class="flex flex-wrap gap-5 text-but18m mb-[30px]">
+							<button>Лечение кариеса</button>
+							<button>Удаление зубов</button>
+							<button>Имплантация</button>
+							<button>Отбеливание зубов</button>
+						</div>
+					</div>
+					<div>
+						<div class="mb-5 flex justify-between items-center">
+							<h4 class=" text-el-it text-body1">История поиска</h4>
+							<button class="flex gap-2 items-center text-but18r">
+								<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 5.21967C19.5732 5.51256 19.5732 5.98744 19.2803 6.28033L5.78033 19.7803C5.48744 20.0732 5.01256 20.0732 4.71967 19.7803C4.42678 19.4874 4.42678 19.0126 4.71967 18.7197L18.2197 5.21967C18.5126 4.92678 18.9874 4.92678 19.2803 5.21967Z" fill="#0A0A0A"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 5.21967C5.01256 4.92678 5.48744 4.92678 5.78033 5.21967L19.2803 18.7197C19.5732 19.0126 19.5732 19.4874 19.2803 19.7803C18.9874 20.0732 18.5126 20.0732 18.2197 19.7803L4.71967 6.28033C4.42678 5.98744 4.42678 5.51256 4.71967 5.21967Z" fill="#0A0A0A"/>
+								</svg>
+								<span>Очистить</span>
+							</button>
+						</div>
+						<div class="flex flex-wrap gap-5 text-but18m">
+							<button>Лечение кариеса</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal--top tablet-nav hidden md:block xl:hidden" id="tabletNav">
+		<div class="modal__container">
+			<div class="py-[30px] px-[27px] flex flex-col gap-10 container">
+				<a href="/" class="text-deskh3">Врачи</a>
+				<a href="/" class="text-deskh3">Цены</a>
+				<a href="/" class="text-deskh3">Отзывы</a>
+				<a href="/" class="text-deskh3">Наш блог</a>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal--left mobile-nav md:hidden" id="mobileNav">
+		<div class="modal__container">
+			<div class="pt-[30px] px-3 h-full flex flex-col">
+				<form action="" class="w-full">
+					<label class="relative mr-[14px] rounded-full border border-el-lg block py-[7px] pl-5 pr-[52px]">
+						<input type="text" class="text-body3 h-[26px] w-full p-0 border-0 ">
+						<button  class="flex items-center justify-center w-10 h-10 rounded-full absolute right-0 top-0 bg-mcg-pg">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75C6.93997 3.75 3.75 6.93997 3.75 10.875C3.75 14.81 6.93997 18 10.875 18C14.81 18 18 14.81 18 10.875C18 6.93997 14.81 3.75 10.875 3.75ZM2.25 10.875C2.25 6.11154 6.11154 2.25 10.875 2.25C15.6385 2.25 19.5 6.11154 19.5 10.875C19.5 15.6385 15.6385 19.5 10.875 19.5C6.11154 19.5 2.25 15.6385 2.25 10.875Z" fill="#fff"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9133 15.9135C16.2062 15.6206 16.681 15.6206 16.9739 15.9135L21.5302 20.4697C21.8231 20.7626 21.8231 21.2375 21.5302 21.5304C21.2373 21.8233 20.7624 21.8233 20.4695 21.5304L15.9133 16.9741C15.6204 16.6812 15.6204 16.2064 15.9133 15.9135Z" fill="#fff"/>
+							</svg>
+						</button>
+					</label>
+				</form>
+				<div class="w-full pt-10">
+					<nav class="overflow-auto no-scrollbar accardeon mobile-nav__accord--lvl1">
+						<div class="accardeon-item">
+							<div class="flex items-center accardeon-item__but mobile-nav__accord--lvl1__but">
+								<span class="text-deskh3 flex-1">Услуги взрослым</span>
+								<span class="flex items-center justify-center w-8 h-8 rounded-full icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
+									</svg>
+								</span>
+							</div>
+							<div class="accardeon-item__list">
+								<div>
+									<div class="accardeon-item__list__container accardeon mobile-nav__accord--lvl2">
+										<div class="accardeon-item">
+											<div class="flex items-center accardeon-item__but mobile-nav__accord--lvl2__but">
+												<span class="text-but18m flex-1">Диагностика зубов и десен, стоматологический чекап</span>
+												<span class="flex items-center justify-center w-7 h-7 rounded-full icon">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M3.30806 7.05806C3.55214 6.81398 3.94786 6.81398 4.19194 7.05806L10 12.8661L15.8081 7.05806C16.0521 6.81398 16.4479 6.81398 16.6919 7.05806C16.936 7.30214 16.936 7.69786 16.6919 7.94194L10.4419 14.1919C10.1979 14.436 9.80214 14.436 9.55806 14.1919L3.30806 7.94194C3.06398 7.69786 3.06398 7.30214 3.30806 7.05806Z"  />
+													</svg>
+												</span>
+											</div>
+											<div class="accardeon-item__list">
+												<div>
+													<div class="accardeon-item__list__container mobile-nav__accord--lvl3 text-but16r">
+														<a href="/" > 3Д томография зубов</a>
+														<a href="/" >Прицельный снимок</a>
+														<a href="/" >Рентген-диагностика состояния зубов</a>
+														<a href="/" >Визиограф</a>
+														<a href="/" >Искусственный интеллект Diagnocat</a>
+														<a href="/" >Консультация врача-стоматолога</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accardeon-item">
+											<div class="flex items-center accardeon-item__but mobile-nav__accord--lvl2__but">
+												<span class="text-but18m flex-1">Реставрация зубов</span>
+												<span class="flex items-center justify-center w-7 h-7 rounded-full icon">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M3.30806 7.05806C3.55214 6.81398 3.94786 6.81398 4.19194 7.05806L10 12.8661L15.8081 7.05806C16.0521 6.81398 16.4479 6.81398 16.6919 7.05806C16.936 7.30214 16.936 7.69786 16.6919 7.94194L10.4419 14.1919C10.1979 14.436 9.80214 14.436 9.55806 14.1919L3.30806 7.94194C3.06398 7.69786 3.06398 7.30214 3.30806 7.05806Z"  />
+													</svg>
+												</span>
+											</div>
+											<div class="accardeon-item__list">
+												<div>
+													<div class="accardeon-item__list__container mobile-nav__accord--lvl3 text-but16r">
+														<a href="/" > 3Д томография зубов</a>
+														<a href="/" >Прицельный снимок</a>
+														<a href="/" >Рентген-диагностика состояния зубов</a>
+														<a href="/" >Визиограф</a>
+														<a href="/" >Искусственный интеллект Diagnocat</a>
+														<a href="/" >Консультация врача-стоматолога</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accardeon-item">
+											<div class="flex items-center accardeon-item__but mobile-nav__accord--lvl2__but">
+												<span class="text-but18m flex-1">Хирургия стоматологическая, удаление зубов</span>
+												<span class="flex items-center justify-center w-7 h-7 rounded-full icon">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M3.30806 7.05806C3.55214 6.81398 3.94786 6.81398 4.19194 7.05806L10 12.8661L15.8081 7.05806C16.0521 6.81398 16.4479 6.81398 16.6919 7.05806C16.936 7.30214 16.936 7.69786 16.6919 7.94194L10.4419 14.1919C10.1979 14.436 9.80214 14.436 9.55806 14.1919L3.30806 7.94194C3.06398 7.69786 3.06398 7.30214 3.30806 7.05806Z"  />
+													</svg>
+												</span>
+											</div>
+											<div class="accardeon-item__list">
+												<div>
+													<div class="accardeon-item__list__container mobile-nav__accord--lvl3 text-but16r">
+														<a href="/" > 3Д томография зубов</a>
+														<a href="/" >Прицельный снимок</a>
+														<a href="/" >Рентген-диагностика состояния зубов</a>
+														<a href="/" >Визиограф</a>
+														<a href="/" >Искусственный интеллект Diagnocat</a>
+														<a href="/" >Консультация врача-стоматолога</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accardeon-item">
+											<div class="flex items-center accardeon-item__but mobile-nav__accord--lvl2__but">
+												<span class="text-but18m flex-1">Имплантация</span>
+												<span class="flex items-center justify-center w-7 h-7 rounded-full icon">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M3.30806 7.05806C3.55214 6.81398 3.94786 6.81398 4.19194 7.05806L10 12.8661L15.8081 7.05806C16.0521 6.81398 16.4479 6.81398 16.6919 7.05806C16.936 7.30214 16.936 7.69786 16.6919 7.94194L10.4419 14.1919C10.1979 14.436 9.80214 14.436 9.55806 14.1919L3.30806 7.94194C3.06398 7.69786 3.06398 7.30214 3.30806 7.05806Z"  />
+													</svg>
+												</span>
+											</div>
+											<div class="accardeon-item__list">
+												<div>
+													<div class="accardeon-item__list__container mobile-nav__accord--lvl3 text-but16r">
+														<a href="/" > 3Д томография зубов</a>
+														<a href="/" >Прицельный снимок</a>
+														<a href="/" >Рентген-диагностика состояния зубов</a>
+														<a href="/" >Визиограф</a>
+														<a href="/" >Искусственный интеллект Diagnocat</a>
+														<a href="/" >Консультация врача-стоматолога</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accardeon-item">
+							<div class="flex items-center accardeon-item__but mobile-nav__accord--lvl1__but">
+								<span class="text-deskh3 flex-1">Услуги детям</span>
+								<span class="flex items-center justify-center w-8 h-8 rounded-full icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
+									</svg>
+								</span>
+							</div>
+							<div class="accardeon-item__list">
+								<div>
+									<div class="accardeon-item__list__container accardeon mobile-nav__accord--lvl2">
+										<div class="accardeon-item">
+											<div class="flex items-center accardeon-item__but mobile-nav__accord--lvl2__but">
+												<span class="text-but18m flex-1">Диагностика зубов и десен, стоматологический чекап</span>
+												<span class="flex items-center justify-center w-7 h-7 rounded-full icon">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M3.30806 7.05806C3.55214 6.81398 3.94786 6.81398 4.19194 7.05806L10 12.8661L15.8081 7.05806C16.0521 6.81398 16.4479 6.81398 16.6919 7.05806C16.936 7.30214 16.936 7.69786 16.6919 7.94194L10.4419 14.1919C10.1979 14.436 9.80214 14.436 9.55806 14.1919L3.30806 7.94194C3.06398 7.69786 3.06398 7.30214 3.30806 7.05806Z"  />
+													</svg>
+												</span>
+											</div>
+											<div class="accardeon-item__list">
+												<div>
+													<div class="accardeon-item__list__container mobile-nav__accord--lvl3 text-but16r">
+														<a href="/" > 3Д томография зубов</a>
+														<a href="/" >Прицельный снимок</a>
+														<a href="/" >Рентген-диагностика состояния зубов</a>
+														<a href="/" >Визиограф</a>
+														<a href="/" >Искусственный интеллект Diagnocat</a>
+														<a href="/" >Консультация врача-стоматолога</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accardeon-item">
+											<div class="flex items-center accardeon-item__but mobile-nav__accord--lvl2__but">
+												<span class="text-but18m flex-1">Реставрация зубов</span>
+												<span class="flex items-center justify-center w-7 h-7 rounded-full icon">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M3.30806 7.05806C3.55214 6.81398 3.94786 6.81398 4.19194 7.05806L10 12.8661L15.8081 7.05806C16.0521 6.81398 16.4479 6.81398 16.6919 7.05806C16.936 7.30214 16.936 7.69786 16.6919 7.94194L10.4419 14.1919C10.1979 14.436 9.80214 14.436 9.55806 14.1919L3.30806 7.94194C3.06398 7.69786 3.06398 7.30214 3.30806 7.05806Z"  />
+													</svg>
+												</span>
+											</div>
+											<div class="accardeon-item__list">
+												<div>
+													<div class="accardeon-item__list__container mobile-nav__accord--lvl3 text-but16r">
+														<a href="/" > 3Д томография зубов</a>
+														<a href="/" >Прицельный снимок</a>
+														<a href="/" >Рентген-диагностика состояния зубов</a>
+														<a href="/" >Визиограф</a>
+														<a href="/" >Искусственный интеллект Diagnocat</a>
+														<a href="/" >Консультация врача-стоматолога</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accardeon-item">
+											<div class="flex items-center accardeon-item__but mobile-nav__accord--lvl2__but">
+												<span class="text-but18m flex-1">Хирургия стоматологическая, удаление зубов</span>
+												<span class="flex items-center justify-center w-7 h-7 rounded-full icon">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M3.30806 7.05806C3.55214 6.81398 3.94786 6.81398 4.19194 7.05806L10 12.8661L15.8081 7.05806C16.0521 6.81398 16.4479 6.81398 16.6919 7.05806C16.936 7.30214 16.936 7.69786 16.6919 7.94194L10.4419 14.1919C10.1979 14.436 9.80214 14.436 9.55806 14.1919L3.30806 7.94194C3.06398 7.69786 3.06398 7.30214 3.30806 7.05806Z"  />
+													</svg>
+												</span>
+											</div>
+											<div class="accardeon-item__list">
+												<div>
+													<div class="accardeon-item__list__container mobile-nav__accord--lvl3 text-but16r">
+														<a href="/" > 3Д томография зубов</a>
+														<a href="/" >Прицельный снимок</a>
+														<a href="/" >Рентген-диагностика состояния зубов</a>
+														<a href="/" >Визиограф</a>
+														<a href="/" >Искусственный интеллект Diagnocat</a>
+														<a href="/" >Консультация врача-стоматолога</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accardeon-item">
+											<div class="flex items-center accardeon-item__but mobile-nav__accord--lvl2__but">
+												<span class="text-but18m flex-1">Имплантация</span>
+												<span class="flex items-center justify-center w-7 h-7 rounded-full icon">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M3.30806 7.05806C3.55214 6.81398 3.94786 6.81398 4.19194 7.05806L10 12.8661L15.8081 7.05806C16.0521 6.81398 16.4479 6.81398 16.6919 7.05806C16.936 7.30214 16.936 7.69786 16.6919 7.94194L10.4419 14.1919C10.1979 14.436 9.80214 14.436 9.55806 14.1919L3.30806 7.94194C3.06398 7.69786 3.06398 7.30214 3.30806 7.05806Z"  />
+													</svg>
+												</span>
+											</div>
+											<div class="accardeon-item__list">
+												<div>
+													<div class="accardeon-item__list__container mobile-nav__accord--lvl3 text-but16r">
+														<a href="/" > 3Д томография зубов</a>
+														<a href="/" >Прицельный снимок</a>
+														<a href="/" >Рентген-диагностика состояния зубов</a>
+														<a href="/" >Визиограф</a>
+														<a href="/" >Искусственный интеллект Diagnocat</a>
+														<a href="/" >Консультация врача-стоматолога</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="/" class="text-deskh3 "><span>Врачи</span></a>
+						<a href="/" class="text-deskh3 "><span>Цены</span></a>
+						<a href="/" class="text-deskh3 "><span>Отзывы</span></a>
+						<a href="/" class="text-deskh3 "><span>Наш блог</span></a>
+						<div class="accardeon-item">
+							<div class="flex items-center accardeon-item__but mobile-nav__accord--lvl1__but">
+								<span class="text-deskh3 flex-1">3 клиники</span>
+								<span class="flex items-center justify-center w-8 h-8 rounded-full icon">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
+									</svg>
+								</span>
+							</div>
+							<div class="accardeon-item__list">
+								<div>
+									<div class="accardeon-item__list__container mobile-nav__accord--lvl2">
+										<a href="/" class="text-but18m">Солнцево</a>
+										<a href="/" class="text-but18m">Мытищи</a>
+										<a href="/" class="text-but18m">Подольск</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal--fade hidden md:block" id="grownUpNav">
+		<div class="modal__container">
+			<div class="container grid grid-cols-2 h-full relative">
+				<div class="pt-5 pr-5 xl:pt-[30px] xl:pr-[30px] navigation-on-site z-20">
+					<h3 class="text-deskh2 xl:text-deskh1 mb-10">Услуги для взрослых</h3>
+					<ul class="navigation-on-site__list pb-5">
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">
+									Диагностика зубов  и десен, стоматологический чекап
+								</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Диагностика зубов <br> и десен, стоматологический чекап</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">Терапевтическая стоматология</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Терапевтическая стоматология</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">
+									Реставрация зубов
+								</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Реставрация зубов</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">
+									Хирургия стоматологическая, удаление зубов
+								</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Хирургия стоматологическая, удаление зубов</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">
+									Имплантация
+								</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Имплантация</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">
+									Ортопедия, протезирование: коронки вкладки, виниры
+								</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Ортопедия, протезирование: коронки вкладки, виниры</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Ортодонтия (исправление прикуса): брекеты, элайнеры
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+						</div>
+						<div class="navigation-on-site__body">
+							<div class="navigation-on-site__body__heading">
+								<h5 class="navigation-on-site__body__heading__title">Ортодонтия (исправление прикуса): брекеты, элайнеры</h5>
+								<button class="navigation-on-site__body__heading__close">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+									</svg>
+								</button>
+							</div>
+							<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+								<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+								<li><a href="/">Прицельный снимок</a></li>
+								<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+								<li><a href="/">Визиограф</a></li>
+								<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+								<li><a href="/">Консультация врача-стоматолога</a></li>
+							</ul>
+						</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Лечение десен (пародонтология)
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+						</div>
+						<div class="navigation-on-site__body">
+							<div class="navigation-on-site__body__heading">
+								<h5 class="navigation-on-site__body__heading__title">Лечение десен (пародонтология)</h5>
+								<button class="navigation-on-site__body__heading__close">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+									</svg>
+								</button>
+							</div>
+							<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+								<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+								<li><a href="/">Прицельный снимок</a></li>
+								<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+								<li><a href="/">Визиограф</a></li>
+								<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+								<li><a href="/">Консультация врача-стоматолога</a></li>
+							</ul>
+						</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Профилактика и профессиональная гигиена
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+						</div>
+						<div class="navigation-on-site__body">
+							<div class="navigation-on-site__body__heading">
+								<h5 class="navigation-on-site__body__heading__title">Профилактика и профессиональная гигиена</h5>
+								<button class="navigation-on-site__body__heading__close">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+									</svg>
+								</button>
+							</div>
+							<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+								<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+								<li><a href="/">Прицельный снимок</a></li>
+								<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+								<li><a href="/">Визиограф</a></li>
+								<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+								<li><a href="/">Консультация врача-стоматолога</a></li>
+							</ul>
+						</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Отбеливание зубов
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Отбеливание зубов</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Лечение травм зубов и десен
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Лечение травм зубов и десен</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Антистресс-стоматология (лечение зубв в наркозе или седации)
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Антистресс-стоматология (лечение зубв в наркозе или седации)</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="py-5 pl-5 border-l border-el-lg relative z-10 xl:pt-[30px] xl:pl-[30px]">
+					<div class="flex items-start mb-10">
+						<h4 class="flex-1 text-deskh3 xl:text-deskh2">Найти услугу</h4>
+						<button class="rounded-full flex items-center justify-center bg-mcg-bs w-10 h-10 modal-close">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+							</svg>
+						</button>
+					</div>
+					<form action="" class="w-full">
+						<label class="relative rounded-full border border-el-lg block py-[7px] pl-5 pr-[52px] xl:flex xl:items-center xl:gap-[22px] xl:py-[14.5px] xl:pl-5 xl:pr-[152px]">
+							<svg class="hidden xl:block" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75C6.93997 3.75 3.75 6.93997 3.75 10.875C3.75 14.81 6.93997 18 10.875 18C14.81 18 18 14.81 18 10.875C18 6.93997 14.81 3.75 10.875 3.75ZM2.25 10.875C2.25 6.11154 6.11154 2.25 10.875 2.25C15.6385 2.25 19.5 6.11154 19.5 10.875C19.5 15.6385 15.6385 19.5 10.875 19.5C6.11154 19.5 2.25 15.6385 2.25 10.875Z" fill="#797979"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9133 15.9135C16.2062 15.6206 16.681 15.6206 16.9739 15.9135L21.5302 20.4697C21.8231 20.7626 21.8231 21.2375 21.5302 21.5304C21.2373 21.8233 20.7624 21.8233 20.4695 21.5304L15.9133 16.9741C15.6204 16.6812 15.6204 16.2064 15.9133 15.9135Z" fill="#797979"/>
+							</svg>
+							<input type="text" placeholder="Название услуги" class="text-body3 h-[26px] w-full p-0 border-0 placeholder-el-it xl:text-but18r xl:h-[22px] ">
+							<button  class="flex items-center justify-center w-10 h-10 xl:w-fit xl:h-fit rounded-full xl:rounded-none absolute  right-0 top-1/2 -translate-y-1/2 bg-mcg-pg xl:bg-trans">
+								<svg class="xl:hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75C6.93997 3.75 3.75 6.93997 3.75 10.875C3.75 14.81 6.93997 18 10.875 18C14.81 18 18 14.81 18 10.875C18 6.93997 14.81 3.75 10.875 3.75ZM2.25 10.875C2.25 6.11154 6.11154 2.25 10.875 2.25C15.6385 2.25 19.5 6.11154 19.5 10.875C19.5 15.6385 15.6385 19.5 10.875 19.5C6.11154 19.5 2.25 15.6385 2.25 10.875Z" fill="#fff"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9133 15.9135C16.2062 15.6206 16.681 15.6206 16.9739 15.9135L21.5302 20.4697C21.8231 20.7626 21.8231 21.2375 21.5302 21.5304C21.2373 21.8233 20.7624 21.8233 20.4695 21.5304L15.9133 16.9741C15.6204 16.6812 15.6204 16.2064 15.9133 15.9135Z" fill="#fff"/>
+								</svg>
+								<span class="!hidden xl:!flex button button-main ">
+									<span >Найти</span>
+								</span>
+							</button>
+						</label>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal--fade hidden md:block " id="childNav">
+		<div class="modal__container">
+			<div class="container grid grid-cols-2 h-full relative">
+				<div class="pt-5 pr-5 xl:pt-[30px] xl:pr-[30px] navigation-on-site z-20">
+					<h3 class="text-deskh2 xl:text-deskh1 mb-10">Услуги для детей</h3>
+					<ul class="navigation-on-site__list pb-5">
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">
+									Диагностика зубов  и десен, стоматологический чекап
+								</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Диагностика зубов <br> и десен, стоматологический чекап</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">Терапевтическая стоматология</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Терапевтическая стоматология</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">
+									Реставрация зубов
+								</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Реставрация зубов</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">
+									Хирургия стоматологическая, удаление зубов
+								</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Хирургия стоматологическая, удаление зубов</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">
+									Имплантация
+								</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Имплантация</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+								<a href="#">
+									Ортопедия, протезирование: коронки вкладки, виниры
+								</a>
+								<div class="icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+									</svg>
+								</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Ортопедия, протезирование: коронки вкладки, виниры</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Ортодонтия (исправление прикуса): брекеты, элайнеры
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+						</div>
+						<div class="navigation-on-site__body">
+							<div class="navigation-on-site__body__heading">
+								<h5 class="navigation-on-site__body__heading__title">Ортодонтия (исправление прикуса): брекеты, элайнеры</h5>
+								<button class="navigation-on-site__body__heading__close">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+									</svg>
+								</button>
+							</div>
+							<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+								<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+								<li><a href="/">Прицельный снимок</a></li>
+								<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+								<li><a href="/">Визиограф</a></li>
+								<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+								<li><a href="/">Консультация врача-стоматолога</a></li>
+							</ul>
+						</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Лечение десен (пародонтология)
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+						</div>
+						<div class="navigation-on-site__body">
+							<div class="navigation-on-site__body__heading">
+								<h5 class="navigation-on-site__body__heading__title">Лечение десен (пародонтология)</h5>
+								<button class="navigation-on-site__body__heading__close">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+									</svg>
+								</button>
+							</div>
+							<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+								<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+								<li><a href="/">Прицельный снимок</a></li>
+								<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+								<li><a href="/">Визиограф</a></li>
+								<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+								<li><a href="/">Консультация врача-стоматолога</a></li>
+							</ul>
+						</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Профилактика и профессиональная гигиена
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+						</div>
+						<div class="navigation-on-site__body">
+							<div class="navigation-on-site__body__heading">
+								<h5 class="navigation-on-site__body__heading__title">Профилактика и профессиональная гигиена</h5>
+								<button class="navigation-on-site__body__heading__close">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+									</svg>
+								</button>
+							</div>
+							<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+								<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+								<li><a href="/">Прицельный снимок</a></li>
+								<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+								<li><a href="/">Визиограф</a></li>
+								<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+								<li><a href="/">Консультация врача-стоматолога</a></li>
+							</ul>
+						</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Отбеливание зубов
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Отбеливание зубов</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Лечение травм зубов и десен
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Лечение травм зубов и десен</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation-on-site__el">
+							<div class="navigation-on-site__but"> 
+							<a href="#">
+								Антистресс-стоматология (лечение зубв в наркозе или седации)
+							</a>
+							<div class="icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.30806C7.30214 3.06398 7.69786 3.06398 7.94194 3.30806L14.1919 9.55806C14.436 9.80214 14.436 10.1979 14.1919 10.4419L7.94194 16.6919C7.69786 16.936 7.30214 16.936 7.05806 16.6919C6.81398 16.4479 6.81398 16.0521 7.05806 15.8081L12.8661 10L7.05806 4.19194C6.81398 3.94786 6.81398 3.55214 7.05806 3.30806Z" fill="#858585" />
+								</svg>
+							</div>
+							</div>
+							<div class="navigation-on-site__body">
+								<div class="navigation-on-site__body__heading">
+									<h5 class="navigation-on-site__body__heading__title">Антистресс-стоматология (лечение зубв в наркозе или седации)</h5>
+									<button class="navigation-on-site__body__heading__close">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+										</svg>
+									</button>
+								</div>
+								<ul class="navigation-on-site__body__list text-but16r flex flex-col gap-5 overflow-auto">
+									<li><a href="/">Компьтерная 3Д томография зубов</a></li>
+									<li><a href="/">Прицельный снимок</a></li>
+									<li><a href="/">Рентген-диагностика состояния зубов</a></li>
+									<li><a href="/">Визиограф</a></li>
+									<li><a href="/">Искусственный интеллект Diagnocat</a></li>
+									<li><a href="/">Консультация врача-стоматолога</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="py-5 pl-5 border-l border-el-lg relative z-10 xl:pt-[30px] xl:pl-[30px]">
+					<div class="flex items-start mb-10">
+						<h4 class="flex-1 text-deskh3 xl:text-deskh2">Найти услугу</h4>
+						<button class="rounded-full flex items-center justify-center bg-mcg-bs w-10 h-10 modal-close">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055" />
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055" />
+							</svg>
+						</button>
+					</div>
+					<form action="" class="w-full">
+						<label class="relative rounded-full border border-el-lg block py-[7px] pl-5 pr-[52px] xl:flex xl:items-center xl:gap-[22px] xl:py-[14.5px] xl:pl-5 xl:pr-[152px]">
+							<svg class="hidden xl:block" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75C6.93997 3.75 3.75 6.93997 3.75 10.875C3.75 14.81 6.93997 18 10.875 18C14.81 18 18 14.81 18 10.875C18 6.93997 14.81 3.75 10.875 3.75ZM2.25 10.875C2.25 6.11154 6.11154 2.25 10.875 2.25C15.6385 2.25 19.5 6.11154 19.5 10.875C19.5 15.6385 15.6385 19.5 10.875 19.5C6.11154 19.5 2.25 15.6385 2.25 10.875Z" fill="#797979"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9133 15.9135C16.2062 15.6206 16.681 15.6206 16.9739 15.9135L21.5302 20.4697C21.8231 20.7626 21.8231 21.2375 21.5302 21.5304C21.2373 21.8233 20.7624 21.8233 20.4695 21.5304L15.9133 16.9741C15.6204 16.6812 15.6204 16.2064 15.9133 15.9135Z" fill="#797979"/>
+							</svg>
+							<input type="text" placeholder="Название услуги" class="text-body3 h-[26px] w-full p-0 border-0 placeholder-el-it xl:text-but18r xl:h-[22px] ">
+							<button  class="flex items-center justify-center w-10 h-10 xl:w-fit xl:h-fit rounded-full xl:rounded-none absolute  right-0 top-1/2 -translate-y-1/2 bg-mcg-pg xl:bg-trans">
+								<svg class="xl:hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75C6.93997 3.75 3.75 6.93997 3.75 10.875C3.75 14.81 6.93997 18 10.875 18C14.81 18 18 14.81 18 10.875C18 6.93997 14.81 3.75 10.875 3.75ZM2.25 10.875C2.25 6.11154 6.11154 2.25 10.875 2.25C15.6385 2.25 19.5 6.11154 19.5 10.875C19.5 15.6385 15.6385 19.5 10.875 19.5C6.11154 19.5 2.25 15.6385 2.25 10.875Z" fill="#fff"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9133 15.9135C16.2062 15.6206 16.681 15.6206 16.9739 15.9135L21.5302 20.4697C21.8231 20.7626 21.8231 21.2375 21.5302 21.5304C21.2373 21.8233 20.7624 21.8233 20.4695 21.5304L15.9133 16.9741C15.6204 16.6812 15.6204 16.2064 15.9133 15.9135Z" fill="#fff"/>
+								</svg>
+								<span class="!hidden xl:!flex button button-main ">
+									<span >Найти</span>
+								</span>
+							</button>
+						</label>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</header>

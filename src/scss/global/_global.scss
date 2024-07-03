@@ -1,3 +1,10 @@
+:root {
+  --header: 60px;
+  --subheader: 0px;
+  --headerSummonHeight: calc(var(--header) + var(--subheader));
+ 
+}
+
 *,
 *::before,
 *::after {
@@ -5,7 +12,10 @@
 }
 
 html {
+  @apply text-text-th;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 *,
@@ -23,22 +33,134 @@ html {
   font-optical-sizing: auto;
 }
 
-// POTENTIAL
-
-html.has-scroll-smooth,
-html.has-scroll-smooth body {
-  width: 100vw;
-  height: 100vh;
+.container {
+  min-width: 375px;
 }
+
+html.something-opened {
+  overflow: hidden;
+}
+
+// POTENTIAL
 
 .page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 .footer {
   margin-top: auto;
 }
 
+.h-fill {
+  height: 100%;
+  height: -moz-available;          /* WebKit-based browsers will ignore this. */
+  height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  height: fill-available;
+}
+
+.main {
+  
+  padding-top: var(--headerSummonHeight);
+  @apply md:pt-0;
+}
+
+
+.swiper,
+.swiper-slide {
+  min-width: 0;
+  max-width: 100%;
+}
+
+
 // POTENTIAL---------------->
+
+
+// Tabs
+
+.tabs {
+  @apply bg-mcg-bs rounded-[14px] md:rounded-[20px] xl:rounded-[28px] text-text-th p-[6px] flex md:grid md:p-2 xl:p-3;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-items: center;
+
+  .tab {
+    @apply text-but16m md:text-but18m xl:text-tag20m px-3 md:px-4 xl:px-[30px] md:w-full py-[6px] md:py-[10px] xl:py-4 border rounded-lg md:rounded-xl xl:rounded-2xl bg-mcg-bs border-mcg-bs transition-colors flex items-center justify-center xl:flex-1 xl:w-full;
+
+    &:not(.selected):hover{
+      @apply border-bg-white bg-bg-white text-text-th;
+    }
+
+    &.selected {
+      @apply bg-bg-white border-text-d text-text-th;
+    }
+  }
+
+  &.site-theme-toggler {
+    @apply  rounded-[10px] md:rounded-[14px] xl:rounded-[20px] p-1 md:p-[6px] xl:p-2;
+    .tab {
+      @apply text-but14m md:text-but18m px-2 py-1 rounded-md md:px-3 md:py-[6px] md:rounded-lg xl:px-[17.5px] xl:py-[10px] xl:rounded-xl;
+    }
+  }
+}
+
+
+
+
+// Tabs---------------->
+
+
+// Accordion
+
+.accardeon-item {
+  & > &__list {
+    transition-property: grid-template-rows;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    & > div {
+      min-height: 0;
+    }
+  }
+
+  &__but {
+    cursor: pointer;
+  }
+
+  &.opened {
+    & > .accardeon-item__list {
+      grid-template-rows: 1fr;
+    }
+  }
+}
+
+
+// Accordion---------------->
+
+
+
+
+@screen md{
+  :root {
+    --header: 69px;
+    --subheader: 60px;
+  }
+
+  .header-close{
+      --headerSummonHeight: calc(var(--subheader));
+  } 
+}
+
+
+@screen xl{
+  :root {
+    --header: 90.85px;
+    --subheader: 68px;
+  }
+  
+}
