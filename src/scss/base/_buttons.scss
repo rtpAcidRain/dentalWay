@@ -11,13 +11,19 @@
         &--small-on-tab {
             @apply py-[10px] xl:py-[14px];
         }
+
+        &--small-on-desk {
+            @apply py-[10px] xl:py-[10px];
+        }
     }
 
     &-link {
-        @apply text-but18m;
+        @apply text-but18m flex items-center gap-2;
 
         span {
-            @apply border-b;
+            // @apply border-b;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
         }
 
         &:hover {

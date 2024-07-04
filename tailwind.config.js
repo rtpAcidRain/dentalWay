@@ -152,6 +152,14 @@ module.exports = {
             letterSpacing: "0.02em",
           }
         ],
+        mobh2: [
+          '20px',
+          {
+            fontWeight: "600",
+            lineHeight: "24px",
+            letterSpacing: "0.02em",
+          }
+        ],
         mobh3: [
           '18px',
           {
