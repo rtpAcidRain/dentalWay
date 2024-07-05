@@ -124,17 +124,17 @@
     }
 }
 
-@property --left {
+@property --leftGradientColorStory {
     syntax: "<color>";
     inherits: false;
     initial-value: rgba(59,91,255,1);
 }
-@property --middle {
+@property --middleGradientColorStory {
     syntax: "<color>";
     inherits: false;
     initial-value: rgba(255,78,142,1);
 }
-@property --right {
+@property --rightGradientColorStory {
     syntax: "<color>";
     inherits: false;
     initial-value: rgba(255,227,78,1);
@@ -142,7 +142,7 @@
 
 .story {
     @apply w-32 h-32 min-w-32 max-w-32 rounded-full flex items-center justify-center;
-    transition-property: --left, --middle, --right;
+    transition-property: --leftGradientColorStory, --middleGradientColorStory, --rightGradientColorStory;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
     background: linear-gradient(225deg, var(--left) 0%, var(--middle) 50%,  var(--right) 100%);
@@ -152,8 +152,8 @@
     }
 
     &:hover {
-        --left: #fff;
-        --middle: #fff; 
-        --right: #fff;
+        --leftGradientColorStory: #fff;
+        --middleGradientColorStory: #fff; 
+        --rightGradientColorStory: #fff;
     }
 }
