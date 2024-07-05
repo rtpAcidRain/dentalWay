@@ -241,12 +241,12 @@ header {
     --right: 47px;
     left: auto;
     right: var(--right);
-    border-radius: 20px;
-    overflow: hidden;
-    max-width: 372px;
+    overflow: visible;
     .modal__container {
         box-shadow: 0 0 30px 0 rgba(237, 237, 237, 0.7);
         padding: 20px 20px 20px 27px;
+        border-radius: 20px;
+        max-width: 372px;
     }
 }
 
