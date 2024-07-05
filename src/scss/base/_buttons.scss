@@ -28,15 +28,17 @@
 
         &:hover {
             @apply text-mcg-lg;
-            span {
-                @apply border-mcg-lg;
-            }
         }
 
         &:focus {
             @apply text-mcg-pg;
-            span {
-                @apply border-mcg-pg;
+        }
+
+        &--revers{
+            @apply text-mcg-pg;
+
+            &:focus {
+                @apply text-text-d;
             }
         }
     }
@@ -107,5 +109,51 @@
         path {
             @apply fill-text-th;
         }
+    }
+}
+
+.social-button {
+    @apply w-[100px] h-[100px] md:w-[182px] md:h-[182px] rounded-2xl md:rounded-[30px] flex items-center justify-center transition-colors border border-el-lg bg-bg-white hover:bg-bg-beige focus:bg-bg-white focus:border-text-d;
+
+    svg {
+        @apply w-10 h-10 md:w-[72px] md:h-[72px];
+    }
+    
+    path {
+        @apply fill-text-th;
+    }
+}
+
+@property --left {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgba(59,91,255,1);
+}
+@property --middle {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgba(255,78,142,1);
+}
+@property --right {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgba(255,227,78,1);
+}
+
+.story {
+    @apply w-32 h-32 min-w-32 max-w-32 rounded-full flex items-center justify-center;
+    transition-property: --left, --middle, --right;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    background: linear-gradient(225deg, var(--left) 0%, var(--middle) 50%,  var(--right) 100%);
+
+    img {
+        @apply rounded-full w-[120px] h-[120px]  object-cover border-[5px] border-bg-white;
+    }
+
+    &:hover {
+        --left: #fff;
+        --middle: #fff; 
+        --right: #fff;
     }
 }
