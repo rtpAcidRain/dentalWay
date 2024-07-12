@@ -104,6 +104,14 @@ module.exports = {
             letterSpacing: "normal",
           }
         ],
+        body4: [
+          '14px',
+          {
+            fontWeight: "400",
+            lineHeight: "21px",
+            letterSpacing: "normal",
+          }
+        ],
         deskh1: [
           '40px',
           {
@@ -141,6 +149,22 @@ module.exports = {
           {
             fontWeight: "600",
             lineHeight: "23px",
+            letterSpacing: "0.02em",
+          }
+        ],
+        deskSubtitle2: [
+          '16px',
+          {
+            fontWeight: "600",
+            lineHeight: "19px",
+            letterSpacing: "normal",
+          }
+        ],
+        mobSubtitle: [
+          '16px',
+          {
+            fontWeight: "600",
+            lineHeight: "18px",
             letterSpacing: "0.02em",
           }
         ],
@@ -206,6 +230,9 @@ module.exports = {
         white: '#FFFFFF',
         beige: '#FAFAFA'
       }
+    },
+    boxShadow: {
+      '2': '0 0 30px 0 rgba(237, 237, 237, 0.7)',
     }, 
     container: {
       center: true,
@@ -220,10 +247,10 @@ module.exports = {
         xl: "63px",
       },
     },
+
     extend: {
       height: {
         screen: "var(--doc-height, 100vh)",
-        
       },
     },
   },

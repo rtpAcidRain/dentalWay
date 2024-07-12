@@ -2,7 +2,7 @@
     @apply transition-colors flex items-center justify-center;
 
     &-main {
-        @apply text-but18m py-[10px] rounded-full px-[34px] md:py-[14px] md:px-9  text-bg-white bg-mcg-pg border-mcg-pg border-[3px] hover:bg-mcg-lg hover:border-mcg-lg focus:bg-mcg-pg focus:border-mcg-lg;
+        @apply text-but18m py-[10px] rounded-full px-[34px] md:py-[14px] md:px-9  text-bg-white bg-mcg-pg border-mcg-pg border-4 hover:bg-mcg-lg hover:border-mcg-lg focus:bg-mcg-pg focus:border-mcg-lg;
 
         &--secondary {
             @apply text-mcg-pg bg-mcg-bs border-mcg-bs hover:text-bg-white hover:bg-mcg-lg hover:border-mcg-lg focus:bg-mcg-bs focus:text-mcg-pg focus:border-mcg-pg;
@@ -22,6 +22,7 @@
 
         span {
             // @apply border-b;
+            @apply underline-offset-2;
             text-decoration: underline;
             text-decoration-skip-ink: none;
         }
@@ -145,7 +146,7 @@
     transition-property: --leftGradientColorStory, --middleGradientColorStory, --rightGradientColorStory;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
-    background: linear-gradient(225deg, var(--left) 0%, var(--middle) 50%,  var(--right) 100%);
+    background: linear-gradient(225deg, var(--leftGradientColorStory) 0%, var(--middleGradientColorStory) 50%,  var(--rightGradientColorStory) 100%);
 
     img {
         @apply rounded-full w-[120px] h-[120px]  object-cover border-[5px] border-bg-white;
@@ -155,5 +156,30 @@
         --leftGradientColorStory: #fff;
         --middleGradientColorStory: #fff; 
         --rightGradientColorStory: #fff;
+    }
+}
+
+.breadcrumb {
+    @apply text-text-th transition-colors hover:text-text-at flex items-center gap-[6px];
+
+    &:not(:first-child)::before {
+        content: '/';
+    }
+
+    &s {
+        @apply text-but16r xl:pt-[30px] pb-6;
+    }
+    &s__desk {
+        @apply hidden xl:flex items-center gap-[6px];
+    }
+
+    &s__mob {
+        @apply flex xl:hidden items-center gap-[6px] w-fit;
+    }
+
+    &__home {
+        svg {
+            @apply fill-text-th transition-colors hover:fill-text-at;
+        }
     }
 }

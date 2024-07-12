@@ -130,8 +130,8 @@ header {
         @apply gap-3 pt-3;
     }
 
-    .mobile-nav__accord--lvl1 > .opened .mobile-nav__accord--lvl1__but,
-    .mobile-nav__accord--lvl2 > .opened .mobile-nav__accord--lvl2__but {
+    &__accord--lvl1 > .opened &__accord--lvl1__but,
+    &__accord--lvl2 > .opened &__accord--lvl2__but {
             & > span {
                 &:first-child {
                     @apply text-mcg-pg;
@@ -253,6 +253,8 @@ header {
 @screen xl {
     #clinickModal {
         --right: 123px !important;
-        max-width: 519px;
+        .modal__container { 
+            max-width: 519px;
+        }
     }
 }

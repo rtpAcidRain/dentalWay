@@ -12,7 +12,7 @@
     }
 
     &__icon {
-        @apply border-4 rounded-full ;
+        @apply border-4 rounded-full border-mcg-bs;
         padding: 11px;
         
     }
@@ -23,7 +23,7 @@
         &-el {
             display: none;
             a {
-                @apply p-5 border rounded-[20px] transition-colors ;
+                @apply p-5 border rounded-[20px] transition-colors bg-mcg-b border-mcg-b hover:border-el-lg focus:border-text-d;
                 display: flex;
                 gap: 8px;
 
@@ -68,21 +68,6 @@
         }
     }
 
-    &:nth-child(even){
-        .service-slide{
-            &__icon {
-                @apply border-mcg-bs;
-            }
-
-            &__body {
-                &-el {
-                    a {
-                        @apply bg-mcg-b border-mcg-b hover:border-el-lg focus:border-text-d;
-                    }
-                }
-            }
-        }
-    }
 }
 
 .docavatar {
@@ -141,7 +126,9 @@
             left: 13px;
         }
     }
+
 }
+
 
 .doctor-card {
     @apply bg-bg-white p-5 xl:p-[30px] border border-bg-white rounded-3xl flex flex-col xl:gap-[6px] xl:flex-row ;
@@ -200,12 +187,14 @@
 
 
 @screen md {
+    .swiper-fade .swiper,
     #reviewSlider .swiper,
     #serviceSlider .swiper,
     #reasonsSlider .swiper {
         @apply overflow-visible;
     }
 
+    .swiper-fade .swiper-slide,
     #reviewSlider .swiper-slide,
     #doctorsSlider .swiper-slide,
     #serviceSlider .swiper-slide,
@@ -368,7 +357,7 @@
 }
 
 .review {
-    @apply rounded-[20px] p-5 border border-[#F3FBFB];
+    @apply rounded-[20px] p-5 border border-[#F3FBFB] bg-bg-beige;
 
     &__header {
         @apply flex items-center justify-between mb-2;

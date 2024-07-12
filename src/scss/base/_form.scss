@@ -1,0 +1,116 @@
+
+[multiple], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], input:where(:not([type])), select, textarea {
+    border: 0px;
+    padding: 0px;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.textarea,
+.input {
+//   @apply placeholder:text-black400 hover:placeholder:text-black100 text-black100 text-14med bg-[transparent] rounded-3xl border transition-colors;
+
+    @apply flex flex-col gap-3 bg-trans;
+
+    &__title {
+      @apply text-body3 text-text-at;
+    }
+
+    &__target {
+      @apply text-body1 text-text-d border-0 border-el-ia hover:border-el-ih transition-colors border-b bg-trans;
+      border-bottom: 1px solid rgb(133 133 133) !important; 
+      padding-bottom: 0.375rem;
+    }
+
+    &:hover {
+        .textarea__target,
+        .input__target {
+            border-bottom: 1px solid rgb(60 60 60) !important; 
+        }
+    }
+}
+
+.textarea {
+  resize: none;
+}
+
+.inuput-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 32px;
+  cursor: pointer;
+}
+
+.inuput-checkbox::before,
+.inuput-checkbox::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.inuput-checkbox::after  {
+    border: 2px solid #5c5c5c;
+    background: transparent;
+    border-radius: 2px;
+}
+
+.inuput-checkbox::before {
+  content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="19" height="19" rx="3.5" fill="%23005055"/><rect x="0.5" y="0.5" width="19" height="19" rx="3.5" stroke="%23005055"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.13295 10.441C4.95568 10.253 4.95568 9.947 5.13295 9.757L5.77568 9.074C5.95295 8.886 6.24113 8.886 6.4184 9.074L8.63657 11.466L13.5811 6.141C13.7584 5.953 14.0465 5.953 14.2238 6.141L14.8665 6.825C15.0438 7.013 15.0438 7.32 14.8665 7.507L8.95748 13.858C8.78021 14.046 8.49203 14.046 8.31476 13.858L5.13295 10.441Z" fill="white"/></svg>');
+  display: none;
+}
+
+
+.checkbox:checked + .inuput-checkbox::after {
+  display: none;
+}
+
+.checkbox:checked + .inuput-checkbox::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.checkbox:not(:checked) + .inuput-checkbox + button {
+//   @apply border-black800 bg-black800 text-black600 hover:border-black800 hover:bg-black800 cursor-default;
+    --tw-bg-opacity: 1;
+    background-color: rgb(219 219 219 / var(--tw-bg-opacity)) !important;
+    --tw-border-opacity: 1;
+    border-color: rgb(219 219 219 / var(--tw-border-opacity)) !important;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+    cursor: default !important;
+    
+    svg path{
+        stroke: #FFFFFF !important;
+        fill: #FFFFFF !important;
+    }
+}
+
+.formback {
+    background-repeat: no-repeat;
+    background-position: 420.47px 0px;
+    background-size: 0px;
+
+    @screen md {
+        background-size: auto 100%;
+    }
+
+    @screen xl {
+        background-position: 683px 0px;
+    }
+}
