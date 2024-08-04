@@ -11,7 +11,7 @@ const bs = require("browser-sync");
 
 module.exports = function style() {
   const tailwindcss = require("tailwindcss");
-  return src("src/scss/**/*.scss")
+  return src("src/**/**/*.scss")
     .pipe(map.init())
     .pipe(bulk())
     .pipe(

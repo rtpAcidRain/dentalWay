@@ -1,0 +1,31 @@
+.doctor-chars {
+    @apply flex flex-col gap-5 xl:grid grid-cols-2 xl:gap-[30px];
+    
+    .list{
+        @apply flex flex-col gap-5; 
+    }
+    
+    .item {
+        @apply text-text-d flex flex-col gap-2;
+        &:not(.socials) a{
+            @apply underline underline-offset-[3px];
+        }
+        ul {
+            @apply list-disc pl-6 flex flex-col gap-1;
+        }
+        &__header {
+            @apply text-body2;
+        }
+
+        &__body {
+            @apply text-body3;
+        }
+
+        &.socials .item__body{
+            @apply flex gap-5 flex-wrap;
+            a {
+                @apply flex gap-2 items-center shadow-2 rounded-[200px] py-1.5 px-3;
+            }
+        }
+    }
+}

@@ -22,7 +22,7 @@
 
         span {
             // @apply border-b;
-            @apply underline-offset-2;
+            @apply underline-offset-[3px];
             text-decoration: underline;
             text-decoration-skip-ink: none;
         }

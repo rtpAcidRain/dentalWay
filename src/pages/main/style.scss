@@ -83,6 +83,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    background-color: #fff;
 
     img {
         border-radius: 50%;
@@ -124,6 +125,16 @@
             height: 284.71px;
             top: 154px;
             left: 13px;
+        }
+
+
+        &.docavatar--small {
+            &::before {
+                width: 439.35px;
+                height: 219.67px;
+                top: 124px;
+                left: 12px;
+            }
         }
     }
 

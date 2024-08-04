@@ -4,17 +4,23 @@
 	"title":"Dental way",
 	"description":"Gulp pack for easy html/php markup development",
 	"keywords":"",
-	"favicon":"img/favicons/favicon",
+	"favicon":"/img/favicons/favicon",
 	})
 	@@include('components/page-blocks/_scripts.html')
 	<body>
 		<div class="page">
 			@@include('components/page-blocks/header/index.html')
 			<main class="main">
-				<!-- @@include('components/pages/main/index.html') -->
-				<!-- @@include('components/pages/services/index.html') -->
-				<!-- @@include('components/pages/services/serviceDirection.html') -->
-				@@include('components/pages/services/service.html')
+				<!-- @@include('pages/main/main.html') -->
+				<!-- @@include('pages/services/index.html') -->
+				<!-- @@include('pages/services/serviceDirection.html') -->
+				<!-- @@include('pages/services/service.html') -->
+				<!-- @@include('pages/doctors/allDocs.html') -->
+				<!-- @@include('pages/doctors/doc.html') -->
+				<!-- @@include('pages/search/index.html') -->
+				<!-- @@include('pages/blog/index.html') -->
+				<!-- @@include('pages/blog/blog-page/index.html') -->
+				@@include('pages/blog/blog-page/index.html')
 			</main>
 			@@include('components/page-blocks/footer/index.html')
 		</div>

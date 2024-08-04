@@ -238,6 +238,215 @@ html.something-opened {
   }
 }
 
+.pag {
+  @apply flex items-center gap-4 w-fit mx-auto;
+
+  &__item {
+    @apply text-body3 text-text-at transition-colors rounded-full border border-trans flex items-center justify-center;    
+    padding: 0 4.5px;
+
+    &.active {
+      @apply text-text-d;
+    }
+
+
+    &:not(.active):hover {
+      @apply text-text-d bg-bg-beige border-bg-beige;
+    }
+
+    &:not(.active):focus,
+    &:not(.active):active {
+      @apply text-text-d bg-bg-beige border-el-lg;
+    }
+  }
+
+  &__before {
+    @apply text-body3 text-text-at transition-colors rounded-full border border-trans flex items-center justify-center;    
+    padding: 0 4.5px;
+  }
+
+  &__button {
+    @apply w-11 h-11 rounded-full transition-colors border border-trans flex items-center justify-center;
+
+    svg {
+      @apply transition-colors fill-el-ia;
+    }
+
+
+    &.disabled, 
+    &:disabled {
+      border-color: transparent !important;
+      background-color: transparent !important;
+
+      svg {
+        fill: #DBDBDB !important;
+      }
+    }
+
+    &:not(.disabled, :disabled):hover {
+      @apply bg-mcg-b border-mcg-b;
+
+      svg {
+        @apply fill-el-ih;
+      }
+    }
+
+    &:not(.disabled, :disabled):active,
+    &:not(.disabled, :disabled):focus {
+      @apply bg-bg-beige border-el-lg;
+
+      svg {
+        @apply fill-el-ih;
+      }
+    }
+  }
+}
+
+// SELECT CUSTOM
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  @apply text-but18r text-el-it border border-el-lg px-5 flex items-center gap-3 transition-colors hover:border-el-ia cursor-pointer;
+  height: 53px;
+  border-radius: 200px;
+  span {
+    @apply flex-1;
+  }
+
+  svg {
+    @apply fill-el-it;
+  }
+
+  &:hover {
+    svg {
+      @apply fill-text-d;
+    }
+  }
+
+
+  &.select-arrow-active {
+    @apply border-el-ih;
+    span {
+      @apply text-text-d;
+    }
+    svg {
+      @apply rotate-180 fill-text-d;
+    }
+  }
+}
+
+
+/* Style items (options): */
+.select-items {
+  @apply bg-bg-white p-5 rounded-xl shadow-2 max-h-[280px];
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  &__items {
+    @apply flex flex-col gap-6 overflow-auto max-h-[240px] pr-4;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+      @apply bg-bg-white;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      @apply bg-el-ia rounded-[20px];
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      @apply bg-el-ia;
+    }
+
+
+    & > div {
+      @apply text-text-d text-but14r relative pl-7 cursor-pointer;
+
+      &::before {
+        @apply border border-el-ia transition-colors rounded-full;
+        content: '';
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        left: 0;
+      }
+
+      &::after  {
+        content: '';
+        @apply transition-colors rounded-full bg-trans;
+        content: '';
+        width: 10px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+      }
+
+      &:not(.same-as-selected):hover {
+        &::before {
+          @apply border-el-ih;
+        }
+      }
+
+      &.same-as-selected {
+        &::before {
+          @apply border-mcg-pg;
+        }
+
+        &::after {
+          @apply bg-mcg-pg;
+        }
+      }
+    }
+  }
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+// SELECT CUSTOM --------------------------->
+
+
+.filter {
+  @apply flex  items-center gap-3 no-scrollbar overflow-auto md:flex-wrap;
+  &__item {
+    @apply flex items-center justify-center whitespace-nowrap text-but16m py-1.5 px-3 border rounded-[10px] text-el-it border-el-lg transition-colors cursor-pointer;
+
+    input {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+    
+    &:not(.active):hover {
+      @apply text-el-ih border-el-ih;
+    }
+
+    &.active {
+      @apply text-mcg-pg border-mcg-pg;
+    }
+  }
+}
 
 @screen md{
   :root {

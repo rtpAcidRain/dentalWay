@@ -96,6 +96,14 @@ module.exports = {
             letterSpacing: "normal",
           }
         ],
+        body2: [
+          '16px',
+          {
+            fontWeight: "600",
+            lineHeight: "26px",
+            letterSpacing: "normal",
+          }
+        ],
         body3: [
           '16px',
           {
@@ -194,6 +202,7 @@ module.exports = {
         ],
     },
     colors: {
+      inherit: 'inherit',
       trans: 'transparent',
       black: '#000000',
       mcg: {
