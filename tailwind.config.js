@@ -242,6 +242,7 @@ module.exports = {
     },
     boxShadow: {
       '2': '0 0 30px 0 rgba(237, 237, 237, 0.7)',
+      '4': '0 0 30px 0 #d6d6d6',
     }, 
     container: {
       center: true,

@@ -159,10 +159,16 @@ header {
 
 .navigation-on-site {
     &__list {
-        @apply no-scrollbar overflow-auto gap-6;
+        @apply overflow-auto gap-6;
         height: calc(var(--doc-height, 100vh) - var(--headerSummonHeight) - 126px);
         display: flex;
         flex-direction: column;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
     }
     &__but{
          @apply flex items-center text-but18m;

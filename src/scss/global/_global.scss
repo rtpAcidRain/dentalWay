@@ -211,7 +211,6 @@ html.something-opened {
     width: 32px;
     height: 32px;
     display: block;
-    
   }
 
   &--small {
@@ -445,6 +444,13 @@ html.something-opened {
     &.active {
       @apply text-mcg-pg border-mcg-pg;
     }
+  }
+}
+
+
+.question-page_acc {
+  a {
+    @apply underline underline-offset-4;
   }
 }
 

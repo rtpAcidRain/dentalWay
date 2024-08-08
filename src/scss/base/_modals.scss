@@ -58,6 +58,18 @@
         top: 100%;
     }
 
+    &.modal--full {
+        @apply w-screen h-screen;
+        top: 0;
+        z-index: 9999;
+        overflow: auto;
+        background: rgba(0, 0, 0, 0.3);
+        
+        .modal__container {
+            @apply bg-trans h-full py-10 xl:py-[90px];
+        }
+    }
+
     &.mounted {
         pointer-events: auto;
         opacity: 1;

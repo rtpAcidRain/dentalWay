@@ -6,7 +6,8 @@ let modals,
     MODAL_TIME = 400,
     modalSetTimeout,
     openedModal,
-    header;
+    header,
+    reviewImagesSliderConfig;
 
 const defaultFractionPag = (el) => {
     return {
@@ -161,10 +162,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Header END ------------------------>
 
+    // SLIDERS
+
+    // REVIEW IMAGES SLIDER
+
+    reviewImagesSliderConfig = (el) => {
+        return new Swiper(el.querySelector('.swiper'), {
+            slidesPerView: 'auto',
+            spaceBetween: 12,
+            navigation: {
+                nextEl: el.querySelector('.review-slider__button.next'),
+                prevEl: el.querySelector('.review-slider__button.before'),
+            }
+        }
+    )
+    };
+
+    const reviewImagesSlider = document.querySelectorAll('.review-slider');
+
+    reviewImagesSlider.forEach((el) => {
+        const slider = reviewImagesSliderConfig(el)
+    })
+
 
     // SITENAVIGATION
 
-    const navigationOnSite = document.querySelectorAll('.navigation-on-site')
+    const navigationOnSite = document.querySelectorAll('.navigation-on-site');
 
     navigationOnSite.forEach((el) => {
         const els = el.querySelectorAll('.navigation-on-site__el')
@@ -194,25 +217,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
             }
         })
-    })
+    });
 
     // SITENAVIGATION ------------------------->
 
     // TABS
 
-    const tabs = document.querySelectorAll('.tabs')
+    const tabs = document.querySelectorAll('.tabs');
 
     for (const el of tabs) {
         el.style.gridTemplateColumns = `repeat(${el.querySelectorAll('.tab').length}, minmax(0, 1fr))`
-    }
+    };
 
     // 
 
-
-    // SLIDERS
-
-    
-    
     // SELECTS
 
     (() => {
