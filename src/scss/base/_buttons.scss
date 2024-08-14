@@ -61,6 +61,10 @@
     }
 }
 
+.link {
+    @apply block underline underline-offset-4 text-but18r transition-colors text-text-th hover:text-text-at;
+}
+
 .swiper-controls {
     @apply border border-el-lg bg-el-slider;
     height: fit-content;

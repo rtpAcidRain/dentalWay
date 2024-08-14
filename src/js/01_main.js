@@ -115,16 +115,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Accordeon
 
-    const accs = document.querySelectorAll('.accardeon')
+    const accs = document.querySelectorAll('.accardeon');
+    const accsScope =  [...accs];
     
-    accs.forEach((acc) => {
-        const accItems = acc.querySelectorAll(':scope > .accardeon-item')
-        accItems.forEach((accItem) => {
+    accsScope.forEach((acc) => {
+        const accItems = acc.querySelectorAll(':scope > .accardeon-item');
+        [...accItems].forEach((accItem) => {
             const accItemBut = accItem.querySelector('.accardeon-item__but')
 
-            accItemBut.addEventListener('click', () => {
+            
+            accItemBut.addEventListener('click', (e) => {
+                e.stopPropagation()
+                acc.classList.add('sm-opened')
                 if(accItem.classList.contains('opened')){
                     accItem.classList.remove('opened')
+                    acc.classList.remove('sm-opened')
                 } else {
                     accItems.forEach((accItem2) => {
                         accItem2.classList.remove('opened')
@@ -134,7 +139,27 @@ document.addEventListener("DOMContentLoaded", () => {
             })
     
         })
+
+        // test
+        acc.addEventListener('click', function(e) {
+            e.stopPropagation()
+        })
     })
+
+    
+    // test
+    document.addEventListener('click', function () {
+        accsScope.forEach((acc) => {
+            const accItems = acc.querySelectorAll(':scope > .accardeon-item');
+            [...accItems].forEach((accItem) => {
+                accItem.classList.remove('opened')
+            })
+            acc.classList.remove('sm-opened')
+        })
+       
+        
+    })
+
 
 
     // Accordeon END ------------------------>
@@ -300,7 +325,6 @@ document.addEventListener("DOMContentLoaded", () => {
           /* A function that will close all select boxes in the document,
           except the current select box: */
           var x, y, i, xl, yl, arrNo = [];
-          console.log(elmnt)
           x = document.getElementsByClassName("select-items");
           y = document.getElementsByClassName("select-selected");
           xl = x.length;

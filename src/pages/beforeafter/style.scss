@@ -1,0 +1,58 @@
+.before-after {
+    display: grid;
+    place-content: center;
+    position: relative;
+    overflow: hidden;
+    --position: 50%;
+
+    
+    &-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    &__image-before {
+        position: absolute;
+        inset: 0;
+        width: var(--position);
+    }
+
+    &__input{
+        position: absolute;
+        inset: 0;
+        cursor: pointer;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__line{
+        position: absolute;
+        inset: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #fff;
+        /* z-index: 10; */
+        left: var(--position);
+        transform: translateX(-50%);
+        pointer-events: none;
+    }
+
+    &__button{
+        @apply shadow-3 px-2 py-2.5 border-[2px] border-bg-white bg-bg-white bg-opacity-[0.02] flex items-center gap-4;
+        position: absolute;
+        border-radius: 1000px;
+        top: 50%;
+        left: var(--position);
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+
+    &--mini {
+        .image-container {
+            @apply aspect-[351/192];
+        }
+    }
+}
