@@ -23,6 +23,7 @@
 				href="css/style.min.css">
 	<!-- <script src="https://api-maps.yandex.ru/2.1/?load=package.standard&amp;apikey=5aff64b0-c60f-4d47-92f5-65a2a0903d7e&amp;lang=ru_RU"></script> -->
 	<title>Dental way</title>
+	
 </head>
 
 	<script src="js/libs.min.js"></script>
@@ -1323,9 +1324,6 @@
     </div>
 </div>
 
-<!-- /img/mainpage/image_slider-2.jpg
-/img/mainpage/image_slider-1.jpg
-/img/mainpage/image_slider.jpg -->
 
 
 <section class="mb-10 xl:mb-[54px] container">
@@ -1637,14 +1635,13 @@
 <section class=" mb-10 xl:mb-[54px] bg-mcg-b">
     <h2 class="w-0 h-0 overflow-hidden">Схема проезда</h2>
     <div class="py-6 md:py-[30px] xl:py-0 md:container xl:px-0 xl:flex flex-row-reverse">
-        <div class="map-main hidden xl:block w-[880px] h-[630px] relative z-10">
-
+        <div class="main-map hidden xl:block w-[880px] h-[630px] relative z-10">       
         </div>
         <div class="xl:py-10 xl:px-[63px] xl:w-[486px] relative z-20">
             <h2 class="text-text-th text-mobh1 md:text-deskh2 xl:text-deskh1 container md:px-0 mb-5 md:mb-7 xl:mb-11">Схема проезда</h2>
             <div class="p-5 shadow-2 rounded-[20px] group xl:p-[30px] accardeon bg-bg-white xl:w-[460px] [&.sm-opened]:xl:bg-bg-beige transition-colors relative">
                 <h3 class="text-text-th text-mobh2 md:text-mobh3 mb-[30px]">Выберите клинику</h3>
-                <div class="accardeon-item group [&:not(:last-child)]:mb-6">
+                <div class="accardeon-item group [&:not(:last-child)]:mb-6"  data-map="podolsk">
                     <div class="accardeon-item__but flex items-center ">
                         <span class="flex-1 text-but18m group-[.opened]:text-butsemi group-[.opened]:text-mcg-pg">Подольск, ул.Маштакова, 3А</span>
                         <span class="flex items-center justify-center w-8 h-8 rounded-full icon group-[.opened]:bg-mcg-bs group-[.opened]:rotate-180 xl:-rotate-90  xl:group-[.opened]:-rotate-90" >
@@ -1655,7 +1652,7 @@
                     </div>
                     <div class="
                     accardeon-item__list xl:!block xl:absolute xl:w-[460px] xl:bg-bg-white xl:rounded-[20px] xl:left-full xl:top-0 xl:p-[30px] xl:-z-10 xl:opacity-0 xl:!transition-opacity
-                    xl:group-[.opened]:opacity-100 xl:group-[.opened]:z-10
+                    xl:group-[.opened]:opacity-100 xl:group-[.opened]:z-10 xl:pointer-events-none xl:group-[.opened]:pointer-events-auto
                     ">
                         <div class="min-w-full">
                             <div class="pt-4 xl:pt-0">
@@ -1684,7 +1681,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="map-podolsk w-full h-[300px] xl:hidden md:h-[368px]"></div>
+                                <div class="map w-full h-[300px] xl:hidden md:h-[368px]"></div>
                                 <div class="rounded-xl bg-mcg-b py-2 px-3 flex flex-col gap-3 text-body2 text-text-d mb-3 xl:mb-6">
                                     <div>
                                         9:00–21:00 (без выходных)
@@ -1703,7 +1700,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="accardeon-item group [&:not(:last-child)]:mb-6">
+                <div class="accardeon-item group [&:not(:last-child)]:mb-6"  data-map="moskva">
                     <div class="accardeon-item__but flex items-center ">
                         <span class="flex-1 text-but18m group-[.opened]:text-butsemi group-[.opened]:text-mcg-pg">Москва, метро Солнцево, ул. Производственная, д.8, к.1</span>
                         <span class="flex items-center justify-center w-8 h-8 rounded-full icon group-[.opened]:bg-mcg-bs group-[.opened]:rotate-180 xl:-rotate-90  xl:group-[.opened]:-rotate-90" >
@@ -1714,7 +1711,7 @@
                     </div>
                     <div class="
                     accardeon-item__list xl:!block xl:absolute xl:w-[460px] xl:bg-bg-white xl:rounded-[20px] xl:left-full xl:top-0 xl:p-[30px] xl:-z-10 xl:opacity-0 xl:!transition-opacity
-                    xl:group-[.opened]:opacity-100 xl:group-[.opened]:z-10
+                    xl:group-[.opened]:opacity-100 xl:group-[.opened]:z-10 xl:pointer-events-none xl:group-[.opened]:pointer-events-auto
                     ">
                         <div class="min-w-full">
                             <div class="pt-4 xl:pt-0">
@@ -1743,7 +1740,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="map-podolsk w-full h-[300px] xl:hidden md:h-[368px]"></div>
+                                <div class="map w-full h-[300px] xl:hidden md:h-[368px]"></div>
                                 <div class="rounded-xl bg-mcg-b py-2 px-3 flex flex-col gap-3 text-body2 text-text-d mb-3 xl:mb-6">
                                     <div>
                                         9:00–21:00 (без выходных)
@@ -1762,7 +1759,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="accardeon-item group [&:not(:last-child)]:mb-6">
+                <div class="accardeon-item group [&:not(:last-child)]:mb-6 "  data-map="mitishi">
                     <div class="accardeon-item__but flex items-center ">
                         <span class="flex-1 text-but18m group-[.opened]:text-butsemi group-[.opened]:text-mcg-pg">Мытищи, ул.Станционная 7, ТЦ Артимолл, 3 этаж</span>
                         <span class="flex items-center justify-center w-8 h-8 rounded-full icon group-[.opened]:bg-mcg-bs group-[.opened]:rotate-180 xl:-rotate-90  xl:group-[.opened]:-rotate-90" >
@@ -1773,7 +1770,7 @@
                     </div>
                     <div class="
                     accardeon-item__list xl:!block xl:absolute xl:w-[460px] xl:bg-bg-white xl:rounded-[20px] xl:left-full xl:top-0 xl:p-[30px] xl:-z-10 xl:opacity-0 xl:!transition-opacity
-                    xl:group-[.opened]:opacity-100 xl:group-[.opened]:z-10
+                    xl:group-[.opened]:opacity-100 xl:group-[.opened]:z-10 xl:pointer-events-none xl:group-[.opened]:pointer-events-auto
                     ">
                         <div class="min-w-full">
                             <div class="pt-4 xl:pt-0">
@@ -1802,7 +1799,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="map-podolsk w-full h-[300px] xl:hidden md:h-[368px]"></div>
+                                <div class="map w-full h-[300px] xl:hidden md:h-[368px]"></div>
                                 <div class="rounded-xl bg-mcg-b py-2 px-3 flex flex-col gap-3 text-body2 text-text-d mb-3 xl:mb-6">
                                     <div>
                                         9:00–21:00 (без выходных)
@@ -1824,7 +1821,9 @@
             </div>
         </div>
     </div>
-
+    
+    
+    <script src="https://api-maps.yandex.ru/v3/?apikey=dc4c9180-39a7-43c6-9063-733b506b26f3&lang=ru_RU"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const pureSliders = document.querySelectorAll('.pure-slider');
@@ -1847,12 +1846,147 @@
                         el.classList.add('selected')
                     })
                 }) 
-                // const slides = el.querySelectorAll('pure-slider__slides');
-
-                // [...slides].forEach((el) => {
-                //     el.classList.add('hidden')
-                // })
             })
+
+            let map;
+            const center = [37.588144, 55.733842];
+            const mapsData = {
+                'podolsk': {
+                    coordinates: [37.524481, 55.426573],
+                },
+                'moskva': {
+                    coordinates: [37.387169, 55.645907],
+                },
+                'mitishi': {
+                    coordinates: [37.757291, 55.914662],
+                },
+            }
+
+            initMap();
+
+            async function initMap() {
+                // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+                await ymaps3.ready;
+                const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
+            
+                const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;
+
+            
+                map = new YMap(
+                    document.querySelector('.main-map'),
+            
+                    {
+                        location: {
+                            center: center,
+                        
+                            zoom: 9,
+                        },
+
+                    }
+                );
+
+                map.addChild(new YMapDefaultSchemeLayer());
+                map.addChild(new YMapDefaultFeaturesLayer())
+              
+
+                // markers
+                
+                const maps = document.querySelectorAll('*[data-map]');
+
+
+                [...maps].forEach((el) => {
+                    let mapName = mapsData[el.dataset.map];
+
+                    const markerConfig = {
+                        coordinates: mapName.coordinates,
+                        mapFollowsOnDrag: true,
+                        draggable: false
+                    }
+
+                    const marker = new YMapDefaultMarker(
+                        {
+                            ...markerConfig,
+                            onClick: function () {
+                                this.style.element.querySelector('svg').classList.add('drop-shadow-shadow-3');
+                                el.classList.add('opened')
+                                map.setLocation({
+                                    center: [this.coordinates[0] - 0.001364, this.coordinates[1] - 0.000839],
+                                    zoom: 17,
+                                    duration: 700
+                                })
+                            }
+                        }
+                    );
+
+                    
+                    el.querySelector('.accardeon-item__but').addEventListener('click', function() {
+                        if(el.classList.contains('opened')){
+                            map.setLocation({
+                                center: [mapName.coordinates[0] - 0.001364, mapName.coordinates[1] - 0.000839],
+                                zoom: 17,
+                                duration: 700
+                            })
+                        }
+                    })
+
+                    const miniMarker = new YMapDefaultMarker(
+                        markerConfig
+                    );
+
+                    const miniMap = new YMap(
+                        el.querySelector('.map'),
+            
+                        {
+                            location: {
+                                center:  mapName.coordinates,
+                                zoom: 15,
+                            },
+
+                        }
+                    );
+
+                    miniMap.addChild(new YMapDefaultSchemeLayer());
+                    miniMap.addChild(new YMapDefaultFeaturesLayer())
+
+                    map.addChild(marker);
+                    miniMap.addChild(miniMarker);
+
+                });
+
+                const markers = [...document.querySelectorAll('.ymaps3x0--default-marker__icon-box')];
+
+                markers.forEach((el) => {
+                    el.innerHTML = `
+                        <div class="group/marker cursor-pointer">
+                            <svg class="transition-all" width="56" height="78" viewBox="0 0 56 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="transition-colors fill-mcg-pg group-hover/marker:fill-mcg-lg" d="M26.548 72.9492L28.0598 74.8205L29.6236 72.9925C34.2099 67.631 40.2644 60.2555 45.178 52.3689C50.0508 44.5479 54 35.9187 54 28.1011C54 13.8095 42.3155 2.00007 28.1038 2.00007C13.6957 2.00007 2 13.7982 2 28.1011C2 36.2423 6.00782 44.718 10.9409 52.3928C15.1808 58.9891 20.27 65.2361 24.4883 70.4142C25.2026 71.291 25.892 72.1372 26.548 72.9492Z"  stroke="white" stroke-width="4"/>
+                                <g clip-path="url(#clip0_221_4857)">
+                                <path d="M20.9518 20.611C21.8446 29.2959 34.6329 28.7515 35.0794 20.1073C34.2968 20.1226 32.8368 20.148 31.8652 20.1684C31.6236 20.1735 31.4188 20.3414 31.3768 20.5754C30.6783 24.4727 25.2531 24.315 24.5336 20.4584C24.4863 20.1938 24.2395 20.0005 23.9611 20.0005H20.957V20.611H20.9518Z" fill="white"/>
+                                <path d="M17.5277 23.4547C16.7715 25.8511 16.8765 24.9455 18.1054 25.8664C21.1883 27.9269 18.7042 32.216 15.3272 31.6003C15.0383 31.5495 14.76 31.7123 14.6655 31.9768C14.3661 32.8723 13.8619 34.363 13.8462 34.5971C13.8462 34.8616 14.7127 35.0346 16.094 35.0346C24.2134 35.1313 25.5946 23.933 18.0109 22.0454L17.5277 23.4547Z" fill="white"/>
+                                <path d="M36.6341 22.4581C35.5207 23.0076 34.0292 24.4067 33.4935 25.4192C33.1153 26.1315 32.795 27.5306 32.795 28.4261C32.795 30.1356 33.3989 31.5907 34.6069 32.822C36.1457 34.3687 37.7107 35.0352 39.8535 35.0352C41.1665 35.0352 42.1538 34.8622 42.1538 34.6434C42.1538 34.5722 41.9175 33.8395 41.6339 33.0255C41.198 31.7637 41.0877 31.5347 40.8986 31.5704C40.7673 31.5958 40.3314 31.6162 39.906 31.6263C38.6141 31.6518 37.4166 30.9598 36.7917 29.8151C36.4135 29.1282 36.424 27.7138 36.8284 26.971C37.1488 26.3503 37.8105 25.7194 38.425 25.4344C38.6508 25.3327 38.8399 25.1953 38.8399 25.1241C38.8399 25.0529 38.6246 24.3457 38.3672 23.5418C37.9786 22.3614 37.8473 22.0714 37.6687 22.0714C37.5479 22.0663 37.0858 22.2495 36.6341 22.4581Z" fill="white"/>
+                                <path d="M33.3991 35.3301C29.0558 36.4748 26.8605 41.583 29.2869 45.1852C29.4287 45.4396 29.6282 45.6533 29.7385 45.6787C29.8751 45.7092 31.5294 44.6357 32.2122 44.1218C32.3802 43.9946 32.4328 43.7758 32.3435 43.5876C30.5263 39.8633 34.9116 36.7496 38.0103 39.7209C38.1521 39.8582 38.3779 39.8735 38.5407 39.7616C39.2234 39.2731 40.3421 38.5049 40.7045 38.2912C40.9041 38.1742 41.0826 38.0164 41.0826 37.935C41.0826 37.6705 40.2528 36.9022 39.3285 36.3069C37.7214 35.1113 35.2583 34.9536 33.3991 35.3301Z" fill="white"/>
+                                <path d="M16.5192 36.3069C15.5949 36.9022 14.7651 37.6705 14.7651 37.935C14.7651 38.0164 14.9436 38.1742 15.1432 38.2912C15.5056 38.4998 16.6242 39.2731 17.307 39.7616C17.4698 39.8786 17.6904 39.8582 17.8374 39.7209C20.9413 36.7496 25.3214 39.8684 23.5042 43.5876C23.4149 43.7758 23.4675 43.9946 23.6355 44.1218C24.3183 44.6357 25.9779 45.7092 26.1092 45.6787C26.2142 45.6533 26.419 45.4396 26.5608 45.1852C28.9924 41.5779 26.7972 36.4748 22.4486 35.3301C20.5947 34.9536 18.1315 35.1113 16.5192 36.3069Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_221_4857">
+                                <rect width="28.3077" height="25.8462" fill="white" transform="translate(13.8462 20.0005)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>    
+                        </div>
+                    `
+                })
+
+                document.addEventListener('click', function() {
+                    markers.forEach((el) => {
+                        if(el.querySelector('svg').classList.contains('drop-shadow-shadow-3')){
+                            el.querySelector('svg').classList.remove('drop-shadow-shadow-3')
+                           
+                        }
+                    })
+                })
+
+            }
         })
     </script>
 </section>
