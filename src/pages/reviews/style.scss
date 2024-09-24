@@ -1,0 +1,9 @@
+.full-review {
+    .review--bot,
+    .review--top {
+        @apply px-0;
+    }
+    .review__text {
+        @apply text-body3 md:text-body1 xl:max-w-[815px] mb-6 md:mb-[30px] xl:mb-10;
+    }
+}

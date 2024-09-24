@@ -241,16 +241,43 @@
     }
 }
 
+#singlePageReviewSlider {
+    .swiper-slide {
+        width: 169px;
+        height: 168px;
+        border-radius: 16px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @screen md {
+            width: 349px;
+            height: 348px;
+            border-radius: 24px;
+        }
+
+        @screen xl {
+            width: 395px;
+            height: 391px;
+            border-radius: 24px;
+        }
+    }
+}
+
 @screen md {
     .swiper-fade .swiper,
-    #reviewSlider .swiper,
+    #reviewSlider .swiper:not(.review__images),
     #serviceSlider .swiper,
     #reasonsSlider .swiper {
         @apply overflow-visible;
     }
 
     .swiper-fade .swiper-slide,
-    #reviewSlider .swiper-slide,
+    #reviewSlider .swiper:not(.review__images) > .swiper-wrapper > .swiper-slide,
     #doctorsSlider .swiper-slide,
     #serviceSlider .swiper-slide,
     #reasonsSlider .swiper-slide{
@@ -263,8 +290,9 @@
 }
 
 @screen xl {
-    #reviewSlider .swiper-slide,
-    #serviceSlider .swiper-slide
+    #reviewSlider .swiper:not(.review__images) > .swiper-wrapper > .swiper-slide,
+    #serviceSlider .swiper-slide,
+    #singlePageReviewSlider .swiper-slide 
      {
         &.swiper-slide-next + .swiper-slide {
             @apply opacity-100;
@@ -466,12 +494,18 @@
     }
 
     &-slider {
-        @apply flex gap-6 md:gap-[1px] items-center xl:px-1.5;
+        @apply flex gap-6 md:gap-[1px] items-center xl:px-1.5 ;
         position: relative;
+
+        .swiper {
+            width: 100%;
+        }
         .swiper-slide {
             width: 57px;
             height: 57px;
             object-fit: cover;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         &__button {

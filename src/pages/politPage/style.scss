@@ -1,0 +1,45 @@
+.polit-page {
+    h1 {
+        @apply text-mobh1 md:text-deskh2 xl:text-deskh1 text-text-th;
+    }
+
+    h2 {
+        @apply text-mobh2 md:text-deskh3 xl:text-deskh2 text-text-th;
+    }
+
+    h3 {
+        @apply text-mobh3 md:text-deskh4 xl:text-deskh3 text-text-th;
+    }
+
+    h4 {
+        @apply text-mobSubtitle md:text-deskSubtitle xl:text-deskh4 text-text-th;
+    }
+
+    p, li {
+        @apply text-text-d text-body4 md:text-body3;
+    }
+
+    ul,
+    ol {
+        @apply pl-6;
+
+    }
+
+    ul {
+
+        li {
+            @apply list-disc;
+        }
+    }
+
+    ol {
+
+        li {
+            @apply list-decimal;
+        }
+    }
+
+    a {
+        @apply text-but16m underline underline-offset-2 text-text-d hover:text-text-at transition-colors;
+    }
+}

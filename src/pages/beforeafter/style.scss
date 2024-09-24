@@ -1,5 +1,5 @@
 .before-after {
-    display: grid;
+    // display: grid;
     place-content: center;
     position: relative;
     overflow: hidden;
@@ -17,6 +17,15 @@
         position: absolute;
         inset: 0;
         width: var(--position);
+        overflow: hidden;
+
+        .before-after-image{
+            position: absolute;
+            height: 100%;
+            inset: 0;
+            min-width: var(--img-width, 0px) !important;
+            max-width: var(--img-width, 100%) !important;
+        }
     }
 
     &__input{

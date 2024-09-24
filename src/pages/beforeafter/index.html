@@ -72,7 +72,7 @@
               </div>
         </label>
     </form>
-    <div class="flex flex-col gap-4 xl:gap-[30px] md:grid grid-cols-2">
+    <div class="flex flex-col gap-4 xl:gap-[30px] md:grid grid-cols-2 before-after-mini-main">
         <div class="rounded-3xl overflow-hidden shadow-2 bg-bg-white">
             <div class="before-after before-after--mini">
                 <div class="image-container">
@@ -150,11 +150,13 @@
         <div class="rounded-3xl overflow-hidden shadow-2 bg-bg-white">
             <div class="before-after before-after--mini">
                 <div class="image-container">
-                    <img
-                      class="before-after__image-before before-after-image"
-                      src="/img/before.jpg"
-                      alt="Фото до"
-                    />
+                    <div class="before-after__image-before ">
+                        <img
+                          class="before-after-image"
+                          src="/img/before.jpg"
+                          alt="Фото до"
+                        />
+                    </div>
                     <img
                       class="before-after__image-after before-after-image"
                       src="/img/after.jpg"
@@ -908,6 +910,16 @@
     <script>
        (function() {
             const beforeAfter = document.querySelectorAll('.before-after');
+            const beforeAfterMiniMain = document.querySelector('.before-after-mini-main');
+
+            function setImgWidth() {
+                beforeAfterMiniMain.style.setProperty('--img-width', `${beforeAfterMiniMain.querySelector('.image-container').clientWidth}px`);
+            }
+
+            setImgWidth();
+
+            window.addEventListener('resize', setImgWidth);
+
             [...beforeAfter].forEach((el) => {
                 el.querySelector('.before-after__input').addEventListener('input', (e) => {
                     el.style.setProperty('--position', `${e.target.value}%`);

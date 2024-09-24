@@ -1,0 +1,4 @@
+.not-found-page {
+    @apply grid place-content-center;
+    min-height: calc(var(--doc-height) - var(--header) - var(--subheader));
+}

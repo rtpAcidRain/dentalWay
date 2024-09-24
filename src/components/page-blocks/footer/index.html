@@ -156,3 +156,79 @@
         </div>
     </div>    
 </footer>
+<div class="modal modal--full modal--fade full-review flex modal--form" id="formModalSimple">
+    <div class="m-auto  max-w-[351px] md:max-w-[640px] w-full ">
+        <div class="modal__container  flex w-full !bg-bg-white rounded-3xl shadow-3 !py-5 md:!py-[30px] px-5 md:px-[30px] ">
+            <div class="w-full modal--form__form">
+                <div class="flex items-center justify-between mb-6 md:mb-[30px]">
+                    <h2 class="text-mobh1 md:text-deskh2 xl:text-deskh1  max-w-[544px] xl:max-w-[717px] modal-form-title">
+                        Запись на прием
+                    </h2>
+                    <button class="rounded-full flex items-center justify-center bg-mcg-bs w-10 h-10 modal-close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z" fill="#005055"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z" fill="#005055"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div action="" class="">
+                    <form action="" class="">
+                        <label class="input mb-[30px]">
+                            <span class="input__title">Имя*</span>
+                            <input  type="text">
+                        </label>
+                        <label class="input mb-[30px]">
+                            <span class="input__title">Телефон*</span>
+                            <input  type="text">
+                        </label>
+                        <div class="grid">
+                            <input class="checkbox row-start-4 w-0 h-0 invisible" type="checkbox" id="formModalSimpleCheckbox">
+                            <label class="mb-6 md:mb-[30px] inuput-checkbox row-start-2" for="formModalSimpleCheckbox">
+                                <div class="text-but14r">Согласен на <a href="" class="underline hover:text-mcg-lg underline-offset-[3px]">обработку персональных данных</a>
+                                </div>
+                            </label>
+                            <button class="button button-main button-main--small-on-tab row-start-3 md:w-fit">
+                                <span>Отправить</span>
+                            </button>
+                        </div>
+                    </form>
+                   
+                </div>
+            </div>
+            <div class="modal--form__success w-full">
+                <div class="flex items-center justify-center flex-col text-center">
+                    <svg class="w-9 h-9 md:w-12 md:h-12 mb-4" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.3353 18.4646C33.9072 19.064 33.8848 20.0135 33.2854 20.5853L22.2792 31.0853C21.6992 31.6386 20.7869 31.6382 20.2074 31.0844L14.7137 25.8344C14.1148 25.2621 14.0932 24.3126 14.6656 23.7137C15.2379 23.1147 16.1874 23.0932 16.7863 23.6656L21.2446 27.9261L31.2146 18.4147C31.814 17.8428 32.7635 17.8652 33.3353 18.4646Z" fill="#2CCE32"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 7.5C14.8873 7.5 7.5 14.8873 7.5 24C7.5 33.1127 14.8873 40.5 24 40.5C33.1127 40.5 40.5 33.1127 40.5 24C40.5 14.8873 33.1127 7.5 24 7.5ZM4.5 24C4.5 13.2304 13.2304 4.5 24 4.5C34.7696 4.5 43.5 13.2304 43.5 24C43.5 34.7696 34.7696 43.5 24 43.5C13.2304 43.5 4.5 34.7696 4.5 24Z" fill="#2CCE32"/>
+                    </svg>
+                    <h3 class="text-mobh1 md:text-deskh2 mb-[30px]">Заявка отправлена!</h3>
+                    <p class="text-body3">Мы свяжемся с вами в ближайшее время</p>
+                    <a href="/" class="button button-main button-main--small-on-tab w-full md:w-fit modal-close mt-[30px]" >
+                        <span>ОК</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+<div class="modal modal--full modal--fade full-review flex" id="formSuccess">
+    <div class="m-auto  max-w-[351px] md:max-w-[640px] w-full ">
+        <div class="modal__container  flex w-full !bg-bg-white rounded-3xl shadow-3 !py-5 md:!py-[30px] px-5 md:px-[30px] ">
+            <div class="w-full">
+                <div class="flex items-center justify-center flex-col text-center">
+                    <svg class="w-9 h-9 md:w-12 md:h-12 mb-4" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.3353 18.4646C33.9072 19.064 33.8848 20.0135 33.2854 20.5853L22.2792 31.0853C21.6992 31.6386 20.7869 31.6382 20.2074 31.0844L14.7137 25.8344C14.1148 25.2621 14.0932 24.3126 14.6656 23.7137C15.2379 23.1147 16.1874 23.0932 16.7863 23.6656L21.2446 27.9261L31.2146 18.4147C31.814 17.8428 32.7635 17.8652 33.3353 18.4646Z" fill="#2CCE32"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 7.5C14.8873 7.5 7.5 14.8873 7.5 24C7.5 33.1127 14.8873 40.5 24 40.5C33.1127 40.5 40.5 33.1127 40.5 24C40.5 14.8873 33.1127 7.5 24 7.5ZM4.5 24C4.5 13.2304 13.2304 4.5 24 4.5C34.7696 4.5 43.5 13.2304 43.5 24C43.5 34.7696 34.7696 43.5 24 43.5C13.2304 43.5 4.5 34.7696 4.5 24Z" fill="#2CCE32"/>
+                    </svg>
+                    <h3 class="text-mobh1 md:text-deskh2 mb-[30px]">Заявка отправлена!</h3>
+                    <p class="text-body3">Мы свяжемся с вами в ближайшее время</p>
+                    <a href="/" class="button button-main button-main--small-on-tab w-full md:w-fit modal-close mt-[30px]" >
+                        <span>ОК</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

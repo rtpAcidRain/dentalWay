@@ -1,0 +1,767 @@
+<div class="container pt-6 md:pt-[30px] xl:pt-3">
+    <div class="breadcrumbs">
+        <ol class="breadcrumbs__desk">
+            <li class="breadcrumb breadcrumb__home">
+                <a href="/">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9886 2.90521C11.265 2.65286 11.6257 2.51294 12 2.51294C12.3743 2.51294 12.735 2.65287 13.0114 2.90521L13.0125 2.90621L20.5107 9.72015L20.5212 9.72994C20.6694 9.86991 20.7881 10.0381 20.8703 10.2247C20.9526 10.4112 20.9966 10.6124 20.9999 10.8162L21 10.8283V19.5002C21 19.898 20.842 20.2796 20.5607 20.5609C20.2794 20.8422 19.8978 21.0002 19.5 21.0002H15C14.6022 21.0002 14.2206 20.8422 13.9393 20.5609C13.658 20.2796 13.5 19.898 13.5 19.5002V15.0002H10.5V19.5002C10.5 19.898 10.342 20.2796 10.0607 20.5609C9.77936 20.8422 9.39782 21.0002 9 21.0002H4.5C4.10218 21.0002 3.72065 20.8422 3.43934 20.5609C3.15804 20.2796 3 19.898 3 19.5002V10.8283L3.0001 10.8162C3.0034 10.6124 3.04745 10.4112 3.12966 10.2247C3.21187 10.0381 3.33057 9.86991 3.47879 9.72994L3.48935 9.72015L10.9875 2.90621L10.9886 2.90521ZM4.50711 10.8221L11.9982 4.01463L12 4.01294L12.0018 4.01463L19.4929 10.8221C19.4949 10.8243 19.4965 10.8268 19.4977 10.8296C19.499 10.8324 19.4997 10.8354 19.5 10.8385V19.5002H15V15.0002C15 14.6024 14.842 14.2208 14.5607 13.9395C14.2794 13.6582 13.8978 13.5002 13.5 13.5002H10.5C10.1022 13.5002 9.72065 13.6582 9.43934 13.9395C9.15804 14.2208 9 14.6024 9 15.0002V19.5002H4.5V10.8385C4.50026 10.8354 4.50103 10.8324 4.50229 10.8296C4.50349 10.8268 4.50512 10.8243 4.50711 10.8221Z"/>
+                    </svg>
+                </a>
+            </li>
+            <li class="breadcrumb">
+                <a href="/">
+                    Врачи
+                </a>
+            </li>
+        </ol>
+        <a href="/" class="breadcrumbs__mob" onclick="history.back(); return false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5303 3.96967C15.8232 4.26256 15.8232 4.73744 15.5303 5.03033L8.56066 12L15.5303 18.9697C15.8232 19.2626 15.8232 19.7374 15.5303 20.0303C15.2374 20.3232 14.7626 20.3232 14.4697 20.0303L6.96967 12.5303C6.67678 12.2374 6.67678 11.7626 6.96967 11.4697L14.4697 3.96967C14.7626 3.67678 15.2374 3.67678 15.5303 3.96967Z" fill="black"/>
+            </svg>
+            <span>Назад</span>
+        </a>
+    </div>
+</div>
+<h1 class="w-0 h-0 overflow-hidden">Отзыв</h1>
+<section class="container mb-10 xl:mb-[54px] full-review"> 
+    <div class="review--top">
+        <div class="">
+            <div class="review__date mb-6">01.01.2024</div>
+            <h2 class="text-text-th text-mobh1 md:text-deskh2 xl:text-deskh1 mb-6 md:mb-[30px]">Ольга</h2>
+        </div>
+        <div class="flex gap-4 items-center mb-6 md:mb-2 xl:mb-3">
+            <div class="review__stars !mb-0">
+                <div class="review__star"></div>
+                <div class="review__star"></div>
+                <div class="review__star"></div>
+                <div class="review__star"></div>
+                <div class="review__star unfilled"></div>
+            </div>
+            <div class="text-but16r text-text-th">
+                Отлично
+            </div>
+        </div>
+    </div>
+    <div class=" mb-6 md:mb-[30px]">
+        <div class="relative pb-[67px] md:pb-0 swiper-fade" id="singlePageReviewSlider">
+            <div class="mb-5 md:flex justify-between items-end">
+                <div class="swiper-controls absolute left-1/2 bottom-[0] -translate-x-1/2 md:static md:translate-x-0 ml-auto">
+                    <button class="but prev">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
+                        </svg>
+                    </button>
+                    <div class="pagination">
+    
+                    </div>
+                    <button class="but next">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/img/svg/rastr.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/svg/rastr.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/svg/rastr.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/svg/rastr.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/svg/rastr.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/svg/rastr.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/svg/rastr.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const slides = document.querySelectorAll('#singlePageReviewSlider .swiper-slide')
+    
+                    const swiper = new Swiper('#singlePageReviewSlider .swiper', {
+                        spaceBetween: 12,
+                        pagination: defaultFractionPag('#singlePageReviewSlider .swiper-controls .pagination'),
+                        slidesPerView: 2,
+                        navigation:{
+                            prevEl: '#singlePageReviewSlider .swiper-controls .prev',
+                            nextEl: '#singlePageReviewSlider .swiper-controls .next',
+                        },
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 16,
+                            },
+                            1366: {
+                                spaceBetween: 30,
+                                slidesPerView: 3,
+                            }
+                        }
+                    })
+                })
+            </script>
+        </div>
+    </div>
+    <div class="review--bot">
+        <p class="review__text">
+            Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+            Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+            Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+            Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+            Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+            Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+            Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+        </p>
+        <div class="review__answer pl-5 md:ml-auto md:pl-0 md:max-w-[532px] xl:max-w-[819px]">
+            <div class="flex items-center justify-between mb-2">
+                <div class="flex gap-[5px] items-center text-mobh2 md:text-deskh2 text-text-h">
+                    <img
+                                  class="w-5 h-5 md:w-8 md:h-8 object-cover"
+                                  src="/img/svg/logo375.svg"
+                                  alt="Логотип" 
+                    />
+                    Dental Way
+                </div>
+                <div class="text-mobSubtitle font-[400] text-el-ia">
+                    01.01.2024
+                </div>
+            </div>
+            <p class="text-body1 text-text-d">
+                Текст ответа в любое количество строк. Текст ответа в любое количество строк. Текст ответа в любое количество строк. Текст ответа в любое количество строк.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="mb-10 xl:mb-[54px]">
+    <div class="container">
+        <div class="">
+            <div id="reviewSlider" class="relative pb-[98px] md:pb-0 mb-6">
+                <div class="mb-5 md:flex justify-between items-end">
+                    <h2 class="text-mobh1 md:text-deskh2 xl:text-deskh1 md:max-w-[456px] xl:max-w-[717px]">Похожие отзывы</h2>
+                    <div class="swiper-controls absolute left-1/2 bottom-[31px] -translate-x-1/2 md:static md:translate-x-0">
+                        <button class="but prev">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
+                            </svg>
+                        </button>
+                        <div class="pagination">
+        
+                        </div>
+                        <button class="but next">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="review swiper-slide">
+                            <div class="review--top">
+                                <div class="review__header">
+                                    <div class="review__name">Ольга</div>
+                                    <div class="review__date">01.01.2024</div>
+                                </div>
+                                <div class="review__stars">
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                </div>
+                            </div>
+                            <div class="review-slider mb-3">
+                                <div class="review-slider__button before"></div>
+                                <div class="swiper review__images">
+                                    <div class="swiper-wrapper">
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a> 
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="review-slider__button next"></div>
+                            </div>
+                            <div class="review--bot">
+                                <p class="review__text">
+                                    Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                                </p>
+                                <a href="/" class="button button-link w-fit">
+                                    <span>Читать полностью</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="review swiper-slide">
+                            <div class="review--top">
+                                <div class="review__header">
+                                    <div class="review__name">Ольга</div>
+                                    <div class="review__date">01.01.2024</div>
+                                </div>
+                                <div class="review__stars">
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                </div>
+                            </div>
+                            <div class="review-slider mb-3">
+                                <div class="review-slider__button before"></div>
+                                <div class="swiper review__images">
+                                    <div class="swiper-wrapper">
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a> 
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="review-slider__button next"></div>
+                            </div>
+                            <div class="review--bot">
+                                <p class="review__text">
+                                    Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                                </p>
+                                <a href="/" class="button button-link w-fit">
+                                    <span>Читать полностью</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="review swiper-slide">
+                            <div class="review--top">
+                                <div class="review__header">
+                                    <div class="review__name">Ольга</div>
+                                    <div class="review__date">01.01.2024</div>
+                                </div>
+                                <div class="review__stars">
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                </div>
+                            </div>
+                            <div class="review-slider mb-3">
+                                <div class="review-slider__button before"></div>
+                                <div class="swiper review__images">
+                                    <div class="swiper-wrapper">
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a> 
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="review-slider__button next"></div>
+                            </div>
+                            <div class="review--bot">
+                                <p class="review__text">
+                                    Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                                </p>
+                                <a href="/" class="button button-link w-fit">
+                                    <span>Читать полностью</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="review swiper-slide">
+                            <div class="review--top">
+                                <div class="review__header">
+                                    <div class="review__name">Ольга</div>
+                                    <div class="review__date">01.01.2024</div>
+                                </div>
+                                <div class="review__stars">
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                </div>
+                            </div>
+                            <div class="review-slider mb-3">
+                                <div class="review-slider__button before"></div>
+                                <div class="swiper review__images">
+                                    <div class="swiper-wrapper">
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a> 
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="review-slider__button next"></div>
+                            </div>
+                            <div class="review--bot">
+                                <p class="review__text">
+                                    Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                                </p>
+                                <a href="/" class="button button-link w-fit">
+                                    <span>Читать полностью</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="review swiper-slide">
+                            <div class="review--top">
+                                <div class="review__header">
+                                    <div class="review__name">Ольга</div>
+                                    <div class="review__date">01.01.2024</div>
+                                </div>
+                                <div class="review__stars">
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                </div>
+                            </div>
+                            <div class="review-slider mb-3">
+                                <div class="review-slider__button before"></div>
+                                <div class="swiper review__images">
+                                    <div class="swiper-wrapper">
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a> 
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="review-slider__button next"></div>
+                            </div>
+                            <div class="review--bot">
+                                <p class="review__text">
+                                    Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                                </p>
+                                <a href="/" class="button button-link w-fit">
+                                    <span>Читать полностью</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="review swiper-slide">
+                            <div class="review--top">
+                                <div class="review__header">
+                                    <div class="review__name">Ольга</div>
+                                    <div class="review__date">01.01.2024</div>
+                                </div>
+                                <div class="review__stars">
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                </div>
+                            </div>
+                            <div class="review-slider mb-3">
+                                <div class="review-slider__button before"></div>
+                                <div class="swiper review__images">
+                                    <div class="swiper-wrapper">
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a> 
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="review-slider__button next"></div>
+                            </div>
+                            <div class="review--bot">
+                                <p class="review__text">
+                                    Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                                </p>
+                                <a href="/" class="button button-link w-fit">
+                                    <span>Читать полностью</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="review swiper-slide">
+                            <div class="review--top">
+                                <div class="review__header">
+                                    <div class="review__name">Ольга</div>
+                                    <div class="review__date">01.01.2024</div>
+                                </div>
+                                <div class="review__stars">
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                </div>
+                            </div>
+                            <div class="review-slider mb-3">
+                                <div class="review-slider__button before"></div>
+                                <div class="swiper review__images">
+                                    <div class="swiper-wrapper">
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a> 
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="review-slider__button next"></div>
+                            </div>
+                            <div class="review--bot">
+                                <p class="review__text">
+                                    Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                                </p>
+                                <a href="/" class="button button-link w-fit">
+                                    <span>Читать полностью</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="review swiper-slide">
+                            <div class="review--top">
+                                <div class="review__header">
+                                    <div class="review__name">Ольга</div>
+                                    <div class="review__date">01.01.2024</div>
+                                </div>
+                                <div class="review__stars">
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                </div>
+                            </div>
+                            <div class="review-slider mb-3">
+                                <div class="review-slider__button before"></div>
+                                <div class="swiper review__images">
+                                    <div class="swiper-wrapper">
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a> 
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <img src="/img/svg/rastr.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="review-slider__button next"></div>
+                            </div>
+                            <div class="review--bot">
+                                <p class="review__text">
+                                    Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                                </p>
+                                <a href="/" class="button button-link w-fit">
+                                    <span>Читать полностью</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const swiper = new Swiper(document.querySelector('#reviewSlider .swiper'), {
+                            spaceBetween: 16,
+                            slidesPerView: 1,
+                            autoHeight: true,
+                            pagination: defaultFractionPag('#reviewSlider .swiper-controls .pagination'),
+                            navigation:{
+                                prevEl: '#reviewSlider .swiper-controls .prev',
+                                nextEl: '#reviewSlider .swiper-controls .next',
+                            },
+                            breakpoints: {
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                                1366: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30,
+                                }
+                            }
+                        })
+                    })
+                </script>
+            </div>
+        </div>
+        <div class=" flex flex-col gap-3 md:gap-6 md:justify-end md:flex-row">
+            <a href="/" class="button button-main button-main--small-on-tab">
+                <span>Все отзывы</span>
+            </a>
+            <a href="/" class="button button-main button-main--small-on-tab button-main--secondary">
+                <span>Фото работ</span>
+            </a>
+        </div>
+    </div>
+</section>

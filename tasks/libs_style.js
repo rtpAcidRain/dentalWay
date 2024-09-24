@@ -1,5 +1,6 @@
 const plugins = [
   "node_modules/swiper/swiper.min.css",
+  'node_modules/@fancyapps/ui/dist/fancybox/fancybox.css'
 ];
 
 const {

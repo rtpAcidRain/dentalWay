@@ -95,3 +95,17 @@
         }
     }
 }
+
+
+.modal--form{
+    &:not(.success){
+        .modal--form__success {
+            display: none !important;
+        }
+    }
+    &.success {
+        .modal--form__form {
+            display: none !important;
+        }
+    }
+}

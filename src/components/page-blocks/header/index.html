@@ -81,7 +81,7 @@
 				<a href="#" class="h-full xl:flex items-center justify-center gap-2 text-but18r ml-10 hidden">
 					<span>Наш блог</span>
 				</a>
-				<a href="#" class="h-full flex items-center justify-center gap-2 ml-6 text-but18r xl:ml-10 subheader-button" data-modal="clinickModal">
+				<a href="#" class="h-full flex items-center justify-center gap-2 ml-6 text-but18r xl:ml-10 subheader-button" data-modal="clinickModal" data-modal-enablescroll>
 					<span>3 клиники</span>
 					<span>
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -127,13 +127,13 @@
 				<h2 class="text-deskh3 mb-5">
 					Поиск по сайту
 				</h2>
-				<form action="" class="w-full mb-10">
+				<form action="" class="w-full mb-10 search-on-site-header" id="searchOnSiteHeader">
 					<label class="relative rounded-[200px] border border-el-lg transition-colors hover:border-text-d flex items-center gap-[22px] py-[14.5px] pl-5 pr-[152px] ">
 						<svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75C6.93997 3.75 3.75 6.93997 3.75 10.875C3.75 14.81 6.93997 18 10.875 18C14.81 18 18 14.81 18 10.875C18 6.93997 14.81 3.75 10.875 3.75ZM2.25 10.875C2.25 6.11154 6.11154 2.25 10.875 2.25C15.6385 2.25 19.5 6.11154 19.5 10.875C19.5 15.6385 15.6385 19.5 10.875 19.5C6.11154 19.5 2.25 15.6385 2.25 10.875Z" fill="#797979"/>
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9133 15.9135C16.2062 15.6206 16.681 15.6206 16.9739 15.9135L21.5302 20.4697C21.8231 20.7626 21.8231 21.2375 21.5302 21.5304C21.2373 21.8233 20.7624 21.8233 20.4695 21.5304L15.9133 16.9741C15.6204 16.6812 15.6204 16.2064 15.9133 15.9135Z" fill="#797979"/>
 						</svg>
-						<input type="text" placeholder="Введите текст" class="placeholder-el-it rounded-[200px] text-but18r h-[22px] w-full p-0 border-0 " id="searchOnSiteInput">
+						<input type="text" placeholder="Введите текст" class="placeholder-el-it text-but18r h-[22px] w-full p-0 border-0 " id="searchOnSiteInputHeader">
 						<button  class="button button-main absolute right-0 top-1/2 -translate-y-1/2 ">
 							<span>Найти</span>
 						</button>
@@ -142,7 +142,7 @@
 				<div class="grid gap-[30px] xl:grid-cols-2">
 					<div>
 						<h4 class="mb-5 text-el-it text-body1">Популярные запросы</h4>
-						<div class="flex flex-wrap gap-5 text-but18m mb-[30px]">
+						<div class="flex flex-wrap gap-5 text-but18m mb-[30px] insert-in-search">
 							<button>Лечение кариеса</button>
 							<button>Удаление зубов</button>
 							<button>Имплантация</button>
@@ -152,7 +152,7 @@
 					<div>
 						<div class="mb-5 flex justify-between items-center">
 							<h4 class=" text-el-it text-body1">История поиска</h4>
-							<button class="flex gap-2 items-center text-but18r">
+							<button class="flex gap-2 items-center text-but18r" id="headerClearHistorySearch">
 								<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2803 5.21967C19.5732 5.51256 19.5732 5.98744 19.2803 6.28033L5.78033 19.7803C5.48744 20.0732 5.01256 20.0732 4.71967 19.7803C4.42678 19.4874 4.42678 19.0126 4.71967 18.7197L18.2197 5.21967C18.5126 4.92678 18.9874 4.92678 19.2803 5.21967Z" fill="#0A0A0A"/>
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M4.71967 5.21967C5.01256 4.92678 5.48744 4.92678 5.78033 5.21967L19.2803 18.7197C19.5732 19.0126 19.5732 19.4874 19.2803 19.7803C18.9874 20.0732 18.5126 20.0732 18.2197 19.7803L4.71967 6.28033C4.42678 5.98744 4.42678 5.51256 4.71967 5.21967Z" fill="#0A0A0A"/>
@@ -160,8 +160,7 @@
 								<span>Очистить</span>
 							</button>
 						</div>
-						<div class="flex flex-wrap gap-5 text-but18m">
-							<button>Лечение кариеса</button>
+						<div class="flex flex-wrap gap-5 text-but18m insert-in-search" id="historySearch">
 						</div>
 					</div>
 				</div>
@@ -181,7 +180,7 @@
 	<div class="modal modal--left mobile-nav md:hidden" id="mobileNav">
 		<div class="modal__container">
 			<div class="pt-[30px] px-3 h-full flex flex-col">
-				<form action="" class="w-full">
+				<form action="" class="w-full search-on-site-header">
 					<label class="relative mr-[14px] rounded-full border border-el-lg block py-[7px] pl-5 pr-[52px]">
 						<input type="text" class="text-body3 h-[26px] w-full p-0 border-0 ">
 						<button  class="flex items-center justify-center w-10 h-10 rounded-full absolute right-0 top-0 bg-mcg-pg">

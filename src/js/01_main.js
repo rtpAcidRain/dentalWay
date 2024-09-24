@@ -7,7 +7,8 @@ let modals,
     modalSetTimeout,
     openedModal,
     header,
-    reviewImagesSliderConfig;
+    reviewImagesSliderConfig,
+    openVideo;
 
 const defaultFractionPag = (el) => {
     return {
@@ -46,16 +47,25 @@ document.addEventListener("DOMContentLoaded", () => {
     handleModalOpen = (modalId, button) => {
         clearTimeout(modalSetTimeout)
         openedModal = document.getElementById(modalId)
-        if(button.dataset.modalScrollblock){
-            html.classList.add('something-opened')
-        }
         modals.forEach((el) => {
             if(el.id === modalId){
                 el.classList.add('mounted')
                 el.classList.add('opened')
             }
         })
-        button.classList.add('modal-opened')
+        html.classList.add('something-opened')
+        
+        if(button){
+            if(button.dataset.modalEnablescroll !== undefined){
+                html.classList.remove('something-opened')
+            }
+            button.classList.add('modal-opened')
+            if(button.dataset.modalName){
+                if(openedModal.querySelector('.modal-form-title')){
+                    openedModal.querySelector('.modal-form-title').innerHTML = button.dataset.modalName
+                }
+            }
+        }
     }
 
     handleModalClose = (callback, attr1, attr2) => {
@@ -78,8 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }, MODAL_TIME)
     }
 
-    modalCloseButs.forEach((el) => {
-        el.addEventListener('click', function () {
+    [...modalCloseButs].forEach((el) => {
+        el.addEventListener('click', function (e) {
+            e.preventDefault()
             handleModalClose()
         })
     })
@@ -89,9 +100,12 @@ document.addEventListener("DOMContentLoaded", () => {
             handleModalClose()
         })
 
-        el.querySelector('.modal__container').addEventListener('click', function (e) {
-            e.stopPropagation()
-        })
+        if(el.querySelector('.modal__container')){
+            el.querySelector('.modal__container').addEventListener('click', function (e) {
+                e.stopPropagation()
+            })
+        }
+
     })
 
 
@@ -150,14 +164,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // test
     document.addEventListener('click', function () {
         accsScope.forEach((acc) => {
-            const accItems = acc.querySelectorAll(':scope > .accardeon-item');
-            [...accItems].forEach((accItem) => {
-                accItem.classList.remove('opened')
-            })
-            acc.classList.remove('sm-opened')
+            if(!acc.classList.contains('static-list')){
+                const accItems = acc.querySelectorAll(':scope > .accardeon-item');
+                [...accItems].forEach((accItem) => {
+                    accItem.classList.remove('opened')
+                })
+                acc.classList.remove('sm-opened')
+            }
         })
-       
-        
     })
 
 
@@ -195,6 +209,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return new Swiper(el.querySelector('.swiper'), {
             slidesPerView: 'auto',
             spaceBetween: 12,
+            touchMoveStopPropagation: true,
+            // touchRatio: 0,
+            // touchReleaseOnEdges: true,
+            // allowTouchMove: false,
             navigation: {
                 nextEl: el.querySelector('.review-slider__button.next'),
                 prevEl: el.querySelector('.review-slider__button.before'),
@@ -207,6 +225,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     reviewImagesSlider.forEach((el) => {
         const slider = reviewImagesSliderConfig(el)
+    })
+
+
+    // SIMPLE SLIDE TOGGLER 
+
+    const sst = document.querySelectorAll('.sst');
+
+    [...sst].forEach((el) => {
+        const tabs = el.querySelectorAll('.sst-tabs > *');
+        const slides = el.querySelectorAll('.sst-slides > *');
+        tabs[0].classList.add('selected');
+        slides[0].classList.add('selected');
+
+        [...tabs].forEach((el, i) => {
+            el.addEventListener('click', function(e) { 
+                e.preventDefault()
+                for(let j = 0; j < tabs.length; j++){
+                    tabs[j].classList.remove('selected')
+                    slides[j].classList.remove('selected')
+                }
+                this.classList.add('selected')
+                slides[i].classList.add('selected')
+            })
+        })
     })
 
 
@@ -279,14 +321,18 @@ document.addEventListener("DOMContentLoaded", () => {
           bCont = document.createElement("DIV");
           b.setAttribute("class", "select-items select-hide");
           bCont.setAttribute("class", "select-items__items");
-          for (j = 1; j < ll; j++) {
+          for (j = 0; j < ll; j++) {
             /* For each option in the original select element,
             create a new DIV that will act as an option item: */
             c = document.createElement("DIV");
             c.innerHTML = selElmnt.options[j].innerHTML;
+            if(j === selElmnt.selectedIndex){
+                c.setAttribute("class", "same-as-selected");
+            }
             c.addEventListener("click", function(e) {
                 /* When an item is clicked, update the original select box,
                 and the selected item: */
+                e.stopPropagation()
                 var y, i, k, s, h, sl, yl;
                 s = this.parentNode.parentNode.parentNode.getElementsByTagName("select")[0];
                 sl = s.length;
@@ -304,6 +350,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     break;
                   }
                 }
+                this.closest('form').submit()
                 h.click();
             });
             bCont.appendChild(c);
@@ -317,8 +364,13 @@ document.addEventListener("DOMContentLoaded", () => {
             closeAllSelect(this);
             this.nextSibling.classList.toggle("select-hide");
             this.classList.toggle("select-arrow-active");
+            
 
           });
+
+          x[i].addEventListener("click", function(e) {
+            e.stopPropagation()
+          })
         }
 
         function closeAllSelect(elmnt) {
@@ -334,6 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
               arrNo.push(i)
             } else {
               y[i].classList.remove("select-arrow-active");
+              
             }
           }
           for (i = 0; i < xl; i++) {
@@ -341,11 +394,13 @@ document.addEventListener("DOMContentLoaded", () => {
               x[i].classList.add("select-hide");
             }
           }
+
+
         }
 
         /* If the user clicks anywhere outside the select box,
         then close all select boxes: */
-        // document.addEventListener("click", closeAllSelect);
+        document.addEventListener("click", closeAllSelect);
     })()
 
     // SELECTS END
@@ -373,4 +428,231 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     // 
+
+    // MASKS
+
+    const inputPhone = document.querySelectorAll('.phone');
+
+    [...inputPhone].forEach((el) => {
+      IMask(el,  {
+        mask: '+{7}(000)000-00-00'
+      });
+    })
+
+
+
+    // FANCYBOX
+
+    openVideo = (link) => {
+        const videoFrame = document.getElementById('videoIframe')
+        videoFrame.setAttribute('src', link)
+        Fancybox.show([{
+            src: '#videoIframe',
+        }])
+    }
+
+
+    // Search
+    // searchOnSiteHeader
+    const searchOnSite = document.querySelectorAll('.search-on-site-header');
+    const searchOnSiteInputs = document.querySelectorAll('.search-on-site-header input');
+    const searchHistory = JSON.parse(localStorage.getItem("searchHistory")) ?? [];
+    const searchOnSiteInputHeader = document.getElementById('searchOnSiteInputHeader');
+    const headerClearHistorySearch = document.getElementById('headerClearHistorySearch');
+    const historySearch = document.getElementById('historySearch');
+
+
+    for(let i = searchHistory.length - 1; i > searchHistory.length - 6; i--) {
+        if(i >= 0 ){
+            const but = document.createElement('button')
+            but.innerText = searchHistory[i]
+            historySearch.appendChild(but)
+        }
+    }
+
+    [...searchOnSite].forEach((el, i) => {
+        el.addEventListener('submit', function() {
+            if(searchOnSiteInputs[i].value){
+                searchHistory.push(searchOnSiteInputs[i].value)
+                localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+            }
+        })
+    })
+
+    if(headerClearHistorySearch){
+        headerClearHistorySearch.addEventListener('click', function() {
+            searchHistory.splice(0, searchHistory.length)
+            localStorage.removeItem("searchHistory");
+            historySearch.innerHTML = ''
+        })
+    }
+
+    const insertInSearch = document.querySelectorAll('.insert-in-search > *');
+
+    [...insertInSearch].forEach((el) => {
+        el.addEventListener('click', function() {
+            searchOnSiteInputHeader.value = el.innerHTML
+        })
+    })
+
 })
+
+
+
+
+function ajaxForm(obForm, link) {
+    if(obForm){
+        
+        obForm.addEventListener('submit', function(e) {
+            e.preventDefault()
+            
+            const inputs = obForm.querySelectorAll('.input')
+            
+            function setValidationFormsBot() {
+                if(!obForm.querySelector('.checkbox').checked){
+                    return false
+                }
+                const EMAIL_REGEXP =
+                  /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+                const PHONE_REGEXP = /\+\d{1}\(\d{3}\)\d{3}-\d{2}-\d{2}/g;
+
+                let check = true;
+
+                function isEmailValid(value) {
+                  if (EMAIL_REGEXP.test(value)) {
+                    check = true;
+                  } else {
+                    check = false;
+                  }
+                }
+            
+                function isPhoneValid(value) {
+                  if (PHONE_REGEXP.test(value)) {
+                    check = true;
+                  } else {
+                    check = false;
+                  }
+                }
+
+                function createErrorElement(target, text){
+                    const error = document.createElement('div')
+                    const textError = document.createTextNode(text);
+                    error.classList.add('input__errortext')
+                    error.appendChild(textError)
+
+                    target.appendChild(error)
+                }
+            
+                [...inputs].forEach((inp) => {
+                    if(inp.querySelector('input') && inp.querySelector('input').type !== 'file'){
+                        let inputTarget = inp.querySelector('input')
+                        inp.classList.remove('error')
+                        if(inp.querySelector('.input__errortext')){
+                            inp.querySelector('.input__errortext').remove()
+                        }
+                    
+                        if(inputTarget.value.length > 0 ){
+                            if(inputTarget.classList.contains('phone')){
+                                isPhoneValid(inputTarget.value)
+                                if(!check){
+                                    inp.classList.add('error')
+                                    createErrorElement(inp, 'Телефон введен неверно')
+                                }
+                            }
+                        } else {
+                            inp.classList.add('error')
+                            createErrorElement(inp, 'Поле должно быть заполнено')
+                        }
+                    }
+                })
+            
+                if(obForm.querySelector('.error')){
+                  return false
+                } else {
+                  return true
+                }
+            
+            }
+        
+            if(!setValidationFormsBot()){
+              return false
+            }
+
+
+
+            obForm.getElementsByClassName('error-msg')[0].innerHTML = '';
+        
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', link);
+        
+            xhr.onload = function() {
+                if (xhr.status != 200) {
+                    alert(`������ ${xhr.status}: ${xhr.statusText}`);
+                } else {
+                    var json = JSON.parse(xhr.responseText)
+                
+                    if (! json.success) {
+                        let errorStr = '';
+                        for (let fieldKey in json.errors) {
+                            errorStr += json.errors[fieldKey] + '<br>';
+                        }
+
+                        // ������ ������� � ������� � ������� error-msg
+                        obForm.getElementsByClassName('error-msg')[0].innerHTML = errorStr;
+                    } else {
+                        // ���������� ��������� �� �������� ��������
+
+                        if(obForm.closest('.modal')) {
+                            obForm.closest('.modal').classList.add('success')
+                        } else {
+                            handleModalOpen('formSuccess');
+                            [...inputs].forEach((inp) => {
+                                let inputTarget = inp.querySelector('input')
+
+                                inputTarget.value = ''
+                            })
+                        }
+                    }
+                }
+            };
+        
+            xhr.onerror = function() {
+                alert("������ �� ������");
+            };
+        
+            // �������� ��� ������ �� �����
+            xhr.send(new FormData(obForm));
+        });
+    }
+}
+
+
+
+function ChangeDoc(a1)
+{
+  var cusid_ele = document.getElementsByClassName('DOCTOR_NAME');
+for (var i = 0; i < cusid_ele.length; ++i) {
+  var item = cusid_ele[i];  
+  item.value = a1;
+}
+}
+
+
+  function ChangeService(a1)
+{
+  var cusid_ele = document.getElementsByClassName('SERVICE_NAME');
+for (var i = 0; i < cusid_ele.length; ++i) {
+  var item = cusid_ele[i];  
+  item.value = a1;
+}
+}
+
+function ChangeClinic(a1)
+{
+  var cusid_ele = document.getElementsByClassName('CLINIC_NAME');
+for (var i = 0; i < cusid_ele.length; ++i) {
+  var item = cusid_ele[i];  
+  item.value = a1;
+}
+}

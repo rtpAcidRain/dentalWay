@@ -25,13 +25,13 @@
 <section class="mb-10 xl:mb-[54px]">
     <h1 class="container text-mobh1 md:text-deskh2 xl:text-deskh1 mb-[30px]">Поиск по сайту</h1>
     <div class="container mb-[30px] md:mb-10">
-        <form action="" class="w-full">
+        <form action="" class="w-full search-on-site-header">
             <label class="relative rounded-[200px] border border-el-lg transition-colors hover:border-text-d block py-[7px] pl-5 pr-[52px] md:flex md:items-center md:gap-[22px] md:py-[14.5px] md:pl-5 md:pr-[152px]">
                 <svg class="hidden md:block" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75C6.93997 3.75 3.75 6.93997 3.75 10.875C3.75 14.81 6.93997 18 10.875 18C14.81 18 18 14.81 18 10.875C18 6.93997 14.81 3.75 10.875 3.75ZM2.25 10.875C2.25 6.11154 6.11154 2.25 10.875 2.25C15.6385 2.25 19.5 6.11154 19.5 10.875C19.5 15.6385 15.6385 19.5 10.875 19.5C6.11154 19.5 2.25 15.6385 2.25 10.875Z" fill="#797979"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9133 15.9135C16.2062 15.6206 16.681 15.6206 16.9739 15.9135L21.5302 20.4697C21.8231 20.7626 21.8231 21.2375 21.5302 21.5304C21.2373 21.8233 20.7624 21.8233 20.4695 21.5304L15.9133 16.9741C15.6204 16.6812 15.6204 16.2064 15.9133 15.9135Z" fill="#797979"/>
                 </svg>
-                <input type="text" placeholder="Название услуги" class="text-body3 rounded-[200px] h-[26px] w-full p-0 border-0 placeholder-el-it md:text-but18r md:h-[22px] ">
+                <input type="text" placeholder="Название услуги" class="text-body3  h-[26px] w-full p-0 border-0 placeholder-el-it md:text-but18r md:h-[22px] ">
                 <button  class="flex items-center justify-center w-10 h-10 md:w-fit md:h-fit rounded-full md:rounded-none absolute  right-0 top-1/2 -translate-y-1/2 bg-mcg-pg md:bg-trans">
                     <svg class="md:hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.875 3.75C6.93997 3.75 3.75 6.93997 3.75 10.875C3.75 14.81 6.93997 18 10.875 18C14.81 18 18 14.81 18 10.875C18 6.93997 14.81 3.75 10.875 3.75ZM2.25 10.875C2.25 6.11154 6.11154 2.25 10.875 2.25C15.6385 2.25 19.5 6.11154 19.5 10.875C19.5 15.6385 15.6385 19.5 10.875 19.5C6.11154 19.5 2.25 15.6385 2.25 10.875Z" fill="#fff"/>
@@ -44,30 +44,26 @@
             </label>
         </form>
     </div>
-    <form action="" class="filter container mb-[30px] md:mb-10">
+    <form action="" class="filter container mb-[30px] md:mb-10" id="searchFilter">
         <label class="filter__item active">
-            <input type="radio">
+            <input value="0" type="radio">
             <span>Все</span>
         </label>
         <label class="filter__item ">
-            <input type="radio">
-            <span>Акции</span>
-        </label>
-        <label class="filter__item ">
-            <input type="radio">
+            <input value="6" type="radio">
             <span>Услуги</span>
         </label>
         <label class="filter__item ">
-            <input type="radio">
+            <input value="10" type="radio">
             <span>Врачи</span>
         </label>
         <label class="filter__item ">
-            <input type="radio">
+            <input value="12" type="radio">
             <span>Блог</span>
         </label>
     </form>
-    <div class="flex flex-col gap-6 md:gap-10">
-        <div class="flex flex-col gap-4 md:gap-5">
+    <div class="flex flex-col gap-6 md:gap-10" id="searchResults">
+        <div id="block_6" class="flex flex-col gap-4 md:gap-5">
             <div class="flex items-center gap-[30px] container">
                 <span class="text-mobh2 md:text-deskh3 xl:text-deskh2">Услуги</span>
                 <span class="text-el-ia text-deskSubtitle2 xl:text-deskSubtitle">3 результата</span>
@@ -80,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col gap-4 md:gap-5">
+        <div id="block_10" class="flex flex-col gap-4 md:gap-5">
             <div class="flex items-center gap-[30px] container">
                 <span class="text-mobh2 md:text-deskh3 xl:text-deskh2">Врачи</span>
                 <span class="text-el-ia text-deskSubtitle2 xl:text-deskSubtitle">7 результатов</span>
@@ -97,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col gap-4 md:gap-5">
+        <div id="block_12" class="flex flex-col gap-4 md:gap-5">
             <div class="flex items-center gap-[30px] container">
                 <span class="text-mobh2 md:text-deskh3 xl:text-deskh2">Блог</span>
                 <span class="text-el-ia text-deskSubtitle2 xl:text-deskSubtitle">8 результатов</span>
@@ -116,4 +112,30 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchFilter = document.querySelectorAll('#searchFilter .filter__item')
+            const searchResults = document.querySelectorAll('#searchResults > div');
+            
+
+            [...searchFilter].forEach((el) => {
+                el.addEventListener('click', function() {
+                    document.querySelector('#searchFilter .filter__item.active').classList.remove('active')
+                    this.classList.add('active');
+
+                    [...searchResults].forEach((el) => {
+                            el.classList.remove("!hidden")
+                    })
+
+                    if(this.querySelector('input').value != 0){
+                        [...searchResults].forEach((res) => {
+                            if(res.getAttribute('id') !== `block_${el.querySelector('input').value}` ){
+                                res.classList.add("!hidden")
+                            }
+                        })
+                    }
+                })
+            });
+        })
+    </script>
 </section>
