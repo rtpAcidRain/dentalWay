@@ -181,7 +181,7 @@ header {
     }
     &__el {
         .navigation-on-site__body {
-            @apply bg-bg-white z-30 pt-5 pr-[27px] pl-5 xl:pt-[30px] xl:pr-[63px] xl:pl-[30px] border-l border-el-lg ;
+            @apply bg-bg-white z-30 pt-5  xl:pt-[30px]  border-l border-el-lg ;
             position: absolute;
             pointer-events: none;
             opacity: 0;
@@ -192,7 +192,7 @@ header {
             
 
             &__heading {
-                @apply flex items-start mb-10;
+                @apply flex items-start mb-10 pr-[27px] pl-5 xl:pr-[63px] xl:pl-[30px];
                 &__title {
                     @apply text-deskh3 flex-1;
                 }
@@ -203,8 +203,9 @@ header {
             }
 
             &__list {
+                @apply pr-[27px] pl-5 xl:pr-[63px] xl:pl-[30px] max-h-[60vh];
                 @screen xl {
-                    @apply flex-row flex-wrap gap-5;
+                    @apply flex-row flex-wrap gap-5 ;
 
                     a {
                         @apply flex items-center justify-center gap-2 rounded-xl py-2 px-4 transition-colors;

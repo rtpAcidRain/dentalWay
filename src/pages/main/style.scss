@@ -33,7 +33,9 @@
 
                 &::before {
                     content: url("data:image/svg+xml,%3Csvg  viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z' fill='%23005055'/%3E%3Crect x='3.73926' y='3.73926' width='9.85164' height='9.87979' rx='4.92582' fill='%23EAF3F4'/%3E%3C/svg%3E%0A");
+                    min-width: 32px;
                     width: 32px;
+                    max-width: 32px;
                     height: 32px;
                 }
             }
@@ -87,6 +89,9 @@
 
     img {
         border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     
@@ -150,10 +155,10 @@
         border: 40px solid #fff;
         &::before {
             border-radius: 284.71px 284.71px 0 0;
-            width: 569.42px;
+            width: 592.42px;
             height: 284.71px;
-            top: 154px;
-            left: 13px;
+            top: 155px;
+            left: 1px;
         }
 
 
@@ -269,6 +274,7 @@
 }
 
 @screen md {
+    #saleSwiper .swiper,
     .swiper-fade .swiper,
     #reviewSlider .swiper:not(.review__images),
     #serviceSlider .swiper,
@@ -276,6 +282,7 @@
         @apply overflow-visible;
     }
 
+    
     .swiper-fade .swiper-slide,
     #reviewSlider .swiper:not(.review__images) > .swiper-wrapper > .swiper-slide,
     #doctorsSlider .swiper-slide,
@@ -287,12 +294,20 @@
             @apply opacity-100;
         }
     }
+
+    #saleSwiper .swiper-slide {
+        @apply opacity-0 transition-opacity;
+        &.swiper-slide-active {
+            @apply opacity-100;
+        }
+    }
 }
 
 @screen xl {
     #reviewSlider .swiper:not(.review__images) > .swiper-wrapper > .swiper-slide,
     #serviceSlider .swiper-slide,
-    #singlePageReviewSlider .swiper-slide 
+    #singlePageReviewSlider .swiper-slide,
+    #afterBeforeSlider .swiper-slide
      {
         &.swiper-slide-next + .swiper-slide {
             @apply opacity-100;
@@ -545,3 +560,6 @@
         }
     }
 }
+
+
+

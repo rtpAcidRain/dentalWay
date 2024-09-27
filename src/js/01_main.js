@@ -288,6 +288,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // SITENAVIGATION ------------------------->
 
+    // HEADERSERVICESSEARCH
+    (function(){
+        const searchInputsModal = document.querySelectorAll('.local-header-services-search');
+
+        [...searchInputsModal].forEach((el) => {
+            const form = el.querySelector('.local-header-services-search__form')
+            const input = el.querySelector('.local-header-services-search__input')
+            const list = [...el.querySelectorAll('.navigation-on-site__body__list a')]
+            const result = el.querySelector('.local-header-services-search__result')
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault()
+                const resultFilter = list.filter((res) => res.innerText.toLowerCase().includes(input.value.toLowerCase()))
+                const resultList = [...resultFilter]
+
+                if(resultList.length > 0){
+                    result.innerHTML = '';
+                    resultList.forEach((el) => {
+                        result.appendChild(el.cloneNode(true))
+                    })
+                } else {
+                    result.innerHTML = `<span class="text-body1 text-el-it">Ничего не найдено</span>`
+                }
+            })
+        })
+    })()
+
+    // HEADERSERVICESSEARCH ------------------------->
+
     // TABS
 
     const tabs = document.querySelectorAll('.tabs');
