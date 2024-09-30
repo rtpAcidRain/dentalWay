@@ -24,6 +24,7 @@
 }
 
 .video-block-desk {
+    position: relative;
     ol,
     ul {
         li {
@@ -32,6 +33,18 @@
             padding-left: 40px;
             display: block;
             min-height: 32px;
+        }
+    }
+
+    &::before {
+        content: '';
+        @apply w-[615px] h-[355px] xl:h-[396px] bg-mcg-b absolute top-[75px] -left-[176px] md:top-[87px] xl:top-auto md:-bottom-3 md:-left-[191px] xl:-bottom-[27px] xl:-left-[227px] -z-10;
+    }
+
+    @screen md {
+        &::after {
+            content: '';
+            @apply w-[507px] h-[340px] xl:h-[294px] bg-bg-beige absolute -bottom-[26px] -right-[253px] xl:-top-[17px] xl:bottom-auto xl:-right-[83px] -z-10;
         }
     }
 }
@@ -66,6 +79,31 @@
     ol,
     ul {
         @apply xl:mb-0 md:max-w-[548px] xl:max-w-[472px] ;
+    }
+
+
+    &::before {
+        @apply bg-bg-beige -z-10;
+        content: '';
+        position: absolute;
+        top: -44px;
+        right: 54px;
+        left: -40px;
+        bottom: -90px;
+
+        @screen md {
+            top: 71px;
+            right: 100px;
+            left: -55px;
+            bottom: -233px;
+        }
+        @screen xl {
+            width: 746px;
+            top: 45px;
+            right: auto;
+            left: -91px;
+            bottom: 0px;
+        }
     }
 }
 
@@ -138,9 +176,117 @@
     h4 {
         @apply text-mobSubtitle md:text-deskSubtitle xl:text-deskh4 text-text-th;
     }
+
+    & > .seo-block__container {
+        position: relative;
+        &::before,
+        &::after  {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+        }
+
+        &::before {
+            @apply bg-bg-beige;
+            height: 65.94202898550725%;
+            top: 45px;
+            right: 82px;
+            width: 100vw;
+        }
+
+        &::after {
+            @apply border border-el-lg;
+            width: 100vw;
+            height: 311px;
+            bottom: -32px;
+            left: 149px;
+        }
+
+        @screen md {
+            &::before {
+                top: auto;
+                bottom: -41px;
+                right: auto;
+                left: -361px;
+            }
+    
+            &::after {
+                width: 841px;
+                height: auto;
+                top: 25px;
+                bottom: -6px;
+                left: auto;
+                right: -684px;
+            }
+        }
+        @screen xl {
+            &::before {
+                width: 737px;
+                height: auto;
+                top: 226.52px;
+                bottom: -22.5px;
+                right: auto;
+                left: -397px;
+            }
+    
+            &::after {
+                width: 737px;
+                height: auto;
+                top: 11.52px;
+                bottom: -22.52px;
+                left: auto;
+                right: -526px;
+            }
+        }
+    }
 }
 
-// ul {
-//     @apply flex flex-col gap-4 text-text-d list-disc pl-6;
-// }
 
+
+.work-stages {
+    &__list {
+        counter-reset: work-secton;
+        &-el {
+            @apply pb-5 pl-[46px] md:pl-[67px] flex flex-col relative;
+            &__header {
+                @apply mb-3 text-mobSubtitle md:text-deskSubtitle2 text-text-d;
+            }
+            &__body {
+                @apply text-body4 text-text-d;
+            }
+            &::before {
+                content: '';
+                top: 0;
+                bottom: 0;
+                position: absolute;
+                left: 14px;
+                width: 1px;
+                @apply bg-mcg-dba;
+
+                @screen md {
+                    left: 21px;
+                }
+                
+            }
+            &::after {
+                counter-increment: work-secton;
+                content: '0'counter(work-secton);
+                @apply text-but16m md:text-but18m absolute top-1/2 -left-1 -translate-y-1/2 rounded-full border-4 border-bg-white bg-mcg-dba shadow-2 w-[38px] md:w-[51px] h-[38px] md:h-[49px] flex items-center justify-center text-text-d;
+            }
+
+            &:first-child {
+                &::before {
+                    top: 50%;
+                }
+            }
+
+            &:last-child {
+                @apply pb-0;
+                &::before {
+                    bottom: 50%;
+                }
+            }
+        }
+    }
+}

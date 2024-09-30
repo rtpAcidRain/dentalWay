@@ -228,6 +228,41 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 
+    const defaultSliders = document.querySelectorAll('.swiper-container');
+
+    [...defaultSliders].forEach((el) => {
+        const slider = new Swiper(el.querySelector('.swiper'), {
+            spaceBetween: el.querySelector('.swiper').dataset.sliderSb ?? 16,
+            slidesPerView: el.querySelector('.swiper').dataset.sliderSpv ?? 'auto',
+            pagination: defaultFractionPag(el.querySelector('.swiper-controls .pagination')),
+            autoHeight: el.querySelector('.swiper').dataset.sliderAh === 'false' ? false : true,
+            navigation:{
+                prevEl: el.querySelector('.swiper-controls .prev'),
+                nextEl: el.querySelector('.swiper-controls .next'),
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: el.querySelector('.swiper').dataset.sliderMdSpv ?? 2,
+                    spaceBetween: el.querySelector('.swiper').dataset.sliderMdSb ?? 16,
+                },
+                1366: {
+                    spaceBetween: el.querySelector('.swiper').dataset.sliderXlSb ?? 30,
+                    slidesPerView: el.querySelector('.swiper').dataset.sliderXlSpv ?? 3,
+                }
+            }
+        })
+
+        if(el.classList.contains('swiper-with-count')) {
+            const slides = el.querySelectorAll('.swiper-slide')
+
+            slides.forEach((el, i) => {
+                el.innerHTML += `<span class="absolute right-5 top-5 text-bg-white" style='font-size: 38px; font-weight: 700; line-height: 42px; letter-spacing: 0.02em;' >0${i + 1}</span>`;
+            })
+        
+        }
+    })
+
+
     // SIMPLE SLIDE TOGGLER 
 
     const sst = document.querySelectorAll('.sst');
@@ -473,12 +508,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // FANCYBOX
 
     openVideo = (link) => {
+        let finallink = link;
+        if(finallink.includes('/video/')){
+            finallink = finallink.replace('/video/', '/play/embed/')
+        }
         const videoFrame = document.getElementById('videoIframe')
-        videoFrame.setAttribute('src', link)
+        videoFrame.setAttribute('src', finallink)
         Fancybox.show([{
             src: '#videoIframe',
         }])
     }
+
+
+    Fancybox.bind("[data-fancybox]", {
+        contentClick: "toggleCover",
+        Images: {
+          Panzoom: {
+            panMode: "mousemove",
+            mouseMoveFactor: 1.1,
+            mouseMoveFriction: 0.12,
+          },
+        },
+    });
+
+
 
 
     // Search

@@ -162,7 +162,7 @@ html.something-opened {
 
     & > .accardeon-item__but {
       & > .accardeon-item__default-title {
-        @apply text-mcg-pg text-butsemi xl:text-deskh3;
+        @apply text-mcg-pg text-butsemi;
       }
 
       & > .accardeon-item__default-icon {
@@ -179,7 +179,7 @@ html.something-opened {
 // Accordion---------------->
 
 .service-single {
-  @apply p-3 rounded-2xl xl:rounded-3xl shadow-2 md:p-5 xl:p-[30px] block;
+  @apply px-3 py-4 rounded-2xl xl:rounded-3xl shadow-2 md:p-4 md:pr-10  block;
   &__title {
     @apply text-but18m xl:text-deskh3 flex-1;
 
