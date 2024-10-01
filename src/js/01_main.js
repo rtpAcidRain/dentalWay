@@ -60,6 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 html.classList.remove('something-opened')
             }
             button.classList.add('modal-opened')
+            if(modalId === 'mobileNav') {
+                document.querySelectorAll('[data-modal="mobileNav"]').forEach(el => el.classList.add('modal-opened'))
+            }
             if(button.dataset.modalName){
                 if(openedModal.querySelector('.modal-form-title')){
                     openedModal.querySelector('.modal-form-title').innerHTML = button.dataset.modalName
@@ -182,22 +185,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const headerTop = document.querySelector('.header__top')
     let scrolled = window.scrollY
-    
-    if(window.innerWidth > 768){
-        document.addEventListener('scroll', function() {
-            scrolled = window.scrollY
 
-            if(scrolled >= headerTop.clientHeight) {
-                if(!html.classList.contains('header-close')){
-                    html.classList.add('header-close')
-                }
-            } else {
-                if(html.classList.contains('header-close')){
-                    html.classList.remove('header-close')
-                }
+   function doSomethingWithHeader() {
+        if(scrolled >= headerTop.clientHeight) {
+            if(!html.classList.contains('header-close')){
+                html.classList.add('header-close')
             }
-        })
-    }
+        } else {
+            if(html.classList.contains('header-close')){
+                html.classList.remove('header-close')
+            }
+        }
+   }
+   doSomethingWithHeader()
+
+    document.addEventListener('scroll', function() {
+        scrolled = window.scrollY;
+
+        doSomethingWithHeader()
+    })
 
     // Header END ------------------------>
 

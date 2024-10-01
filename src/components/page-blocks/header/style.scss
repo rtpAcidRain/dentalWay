@@ -15,6 +15,14 @@ header {
     }
 }
 
+.mobileHeader {
+    height: var(--mobileHeaderHeight, 63px);
+    z-index: 1;
+
+}
+
+
+
 @screen md {
     .header-close .header__bot{
         position: fixed;
@@ -34,7 +42,7 @@ header {
         }
     }
     &.modal-opened {
-        & > span {
+        & > span:first-child {
             @apply bg-bg-beige;
 
             svg path {
@@ -110,8 +118,12 @@ header {
     }
 
     &__accord--lvl1 {
-        height: calc(var(--doc-height, 100vh) - 170px);
+        height: calc(var(--doc-height, 100vh) - 170px - var(--mobileHeaderHeight, 63px));
         padding-bottom: 30px;
+
+        .header-close & {
+            height: calc(var(--doc-height, 100vh) - 170px);
+        }
     }
 
     &__accord--lvl2 {

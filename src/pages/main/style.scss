@@ -162,6 +162,19 @@
         }
 
 
+        &.docavatar--big {
+            width: 430px;
+            height: 430px;
+
+            &::before {
+                border-radius: 569.42px 569.42px 0 0;
+                width: 569.42px;
+                height: 284.71px;
+                top: 43%;
+                left: 6px;
+            }
+        }
+
         &.docavatar--small {
             &::before {
                 width: 439.35px;
@@ -374,12 +387,17 @@
     }
 }
 
-#imageSlider .swiper-slide{
-    @apply rounded-2xl md:rounded-[20px] xl:rounded-[30px] overflow-hidden;
-    max-width: 100%;
-    min-width: 0;
-    max-height: 100%;
-    min-height: 0;
+#imageSlider  {
+    .swiper {
+        @apply rounded-2xl md:rounded-[20px] xl:rounded-[30px];
+    }
+    .swiper-slide{
+        @apply rounded-2xl md:rounded-[20px] xl:rounded-[30px] overflow-hidden;
+        max-width: 100%;
+        min-width: 0;
+        max-height: 100%;
+        min-height: 0;
+    }
 }
 
 
@@ -396,39 +414,39 @@
 
 @screen md {
     #imageSlider .swiper-slide{
-        @apply transition-opacity relative ;
-        opacity: 0;
+        @apply  relative ;
+        // opacity: 0;
     
         &::before {
             content: '';
             @apply transition-colors;
             position: absolute;
-            inset: 0;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
         }
     }
     
     #imageSlider .swiper-slide-active {
-        opacity: 1;
-        z-index: 3;
         &::before {
             background-color: rgba(255, 255, 255, 0.0);;
         }
         & + .swiper-slide {
-            opacity: 1;
-            z-index: 2;
             &::before {
                 background-color: rgba(255, 255, 255, 0.5);;
             }
     
             & + .swiper-slide {
-                opacity: 1;
-                z-index: 1;
                 &::before {
                     background-color: rgba(255, 255, 255, 0.7);;
                 }
-    
-                @screen xl {
-                    margin-left: -100px!important;
+
+                & + .swiper-slide {
+                    &::before {
+                        background-color: rgba(255, 255, 255, 0.9);;
+                    }
+        
                 }
             }
         }

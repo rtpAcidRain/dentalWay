@@ -1,29 +1,3 @@
-<div class="container pt-6 md:pt-[30px] xl:pt-3">
-    <div class="breadcrumbs">
-        <ol class="breadcrumbs__desk">
-            <li class="breadcrumb breadcrumb__home">
-                <a href="/">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9886 2.90521C11.265 2.65286 11.6257 2.51294 12 2.51294C12.3743 2.51294 12.735 2.65287 13.0114 2.90521L13.0125 2.90621L20.5107 9.72015L20.5212 9.72994C20.6694 9.86991 20.7881 10.0381 20.8703 10.2247C20.9526 10.4112 20.9966 10.6124 20.9999 10.8162L21 10.8283V19.5002C21 19.898 20.842 20.2796 20.5607 20.5609C20.2794 20.8422 19.8978 21.0002 19.5 21.0002H15C14.6022 21.0002 14.2206 20.8422 13.9393 20.5609C13.658 20.2796 13.5 19.898 13.5 19.5002V15.0002H10.5V19.5002C10.5 19.898 10.342 20.2796 10.0607 20.5609C9.77936 20.8422 9.39782 21.0002 9 21.0002H4.5C4.10218 21.0002 3.72065 20.8422 3.43934 20.5609C3.15804 20.2796 3 19.898 3 19.5002V10.8283L3.0001 10.8162C3.0034 10.6124 3.04745 10.4112 3.12966 10.2247C3.21187 10.0381 3.33057 9.86991 3.47879 9.72994L3.48935 9.72015L10.9875 2.90621L10.9886 2.90521ZM4.50711 10.8221L11.9982 4.01463L12 4.01294L12.0018 4.01463L19.4929 10.8221C19.4949 10.8243 19.4965 10.8268 19.4977 10.8296C19.499 10.8324 19.4997 10.8354 19.5 10.8385V19.5002H15V15.0002C15 14.6024 14.842 14.2208 14.5607 13.9395C14.2794 13.6582 13.8978 13.5002 13.5 13.5002H10.5C10.1022 13.5002 9.72065 13.6582 9.43934 13.9395C9.15804 14.2208 9 14.6024 9 15.0002V19.5002H4.5V10.8385C4.50026 10.8354 4.50103 10.8324 4.50229 10.8296C4.50349 10.8268 4.50512 10.8243 4.50711 10.8221Z"/>
-                    </svg>
-                </a>
-            </li>
-            <li class="breadcrumb">
-                <a href="/">
-                    Наши клиники
-                </a>
-            </li>
-        </ol>
-        <a href="/" class="breadcrumbs__mob" onclick="history.back(); return false">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5303 3.96967C15.8232 4.26256 15.8232 4.73744 15.5303 5.03033L8.56066 12L15.5303 18.9697C15.8232 19.2626 15.8232 19.7374 15.5303 20.0303C15.2374 20.3232 14.7626 20.3232 14.4697 20.0303L6.96967 12.5303C6.67678 12.2374 6.67678 11.7626 6.96967 11.4697L14.4697 3.96967C14.7626 3.67678 15.2374 3.67678 15.5303 3.96967Z" fill="black"/>
-            </svg>
-            <span>Назад</span>
-        </a>
-    </div>
-</div>
-
-
 
 <section class="mb-10 xl:mb-[54px] container">
     <h1 class=" text-mobh1 md:text-deskh2 xl:text-deskh1 mb-6 md:mb-[30px]">Наши клиники</h1>
@@ -49,8 +23,8 @@
                 <div class="flex flex-col gap-2 text-body3">
                     Добраться можно:
                     <div class="flex gap-4"> 
-                        <a href="#" class="link">На метро</a>    
-                        <a href="#" class="link">На машине</a>    
+                        <a href="#" class="link link-to-map" data-map-name='podolsk' data-map-path="metro">На метро</a>    
+                        <a href="#" class="link link-to-map" data-map-name='podolsk' data-map-path="car">На машине</a>    
                     </div>
                 </div>
             </div>
@@ -71,8 +45,8 @@
                 <div class="flex flex-col gap-2 text-body3">
                     Добраться можно:
                     <div class="flex gap-4"> 
-                        <a href="#" class="link">На метро</a>    
-                        <a href="#" class="link">На машине</a>    
+                        <a href="#" class="link link-to-map" data-map-name='solncevo' data-map-path="metro">На метро</a>    
+                        <a href="#" class="link link-to-map" data-map-name='solncevo' data-map-path="car">На машине</a>    
                     </div>
                 </div>
             </div>
@@ -93,8 +67,8 @@
                 <div class="flex flex-col gap-2 text-body3">
                     Добраться можно:
                     <div class="flex gap-4"> 
-                        <a href="#" class="link">На метро</a>    
-                        <a href="#" class="link">На машине</a>    
+                        <a href="#" class="link link-to-map" data-map-name='mytishchi' data-map-path="metro">На метро</a>    
+                        <a href="#" class="link link-to-map" data-map-name='mytishchi' data-map-path="car">На машине</a>    
                     </div>
                 </div>
             </div>
@@ -107,175 +81,24 @@
             Часто задаваемые вопросы
         </span>
     </h2>
-    <div class=" md:container xl:grid grid-cols-12 gap-[30px]">
+    <div class=" md:container xl:grid grid-cols-12 gap-[30px] mb-3 md:mb-5">
         <div class="accardeon flex flex-col gap-3 md:gap-5 col-start-2 col-span-10">
-            <div class="accardeon-item py-5 px-4 md:py-[30px] md:px-[30px] accardeon-item--default-anim rounded-2xl">
-                <div class="flex items-center accardeon-item__but">
-                    <span class="text-but18m xl:text-deskh3 flex-1 accardeon-item__default-title">Вы работаете круглосуточно?</span>
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full icon accardeon-item__default-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
-                        </svg>
-                    </span>
-                </div>
-                <div class="accardeon-item__list">
-                    <div>
-                        <div class="pt-5 text-body3 flex flex-col gap-5">
-                            <p>Метод имплантации без операции уникален тем, что позволяет сократить перечень противопоказаний. Он подходит для установки имплантатов даже пациентам с сахарным диабетом, с эндокринными заболеваниями (в стадии ремиссии). </p>
-                            <p>Однако противопоказания есть — это недостаточный объем твердых тканей (кости) в зоне имплантации.</p>
-                            <a href="/" class="button button-link w-fit "><span>Получить полную консультацию</span></a>
-                        </div>
+            <div class="accardeon flex flex-col gap-3 md:gap-5 col-start-2 col-span-10">
+                <div class="accardeon-item p-4 accardeon-item--default-anim rounded-2xl">
+                    <div class="flex items-center accardeon-item__but">
+                        <span class="text-but18m  flex-1 accardeon-item__default-title">Что такое имплантация без операции?</span>
+                        <span class="flex items-center justify-center w-8 h-8 rounded-full icon accardeon-item__default-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
+                            </svg>
+                        </span>
                     </div>
-                </div>
-            </div>
-            <div class="accardeon-item py-5 px-4 md:py-[30px] md:px-[30px] accardeon-item--default-anim rounded-2xl">
-                <div class="flex items-center accardeon-item__but">
-                    <span class="text-but18m xl:text-deskh3 flex-1 accardeon-item__default-title">Можно ли придти без записи?</span>
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full icon accardeon-item__default-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
-                        </svg>
-                    </span>
-                </div>
-                <div class="accardeon-item__list">
-                    <div>
-                        <div class="pt-5 text-body3 flex flex-col gap-5">
-                            <p>Метод имплантации без операции уникален тем, что позволяет сократить перечень противопоказаний. Он подходит для установки имплантатов даже пациентам с сахарным диабетом, с эндокринными заболеваниями (в стадии ремиссии). </p>
-                            <p>Однако противопоказания есть — это недостаточный объем твердых тканей (кости) в зоне имплантации.</p>
-                            <a href="/" class="button button-link w-fit "><span>Получить полную консультацию</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accardeon-item py-5 px-4 md:py-[30px] md:px-[30px] accardeon-item--default-anim rounded-2xl">
-                <div class="flex items-center accardeon-item__but">
-                    <span class="text-but18m xl:text-deskh3 flex-1 accardeon-item__default-title">Принимаете ли вы по полису ОМС?</span>
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full icon accardeon-item__default-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
-                        </svg>
-                    </span>
-                </div>
-                <div class="accardeon-item__list">
-                    <div>
-                        <div class="pt-5 text-body3 flex flex-col gap-5">
-                            <p>Метод имплантации без операции уникален тем, что позволяет сократить перечень противопоказаний. Он подходит для установки имплантатов даже пациентам с сахарным диабетом, с эндокринными заболеваниями (в стадии ремиссии). </p>
-                            <p>Однако противопоказания есть — это недостаточный объем твердых тканей (кости) в зоне имплантации.</p>
-                            <a href="/" class="button button-link w-fit "><span>Получить полную консультацию</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accardeon-item py-5 px-4 md:py-[30px] md:px-[30px] accardeon-item--default-anim rounded-2xl">
-                <div class="flex items-center accardeon-item__but">
-                    <span class="text-but18m xl:text-deskh3 flex-1 accardeon-item__default-title">Возможна ли частичная оплата?</span>
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full icon accardeon-item__default-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
-                        </svg>
-                    </span>
-                </div>
-                <div class="accardeon-item__list">
-                    <div>
-                        <div class="pt-5 text-body3 flex flex-col gap-5">
-                            <p>Метод имплантации без операции уникален тем, что позволяет сократить перечень противопоказаний. Он подходит для установки имплантатов даже пациентам с сахарным диабетом, с эндокринными заболеваниями (в стадии ремиссии). </p>
-                            <p>Однако противопоказания есть — это недостаточный объем твердых тканей (кости) в зоне имплантации.</p>
-                            <a href="/" class="button button-link w-fit "><span>Получить полную консультацию</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accardeon-item py-5 px-4 md:py-[30px] md:px-[30px] accardeon-item--default-anim rounded-2xl">
-                <div class="flex items-center accardeon-item__but">
-                    <span class="text-but18m xl:text-deskh3 flex-1 accardeon-item__default-title">Как оформляется рассрочка, и на какие услуги она предоставляется?</span>
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full icon accardeon-item__default-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
-                        </svg>
-                    </span>
-                </div>
-                <div class="accardeon-item__list">
-                    <div>
-                        <div class="pt-5 text-body3 flex flex-col gap-5">
-                            <p>Метод имплантации без операции уникален тем, что позволяет сократить перечень противопоказаний. Он подходит для установки имплантатов даже пациентам с сахарным диабетом, с эндокринными заболеваниями (в стадии ремиссии). </p>
-                            <p>Однако противопоказания есть — это недостаточный объем твердых тканей (кости) в зоне имплантации.</p>
-                            <a href="/" class="button button-link w-fit "><span>Получить полную консультацию</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accardeon-item py-5 px-4 md:py-[30px] md:px-[30px] accardeon-item--default-anim rounded-2xl">
-                <div class="flex items-center accardeon-item__but">
-                    <span class="text-but18m xl:text-deskh3 flex-1 accardeon-item__default-title">Есть ли у вас общий наркоз или седация?</span>
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full icon accardeon-item__default-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
-                        </svg>
-                    </span>
-                </div>
-                <div class="accardeon-item__list">
-                    <div>
-                        <div class="pt-5 text-body3 flex flex-col gap-5">
-                            <p>Метод имплантации без операции уникален тем, что позволяет сократить перечень противопоказаний. Он подходит для установки имплантатов даже пациентам с сахарным диабетом, с эндокринными заболеваниями (в стадии ремиссии). </p>
-                            <p>Однако противопоказания есть — это недостаточный объем твердых тканей (кости) в зоне имплантации.</p>
-                            <a href="/" class="button button-link w-fit "><span>Получить полную консультацию</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accardeon-item py-5 px-4 md:py-[30px] md:px-[30px] accardeon-item--default-anim rounded-2xl">
-                <div class="flex items-center accardeon-item__but">
-                    <span class="text-but18m xl:text-deskh3 flex-1 accardeon-item__default-title">Можно ли прийти на прием во время беременности? До какого срока?</span>
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full icon accardeon-item__default-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
-                        </svg>
-                    </span>
-                </div>
-                <div class="accardeon-item__list">
-                    <div>
-                        <div class="pt-5 text-body3 flex flex-col gap-5">
-                            <p>Метод имплантации без операции уникален тем, что позволяет сократить перечень противопоказаний. Он подходит для установки имплантатов даже пациентам с сахарным диабетом, с эндокринными заболеваниями (в стадии ремиссии). </p>
-                            <p>Однако противопоказания есть — это недостаточный объем твердых тканей (кости) в зоне имплантации.</p>
-                            <a href="/" class="button button-link w-fit "><span>Получить полную консультацию</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accardeon-item py-5 px-4 md:py-[30px] md:px-[30px] accardeon-item--default-anim rounded-2xl">
-                <div class="flex items-center accardeon-item__but">
-                    <span class="text-but18m xl:text-deskh3 flex-1 accardeon-item__default-title">С какого возраста ведется прием детей?</span>
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full icon accardeon-item__default-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
-                        </svg>
-                    </span>
-                </div>
-                <div class="accardeon-item__list">
-                    <div>
-                        <div class="pt-5 text-body3 flex flex-col gap-5">
-                            <p>Метод имплантации без операции уникален тем, что позволяет сократить перечень противопоказаний. Он подходит для установки имплантатов даже пациентам с сахарным диабетом, с эндокринными заболеваниями (в стадии ремиссии). </p>
-                            <p>Однако противопоказания есть — это недостаточный объем твердых тканей (кости) в зоне имплантации.</p>
-                            <a href="/" class="button button-link w-fit "><span>Получить полную консультацию</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accardeon-item py-5 px-4 md:py-[30px] md:px-[30px] accardeon-item--default-anim rounded-2xl">
-                <div class="flex items-center accardeon-item__but">
-                    <span class="text-but18m xl:text-deskh3 flex-1 accardeon-item__default-title">Есть ли гарантия на ваши работы?</span>
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full icon accardeon-item__default-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.46967C4.26256 8.17678 4.73744 8.17678 5.03033 8.46967L12 15.4393L18.9697 8.46967C19.2626 8.17678 19.7374 8.17678 20.0303 8.46967C20.3232 8.76256 20.3232 9.23744 20.0303 9.53033L12.5303 17.0303C12.2374 17.3232 11.7626 17.3232 11.4697 17.0303L3.96967 9.53033C3.67678 9.23744 3.67678 8.76256 3.96967 8.46967Z"  />
-                        </svg>
-                    </span>
-                </div>
-                <div class="accardeon-item__list">
-                    <div>
-                        <div class="pt-5 text-body3 flex flex-col gap-5">
-                            <p>Метод имплантации без операции уникален тем, что позволяет сократить перечень противопоказаний. Он подходит для установки имплантатов даже пациентам с сахарным диабетом, с эндокринными заболеваниями (в стадии ремиссии). </p>
-                            <p>Однако противопоказания есть — это недостаточный объем твердых тканей (кости) в зоне имплантации.</p>
-                            <a href="/" class="button button-link w-fit "><span>Получить полную консультацию</span></a>
+                    <div class="accardeon-item__list">
+                        <div>
+                            <div class="pt-5 text-body3">
+                                <p>Метод имплантации без операции уникален тем, что позволяет сократить перечень противопоказаний. Он подходит для установки имплантатов даже пациентам с сахарным диабетом, с эндокринными заболеваниями (в стадии ремиссии). </p>
+                                <p>Однако противопоказания есть — это недостаточный объем твердых тканей (кости) в зоне имплантации.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -331,14 +154,14 @@
         </div>
     </div>
 </section>
-<section class=" mb-10 xl:mb-[54px] bg-mcg-b">
+<section class=" mb-10 xl:mb-[54px] bg-mcg-b" id="pageMap">
     <h2 class="w-0 h-0 overflow-hidden">Схема проезда</h2>
     <div class="py-6 md:py-[30px] xl:py-0 md:container xl:px-0 xl:flex flex-row-reverse">
         <div class="main-map hidden xl:block w-[880px] h-[630px] relative z-10">       
         </div>
         <div class="xl:py-10 xl:px-[63px] xl:w-[486px] relative z-20">
             <h2 class="text-text-th text-mobh1 md:text-deskh2 xl:text-deskh1 container md:px-0 mb-5 md:mb-7 xl:mb-11">Схема проезда</h2>
-            <div class="p-5 shadow-2 rounded-[20px] group xl:p-[30px] accardeon bg-bg-white xl:w-[460px] [&.sm-opened]:xl:bg-bg-beige transition-colors relative">
+            <div class="p-5 shadow-2 rounded-[20px] group xl:p-[30px] accardeon static-list bg-bg-white xl:w-[460px] [&.sm-opened]:xl:bg-bg-beige transition-colors relative">
                 <h3 class="text-text-th text-mobh2 md:text-mobh3 mb-[30px]">Выберите клинику</h3>
                 <div class="accardeon-item group [&:not(:last-child)]:mb-6"  data-map="podolsk">
                     <div class="accardeon-item__but flex items-center ">
@@ -358,8 +181,8 @@
                                 <h4 class="text-mobSubtitle md:text-deskSubtitle xl:text-deskh3 mb-4 xl:mb-5">Как добраться</h4>
                                 <div class="mb-4 xl:mb-6 pure-slider">
                                     <div class="tabs mb-4 xl:mb-[30px] site-theme-toggler w-fit pure-sliders text-nowrap">
-                                        <a href="/" class="tab selected">На метро</a>
-                                        <a href="/" class="tab">На машине</a>
+                                        <a href="/" class="tab selected"  data-map-path="metro">На метро</a>
+                                        <a href="/" class="tab"  data-map-path="car">На машине</a>
                                     </div>
                                     <div class="swiper">
                                         <div class="swiper-wrapper">
@@ -399,7 +222,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="accardeon-item group [&:not(:last-child)]:mb-6"  data-map="moskva">
+                <div class="accardeon-item group [&:not(:last-child)]:mb-6"  data-map="solncevo">
                     <div class="accardeon-item__but flex items-center ">
                         <span class="flex-1 text-but18m group-[.opened]:text-butsemi group-[.opened]:text-mcg-pg">Москва, метро Солнцево, ул. Производственная, д.8, к.1</span>
                         <span class="flex items-center justify-center w-8 h-8 rounded-full icon group-[.opened]:bg-mcg-bs group-[.opened]:rotate-180 xl:-rotate-90  xl:group-[.opened]:-rotate-90" >
@@ -417,8 +240,8 @@
                                 <h4 class="text-mobSubtitle md:text-deskSubtitle xl:text-deskh3 mb-4 xl:mb-5">Как добраться</h4>
                                 <div class="mb-4 xl:mb-6 pure-slider">
                                     <div class="tabs mb-4 xl:mb-[30px] site-theme-toggler w-fit pure-sliders text-nowrap">
-                                        <a href="/" class="tab selected">На метро</a>
-                                        <a href="/" class="tab">На машине</a>
+                                        <a href="/" class="tab selected"  data-map-path="metro">На метро</a>
+                                        <a href="/" class="tab"  data-map-path="car">На машине</a>
                                     </div>
                                     <div class="swiper">
                                         <div class="swiper-wrapper">
@@ -458,7 +281,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="accardeon-item group [&:not(:last-child)]:mb-6 "  data-map="mitishi">
+                <div class="accardeon-item group [&:not(:last-child)]:mb-6 "  data-map="mytishchi">
                     <div class="accardeon-item__but flex items-center ">
                         <span class="flex-1 text-but18m group-[.opened]:text-butsemi group-[.opened]:text-mcg-pg">Мытищи, ул.Станционная 7, ТЦ Артимолл, 3 этаж</span>
                         <span class="flex items-center justify-center w-8 h-8 rounded-full icon group-[.opened]:bg-mcg-bs group-[.opened]:rotate-180 xl:-rotate-90  xl:group-[.opened]:-rotate-90" >
@@ -476,8 +299,8 @@
                                 <h4 class="text-mobSubtitle md:text-deskSubtitle xl:text-deskh3 mb-4 xl:mb-5">Как добраться</h4>
                                 <div class="mb-4 xl:mb-6 pure-slider">
                                     <div class="tabs mb-4 xl:mb-[30px] site-theme-toggler w-fit pure-sliders text-nowrap">
-                                        <a href="/" class="tab selected">На метро</a>
-                                        <a href="/" class="tab">На машине</a>
+                                        <a href="/" class="tab selected"  data-map-path="metro">На метро</a>
+                                        <a href="/" class="tab"  data-map-path="car">На машине</a>
                                     </div>
                                     <div class="swiper">
                                         <div class="swiper-wrapper">
@@ -550,14 +373,14 @@
             let map;
             const center = [37.588144, 55.733842];
             const mapsData = {
-                'podolsk': {
-                    coordinates: [37.524481, 55.426573],
-                },
-                'moskva': {
+                'solncevo': {
                     coordinates: [37.387169, 55.645907],
                 },
-                'mitishi': {
+                'mytishchi': {
                     coordinates: [37.757291, 55.914662],
+                },
+                'podolsk': {
+                    coordinates: [37.524481, 55.426573],
                 },
             }
 
@@ -591,7 +414,31 @@
                 // markers
                 
                 const maps = document.querySelectorAll('*[data-map]');
+                const topMapsButtons = document.querySelectorAll('*[data-map-name]');
 
+                const id = 'pageMap';
+                const yOffset = document.querySelector('header').offsetHeight + 10; 
+                const element = document.getElementById(id);
+                const y = element.getBoundingClientRect().top + window.scrollY - yOffset;
+                            
+                
+
+                [...topMapsButtons].forEach((el) => {
+                    let mapName = mapsData[el.dataset.mapName];
+                    el.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        window.scrollTo({top: y, behavior: 'smooth'});
+                        [...maps].forEach((elMap) => {
+                            if(elMap.dataset.map === el.dataset.mapName) {
+                                if(!elMap.classList.contains('opened')){
+                                    elMap.querySelector('.accardeon-item__but').click()
+                                }
+
+                                elMap.querySelector(`[data-map-path="${el.dataset.mapPath}"]`).click()
+                            }
+                        })
+                    })
+                });
 
                 [...maps].forEach((el) => {
                     let mapName = mapsData[el.dataset.map];

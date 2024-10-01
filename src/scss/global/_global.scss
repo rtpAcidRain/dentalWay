@@ -2,7 +2,7 @@
   --header: 60px;
   --subheader: 0px;
   --headerSummonHeight: calc(var(--header) + var(--subheader));
- 
+  --mobileHeaderHeight: 63px;
 }
 
 *,
@@ -66,11 +66,11 @@ html.something-opened {
   height: fill-available;
 }
 
-.main {
+// .main {
   
-  padding-top: var(--headerSummonHeight);
-  @apply md:pt-0;
-}
+//   padding-top: var(--headerSummonHeight);
+//   @apply md:pt-0;
+// }
 
 
 .swiper:not(.container, .md\:container, .xl\:container),

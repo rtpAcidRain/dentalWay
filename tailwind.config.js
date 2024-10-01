@@ -200,6 +200,14 @@ module.exports = {
             letterSpacing: "0.02em",
           }
         ],
+        compTab10R: [
+          '10px',
+          {
+            fontWeight: "500",
+            lineHeight: "11px",
+            letterSpacing: "0.02em",
+          }
+        ],
     },
     colors: {
       inherit: 'inherit',
@@ -244,6 +252,7 @@ module.exports = {
       '2': '0 0 30px 0 rgba(237, 237, 237, 0.7)',
       '3': '0 0 30px 0 rgba(116, 116, 116, 0.7)',
       '4': '0 0 30px 0 #d6d6d6',
+      '5': '0 0 30px 0 #d6d6d6',
     }, 
     container: {
       center: true,
