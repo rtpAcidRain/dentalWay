@@ -2,6 +2,7 @@
 .seo-block,
 .main-block-description,
 .picture-block-desk
+
  {
     ul {
         li {
@@ -23,8 +24,8 @@
     }
 }
 
+.price-block-text,
 .video-block-desk {
-    position: relative;
     ol,
     ul {
         li {
@@ -35,6 +36,38 @@
             min-height: 32px;
         }
     }
+
+   
+}
+
+.services-docavatar {
+    transform: scale(-1, 1);
+    img {
+        transform: scale(-1, 1);
+    }
+}
+
+.picture-block-desk, 
+.video-block-desk,
+.price-block-text {
+    @apply text-body3;
+    ol,
+    ul {
+        @apply flex flex-col gap-4;
+         
+        br {
+            display: none;
+        }
+
+    }
+
+    a:not(.button, .link) {
+        @apply underline underline-offset-2 text-text-d hover:text-text-at transition-colors;
+    }
+}
+
+.video-block-desk {
+    position: relative;
 
     &::before {
         content: '';
@@ -47,31 +80,6 @@
             @apply w-[507px] h-[340px] xl:h-[294px] bg-bg-beige absolute -bottom-[26px] -right-[253px] xl:-top-[17px] xl:bottom-auto xl:-right-[83px] -z-10;
         }
     }
-}
-
-.services-docavatar {
-    transform: scale(-1, 1);
-    img {
-        transform: scale(-1, 1);
-    }
-}
-
-.picture-block-desk, 
-.video-block-desk {
-    @apply text-body3;
-    ol,
-    ul {
-        @apply flex flex-col gap-4;
-         
-        br {
-            display: none;
-        }
-
-        li {
-            @apply flex;
-        }
-    }
-
 }
 
 
@@ -146,7 +154,7 @@
         @apply list-decimal;
     }
 
-    a:not(.button) {
+    a:not(.button, .link) {
         @apply underline underline-offset-2 text-text-d hover:text-text-at transition-colors;
     }
 }
@@ -157,7 +165,7 @@
         @apply flex flex-col gap-4 text-text-d pl-6;
     }
 
-    a:not(.button) {
+    a:not(.button, .link) {
         @apply underline underline-offset-2 text-text-d hover:text-text-at transition-colors;
     }
 

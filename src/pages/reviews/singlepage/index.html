@@ -43,8 +43,8 @@
         </div>
     </div>
     <div class=" mb-6 md:mb-[30px]">
-        <div class="relative pb-[67px] md:pb-0 swiper-fade" id="singlePageReviewSlider">
-            <div class="mb-5 md:flex justify-between items-end">
+        <div class="relative pb-[67px] pb-0-on-remove-pagination md:pb-0 swiper-container" id="singlePageReviewSlider">
+            <div class="mb-5 md:flex justify-between items-end hide-on-remove-pagination">
                 <div class="swiper-controls absolute left-1/2 bottom-[0] -translate-x-1/2 md:static md:translate-x-0 ml-auto">
                     <button class="but prev">
                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@
                     </button>
                 </div>
             </div>
-            <div class="swiper">
+            <div class="swiper" data-slider-spv='2' data-slider-sb="12">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="/img/svg/rastr.svg" alt="">
@@ -84,33 +84,15 @@
                     <div class="swiper-slide">
                         <img src="/img/svg/rastr.svg" alt="">
                     </div>
+                    <div class="swiper-slide">
+                        <img src="/img/svg/rastr.svg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/svg/rastr.svg" alt="">
+                    </div>
                 </div>
             </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const slides = document.querySelectorAll('#singlePageReviewSlider .swiper-slide')
-    
-                    const swiper = new Swiper('#singlePageReviewSlider .swiper', {
-                        spaceBetween: 12,
-                        pagination: defaultFractionPag('#singlePageReviewSlider .swiper-controls .pagination'),
-                        slidesPerView: 2,
-                        navigation:{
-                            prevEl: '#singlePageReviewSlider .swiper-controls .prev',
-                            nextEl: '#singlePageReviewSlider .swiper-controls .next',
-                        },
-                        breakpoints: {
-                            768: {
-                                slidesPerView: 2,
-                                spaceBetween: 16,
-                            },
-                            1366: {
-                                spaceBetween: 30,
-                                slidesPerView: 3,
-                            }
-                        }
-                    })
-                })
-            </script>
+            
         </div>
     </div>
     <div class="review--bot">
@@ -146,7 +128,7 @@
 <section class="mb-10 xl:mb-[54px]">
     <div class="container">
         <div class="">
-            <div id="reviewSlider" class="relative pb-[98px] md:pb-0 mb-6">
+            <div class="relative pb-[98px] md:pb-0 mb-6 swiper-container pb-0-on-remove-pagination">
                 <div class="mb-5 md:flex justify-between items-end">
                     <h2 class="text-mobh1 md:text-deskh2 xl:text-deskh1 md:max-w-[456px] xl:max-w-[717px]">Похожие отзывы</h2>
                     <div class="swiper-controls absolute left-1/2 bottom-[31px] -translate-x-1/2 md:static md:translate-x-0">
@@ -730,29 +712,6 @@
                     </div>
                 </div>
                 
-                <script>
-                    document.addEventListener('DOMContentLoaded', () => {
-                        const swiper = new Swiper(document.querySelector('#reviewSlider .swiper'), {
-                            spaceBetween: 16,
-                            slidesPerView: 1,
-                            autoHeight: true,
-                            pagination: defaultFractionPag('#reviewSlider .swiper-controls .pagination'),
-                            navigation:{
-                                prevEl: '#reviewSlider .swiper-controls .prev',
-                                nextEl: '#reviewSlider .swiper-controls .next',
-                            },
-                            breakpoints: {
-                                768: {
-                                    slidesPerView: 2,
-                                },
-                                1366: {
-                                    slidesPerView: 3,
-                                    spaceBetween: 30,
-                                }
-                            }
-                        })
-                    })
-                </script>
             </div>
         </div>
         <div class=" flex flex-col gap-3 md:gap-6 md:justify-end md:flex-row">

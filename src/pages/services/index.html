@@ -179,34 +179,42 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const fraction = document.querySelectorAll("#saleSwiper .swiper-pagination-current");
-            const fractionTotal = document.querySelectorAll("#saleSwiper .swiper-pagination-total");
             const slides = document.querySelectorAll("#saleSwiper .swiper-slide");
             const slideCount = slides.length;
 
-            for (let i = 0; i < slides.length; i++){
-                if(slideCount < 10) {
-                    fractionTotal[i].textContent = `0${slideCount}`
-                } else {
-                    fractionTotal[i].textContent = `${slideCount}`
-                }
-                if(i < 9) {
-                    fraction[i].textContent = `0${i + 1}`;
-                } else {
-                    fraction[i].textContent = `${i + 1}`;
-                }
-            }
+            if(slideCount < 2){
 
-            const swiper = new Swiper('#saleSwiper .swiper', {
-                slidesPerView: 1,
-                effect: 'fade',
-                autoHeight: true,
-                navigation:{
-                    prevEl: '#saleSwiper .swiper-controls .prev',
-                    nextEl: '#saleSwiper .swiper-controls .next',
-                },
-                spaceBetween: 30
-            })
+                document.querySelector("#saleSwiper .swiper-controls").remove()
+                
+            } else {
+                const fraction = document.querySelectorAll("#saleSwiper .swiper-pagination-current");
+                const fractionTotal = document.querySelectorAll("#saleSwiper .swiper-pagination-total");
+                
+
+                for (let i = 0; i < slides.length; i++){
+                    if(slideCount < 10) {
+                        fractionTotal[i].textContent = `0${slideCount}`
+                    } else {
+                        fractionTotal[i].textContent = `${slideCount}`
+                    }
+                    if(i < 9) {
+                        fraction[i].textContent = `0${i + 1}`;
+                    } else {
+                        fraction[i].textContent = `${i + 1}`;
+                    }
+                }
+
+                const swiper = new Swiper('#saleSwiper .swiper', {
+                    slidesPerView: 1,
+                    effect: 'fade',
+                    autoHeight: true,
+                    navigation:{
+                        prevEl: '#saleSwiper .swiper-controls .prev',
+                        nextEl: '#saleSwiper .swiper-controls .next',
+                    },
+                    spaceBetween: 30
+                })
+            }
         })
     </script>
 </div>

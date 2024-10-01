@@ -421,12 +421,19 @@
                 const element = document.getElementById(id);
                 const y = element.getBoundingClientRect().top + window.scrollY - yOffset;
                             
-                
+                document.addEventListener('click', function (){
+                    if(window.innerWidth > 1365){
+                        [...maps].forEach((el) => {
+                            el.classList.remove('opened')
+                        })
+                    }
+                });
 
                 [...topMapsButtons].forEach((el) => {
                     let mapName = mapsData[el.dataset.mapName];
                     el.addEventListener('click', function(e) {
                         e.preventDefault();
+                        e.stopPropagation()
                         window.scrollTo({top: y, behavior: 'smooth'});
                         [...maps].forEach((elMap) => {
                             if(elMap.dataset.map === el.dataset.mapName) {

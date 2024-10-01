@@ -216,9 +216,6 @@ document.addEventListener("DOMContentLoaded", () => {
             slidesPerView: 'auto',
             spaceBetween: 12,
             touchMoveStopPropagation: true,
-            // touchRatio: 0,
-            // touchReleaseOnEdges: true,
-            // allowTouchMove: false,
             navigation: {
                 nextEl: el.querySelector('.review-slider__button.next'),
                 prevEl: el.querySelector('.review-slider__button.before'),
@@ -231,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     reviewImagesSlider.forEach((el) => {
         const slider = reviewImagesSliderConfig(el)
-    })
+    });
 
 
     const defaultSliders = document.querySelectorAll('.swiper-container');
@@ -242,6 +239,16 @@ document.addEventListener("DOMContentLoaded", () => {
             slidesPerView: el.querySelector('.swiper').dataset.sliderSpv ?? 'auto',
             pagination: defaultFractionPag(el.querySelector('.swiper-controls .pagination')),
             autoHeight: el.querySelector('.swiper').dataset.sliderAh === 'false' ? false : true,
+            onAny(eventName, ...args) {
+                if(eventName === "paginationUpdate" || eventName === "afterInit"){
+                    if(this.pagination.el.classList.contains('swiper-pagination-lock')){
+                        this.el.closest('.swiper-container').classList.add('remove-pagination')
+                    } else {
+                        this.el.closest('.swiper-container').classList.remove('remove-pagination')
+                    }
+                }
+                
+            },
             navigation:{
                 prevEl: el.querySelector('.swiper-controls .prev'),
                 nextEl: el.querySelector('.swiper-controls .next'),
@@ -267,7 +274,6 @@ document.addEventListener("DOMContentLoaded", () => {
         
         }
     })
-
 
     // SIMPLE SLIDE TOGGLER 
 
