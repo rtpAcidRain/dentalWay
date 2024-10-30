@@ -1,6 +1,30 @@
 .blog-content {
     h1, h2, h3, h4, h5, h6 {
-        @apply text-text-th text-mobh2 md:text-deskh3 xl:text-deskh2;
+        @apply text-text-th;
+    }
+
+    h1 {
+        @apply text-mobh1 md:text-deskh2 xl:text-deskh1 ;
+    }
+
+    h2 {
+        @apply text-mobh2 md:text-deskh3 xl:text-deskh2 ;
+    }
+
+    h3 {
+        @apply text-mobh3 md:text-deskh4 xl:text-deskh3 ;
+    }
+
+    h4 {
+        @apply text-mobSubtitle md:text-deskSubtitle xl:text-deskh4 ;
+    }
+
+    h5 {
+        @apply text-mobSubtitle md:text-deskSubtitle ;
+    }
+
+    h6 {
+        @apply text-mobSubtitle md:text-deskSubtitle2 ;
     }
 
     ul,

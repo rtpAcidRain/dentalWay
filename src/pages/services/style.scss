@@ -101,7 +101,7 @@
 
         @screen md {
             top: 71px;
-            right: 100px;
+            right: 256px;
             left: -55px;
             bottom: -233px;
         }
@@ -138,8 +138,9 @@
    
 }
 
-.sale-description {
-    @apply px-3 pt-4 pb-6 bg-el-slider rounded-2xl text-body4;
+.sale-description,
+.sale__sale-description {
+    @apply text-body4;
 
     h2, h3, h4, h5, h6 {
         @apply text-deskSubtitle2;
@@ -159,6 +160,10 @@
     }
 }
 
+.sale-description {
+    @apply px-3 pt-4 pb-6 bg-el-slider rounded-2xl ;
+}
+
 .seo-block {
     ol,
     ul {
@@ -175,6 +180,14 @@
 
     h2 {
         @apply text-mobh2 md:text-deskh3 xl:text-deskh2 text-text-th;
+
+        &:not(.mb-6){
+            margin-bottom: 16px;
+        }
+
+        &:not(:first-child){
+            margin: 24px 0 16px;
+        }
     }
 
     h3 {
@@ -184,6 +197,7 @@
     h4 {
         @apply text-mobSubtitle md:text-deskSubtitle xl:text-deskh4 text-text-th;
     }
+
 
     & > .seo-block__container {
         position: relative;

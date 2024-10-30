@@ -1,0 +1,10 @@
+.mansonory__container {
+    @apply md:block md:columns-2 md:gap-4 xl:columns-3 xl:gap-[30px];
+
+    @screen md {
+        & > div {
+            @apply py-3;
+            break-inside: avoid;
+        }
+    }
+}

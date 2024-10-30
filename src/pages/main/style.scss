@@ -312,10 +312,10 @@
         @screen md {
             &:not([data-slider-md-spv="auto"]) {
                 .swiper-slide {
-                    @apply opacity-0 transition-opacity;
+                    @apply opacity-0 transition-opacity pointer-events-none;
                     &.swiper-slide-active,
                     &.swiper-slide-next {
-                        @apply opacity-100;
+                        @apply opacity-100 pointer-events-auto;
                     }
                 }
             }
@@ -327,11 +327,11 @@
     @screen xl {
         .swiper:not([data-slider-xl-spv]){
             .swiper-slide {
-                @apply opacity-0 transition-opacity;
+                @apply opacity-0 transition-opacity pointer-events-none;
                 &.swiper-slide-active,
                 &.swiper-slide-next,
                 &.swiper-slide-next + .swiper-slide {
-                    @apply opacity-100;
+                    @apply opacity-100 pointer-events-auto;
                 }
             }
         }
@@ -555,7 +555,7 @@
     &__text {
         @apply text-body3 line-clamp-4 mb-5;
 
-
+        .modal &,
         .full-review & {
             @apply line-clamp-none;
         }
@@ -601,3 +601,6 @@
 
 
 
+#CalltouchWidgetFrame {
+    bottom: var(--mobileHeaderHeight, 63px) !important;
+}

@@ -22,6 +22,7 @@ module.exports = {
     screens: {
       md: "768px",
       xl: "1366px",
+      // xl: "1294px",
     },
     fontSize: {
         butsemi: [
@@ -208,11 +209,13 @@ module.exports = {
             letterSpacing: "0.02em",
           }
         ],
+        
     },
     colors: {
       inherit: 'inherit',
       trans: 'transparent',
       black: '#000000',
+      color1: '#A346FF',
       mcg: {
         pg: '#005055',
         lg: '#13878F',
@@ -249,6 +252,7 @@ module.exports = {
       }
     },
     boxShadow: {
+      '1': '0 4px 16px 0 #eee',
       '2': '0 0 30px 0 rgba(237, 237, 237, 0.7)',
       '3': '0 0 30px 0 rgba(116, 116, 116, 0.7)',
       '4': '0 0 30px 0 #d6d6d6',
@@ -259,12 +263,14 @@ module.exports = {
       width: {
         DEFAULT: "100%",
         md: "768px",
-        xl: "1366px",
+        // xl: "1366px",
+        xl: "1294px",
       },
       padding: {
         DEFAULT: "12px",
         md: "27px",
         xl: "63px",
+        // xl: "27px",
       },
     },
 

@@ -28,6 +28,29 @@ const defaultFractionPag = (el) => {
     }
 }
 
+function loadScript( url, callback ) {
+    var script = document.createElement( "script" )
+    script.type = "text/javascript";
+    script.async = true;
+    script.defer = true;
+    
+    if(script.readyState) {  // only required for IE <9
+      script.onreadystatechange = function() {
+        if ( script.readyState === "loaded" || script.readyState === "complete" ) {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {  //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+  
+    script.src = url;
+    document.getElementsByTagName( "head" )[0].appendChild( script );
+}
+
 
 const documentHeight = () => {
     const doc = document.documentElement;
@@ -241,10 +264,12 @@ document.addEventListener("DOMContentLoaded", () => {
             autoHeight: el.querySelector('.swiper').dataset.sliderAh === 'false' ? false : true,
             onAny(eventName, ...args) {
                 if(eventName === "paginationUpdate" || eventName === "afterInit"){
-                    if(this.pagination.el.classList.contains('swiper-pagination-lock')){
-                        this.el.closest('.swiper-container').classList.add('remove-pagination')
-                    } else {
-                        this.el.closest('.swiper-container').classList.remove('remove-pagination')
+                    if(this.pagination.el){
+                        if(this.pagination.el.classList.contains('swiper-pagination-lock')){
+                            this.el.closest('.swiper-container').classList.add('remove-pagination')
+                        } else {
+                            this.el.closest('.swiper-container').classList.remove('remove-pagination')
+                        }
                     }
                 }
                 
@@ -374,21 +399,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 
 
+
+
     // SELECTS
 
     (() => {
-        var x, i, j, l, ll, selElmnt, a, b, c, spanText, bCont;
+        var x, i, j, l, ll, a, b, c, spanText, bCont;
         /* Look for any elements with the class "custom-select": */
         x = document.getElementsByClassName("custom-select");
         l = x.length;
         for (i = 0; i < l; i++) {
-          selElmnt = x[i].getElementsByTagName("select")[0];
+          let selElmnt = x[i].getElementsByTagName("select")[0];
+          const multipleCheck = selElmnt.hasAttribute('multiple');
+
           ll = selElmnt.length;
           /* For each element, create a new DIV that will act as the selected item: */
           a = document.createElement("DIV");
           a.setAttribute("class", "select-selected");
           spanText = document.createElement("SPAN");
-          spanText.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+          spanText.innerHTML = selElmnt.options[selElmnt.selectedIndex] ? selElmnt.options[selElmnt.selectedIndex].innerHTML : 'Выбрать...';
           x[i].appendChild(a);
           a.appendChild(spanText)
           spanText.outerHTML += `<svg width='24px' height="24px" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.96967 8.96967C4.26256 8.67678 4.73744 8.67678 5.03033 8.96967L12 15.9393L18.9697 8.96967C19.2626 8.67678 19.7374 8.67678 20.0303 8.96967C20.3232 9.26256 20.3232 9.73744 20.0303 10.0303L12.5303 17.5303C12.2374 17.8232 11.7626 17.8232 11.4697 17.5303L3.96967 10.0303C3.67678 9.73744 3.67678 9.26256 3.96967 8.96967Z"/></svg>`
@@ -413,21 +442,57 @@ document.addEventListener("DOMContentLoaded", () => {
                 s = this.parentNode.parentNode.parentNode.getElementsByTagName("select")[0];
                 sl = s.length;
                 h = this.parentNode.parentNode.previousSibling.querySelector('span');
+                
                 for (i = 0; i < sl; i++) {
                   if (s.options[i].innerHTML == this.innerHTML) {
-                    s.selectedIndex = i;
-                    h.innerHTML = this.innerHTML;
-                    y = this.parentNode.getElementsByClassName("same-as-selected");
-                    yl = y.length;
-                    for (k = 0; k < yl; k++) {
-                      y[k].removeAttribute("class");
+                    if(multipleCheck) {
+
+                        if(s.options[i].selected){
+                            s.options[i].selected = false;
+                            this.removeAttribute("class", "same-as-selected");
+                        } else {
+                            s.options[i].selected = true;
+                            this.setAttribute("class", "same-as-selected");
+                        }
+
+                        h.innerHTML = ''
+
+                        for (y = 0; y < sl; y++) {
+                            if(s.options[y].selected){
+                                if(h.innerHTML.length > 0) {
+                                    h.innerHTML = h.innerHTML + `, ${s.options[y].innerHTML}`
+                                } else {
+                                    h.innerHTML = `${s.options[y].innerHTML}`
+                                }
+                            }
+                        }
+
+                        if(h.innerHTML.length < 1) {
+                            h.innerHTML = 'Выбрать...'
+                        }
+                        
+                        break;
                     }
-                    this.setAttribute("class", "same-as-selected");
-                    break;
+                    else {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected");
+                        yl = y.length;
+                        for (k = 0; k < yl; k++) {
+                          y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected");
+                        break;
+                    }
                   }
                 }
-                this.closest('form').submit()
-                h.click();
+                if(!this.closest('.off-submit') && !multipleCheck) {
+                    this.closest('form').submit();
+                }
+
+                if(!multipleCheck){
+                    h.click();
+                }
             });
             bCont.appendChild(c);
           }
@@ -440,7 +505,6 @@ document.addEventListener("DOMContentLoaded", () => {
             closeAllSelect(this);
             this.nextSibling.classList.toggle("select-hide");
             this.classList.toggle("select-arrow-active");
-            
 
           });
 
@@ -587,6 +651,46 @@ document.addEventListener("DOMContentLoaded", () => {
         el.addEventListener('click', function() {
             searchOnSiteInputHeader.value = el.innerHTML
         })
+    })
+
+
+    // SHAREBUTTON
+
+
+    const btnShare = document.querySelectorAll('.btn-share'),
+                    thisUrl = window.location.href,
+                    thisTitle = document.title;
+
+
+    [...btnShare].forEach((el) => {
+        if (navigator.share) {
+            el.addEventListener('click', function(){
+                navigator.share({
+                  title: thisTitle,
+                  url: thisUrl
+                }).then(() => {
+                  console.log('Thanks for sharing!');
+                })
+                .catch(console.error);
+            })
+        } else {
+            el.remove()
+            console.log('Web Share API не поддерживается');
+        }
+    })
+
+
+
+    const clinicInput = document.querySelectorAll('.CLINIC_NAME');
+
+    [...clinicInput].forEach((el) => {
+        if(thisUrl.includes('/solncevo/')){
+            el.value = 'Солнцево';
+        } else if (thisUrl.includes('/podolsk/')) {
+            el.value = 'Подольск';
+        } else if (thisUrl.includes('/mytishchi/')){
+            el.value = 'Мытищи';
+        }
     })
 
 })

@@ -34,7 +34,7 @@ html {
 }
 
 .container {
-  min-width: 375px;
+  // min-width: 375px;
 }
 
 html.something-opened {
@@ -48,9 +48,7 @@ html.something-opened {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  width: 100vw;
-
-
+  width: 100%;
   position: relative;
   z-index: 200;
 }
@@ -179,7 +177,11 @@ html.something-opened {
 // Accordion---------------->
 
 .service-single {
-  @apply px-3 py-4 rounded-2xl xl:rounded-3xl shadow-2 md:p-4 md:pr-10  block;
+  @apply p-3 rounded-2xl xl:rounded-3xl shadow-2 md:p-[30px]  block;
+
+  &.onlyhead {
+    @apply px-3 py-4 md:p-4 md:pr-10 ;
+  }
   &__title {
     @apply text-but18m xl:text-deskh3 flex-1;
 
@@ -320,11 +322,15 @@ html.something-opened {
   height: 53px;
   border-radius: 200px;
   span {
-    @apply flex-1;
+    @apply flex-1 whitespace-nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: calc(100% - 24px);
   }
 
   svg {
     @apply fill-el-it;
+    min-width: 24px;
   }
 
   &:hover {
@@ -496,6 +502,10 @@ html.something-opened {
   z-index: 99995 !important;
 }
 
+.table-container table{
+  max-width: 100%;
+}
+
 #videoIframe {
  @apply aspect-video;
 
@@ -516,8 +526,7 @@ html.something-opened {
 
 @screen xl{
   :root {
-    --header: 90.85px;
-    --subheader: 68px;
+    --header: 90.85px !important;
+    --subheader: 68px !important;
   }
-  
 }

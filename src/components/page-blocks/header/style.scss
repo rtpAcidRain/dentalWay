@@ -56,6 +56,10 @@ header {
                     transform: rotate(45deg) translate(4px,3px);
                 }
             }
+
+            .mobileHeader & {
+                @apply bg-bg-white;
+            }
         }
     }
 }

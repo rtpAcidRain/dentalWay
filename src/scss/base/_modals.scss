@@ -67,7 +67,7 @@
     }
 
     &.modal--full {
-        @apply w-screen h-screen;
+        @apply w-screen h-screen py-16;
         top: 0;
         z-index: 9999;
         overflow: auto;
