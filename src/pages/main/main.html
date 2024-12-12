@@ -23,7 +23,7 @@
                  </div>
                  <div class="mb-5 md:mb-auto md:w-[305px] md:h-[389px] xl:w-[593px] xl:h-[410px] relative my-auto overflow-hidden" >
                     <img class="aspect-[351/300] md:aspect-auto w-full object-cover object-top" src="/img/mainpage/firstsec.jpg" alt="">
-                    <div class="swiper-controls absolute bottom-4 left-1/2 -translate-x-1/2 xl:bottom-auto xl:left-auto xl:translate-x-0 xl:right-6 xl:top-6 z-10">
+                    <div class="swiper-controls absolute bottom-4 left-1/2 -translate-x-1/2 xl:bottom-auto xl:left-auto xl:translate-x-0 xl:right-6 xl:top-6 z-10 !hidden">
                         <button class="but prev">
                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
@@ -196,14 +196,16 @@
         document.addEventListener('DOMContentLoaded', () => {
             const slides = document.querySelectorAll("#fBlockSlider .swiper-slide");
             const slideCount = slides.length;
+            const  controls = document.querySelector("#fBlockSlider .swiper-controls");
 
             if(slideCount < 2){
 
-                document.querySelector("#fBlockSlider .swiper-controls").remove()
+                controls.remove()
 
             } else {
                 const fraction = document.querySelectorAll("#fBlockSlider .swiper-pagination-current");
                 const fractionTotal = document.querySelectorAll("#fBlockSlider .swiper-pagination-total");
+                controls.classList.remove('!hidden')
 
                 for (let i = 0; i < slides.length; i++){
                     if(slideCount < 10) {
@@ -1103,7 +1105,7 @@
         Наши отличные стоматологии: <br> Солнцево, Подольск, Мытищи
     </h2>
     <div class="container mb-5 md:mb-2 flex gap-4 items-center md:flex-wrap xl:gap-5 no-scrollbar overflow-auto">
-            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap rounded-full py-1 px-4 md:py-2 md:px-5 border border-text-d">
+            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap">
                 <div class="w-10 h-10 xl:w-[52px] xl:h-[52px] flex items-center justify-center">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" fill="#005055"/>
@@ -1114,7 +1116,7 @@
                     Премиальное оборудование
                 </span>
             </div>
-            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap rounded-full py-1 px-4 md:py-2 md:px-5 border border-text-d">
+            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap">
                 <div class="w-10 h-10 xl:w-[52px] xl:h-[52px] flex items-center justify-center">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" fill="#005055"/>
@@ -1125,7 +1127,7 @@
                     Опытные стоматологи
                 </span>
             </div>
-            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap rounded-full py-1 px-4 md:py-2 md:px-5 border border-text-d">
+            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap">
                 <div class="w-10 h-10 xl:w-[52px] xl:h-[52px] flex items-center justify-center">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" fill="#005055"/>
@@ -1136,7 +1138,7 @@
                     Передовые методики 
                 </span>
             </div>
-            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap rounded-full py-1 px-4 md:py-2 md:px-5 border border-text-d">
+            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap">
                 <div class="w-10 h-10 xl:w-[52px] xl:h-[52px] flex items-center justify-center">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" fill="#005055"/>
@@ -1147,7 +1149,7 @@
                     Индвидуальный подход
                 </span>
             </div>
-            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap rounded-full py-1 px-4 md:py-2 md:px-5 border border-text-d">
+            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap">
                 <div class="w-10 h-10 xl:w-[52px] xl:h-[52px] flex items-center justify-center">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" fill="#005055"/>

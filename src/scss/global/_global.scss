@@ -84,13 +84,13 @@ html.something-opened {
 // Tabs
 
 .tabs {
-  @apply bg-mcg-bs rounded-[14px] md:rounded-[20px] xl:rounded-[28px] text-text-th p-[6px] flex md:grid md:p-2 xl:p-3;
+  @apply bg-mcg-bs rounded-[14px] md:rounded-[20px] text-text-th p-[6px] md:p-2 flex md:grid ;
   flex-wrap: wrap;
   gap: 8px;
   justify-items: center;
 
   .tab {
-    @apply text-but16m md:text-but18m xl:text-tag20m px-3 md:px-4 xl:px-[30px] md:w-full py-[6px] md:py-[10px] xl:py-4 border rounded-lg md:rounded-xl xl:rounded-2xl bg-mcg-bs border-mcg-bs transition-colors flex items-center justify-center xl:flex-1 xl:w-full;
+    @apply text-but16m md:text-but18m px-3 md:px-4  md:w-full py-[6px] md:py-[10px] h-[38px] md:h-[41px]  border rounded-lg md:rounded-xl  bg-mcg-bs border-mcg-bs transition-colors flex items-center justify-center xl:flex-1 xl:w-full;
 
     &:not(.selected):hover{
       @apply border-bg-white bg-bg-white text-text-th;
@@ -177,17 +177,17 @@ html.something-opened {
 // Accordion---------------->
 
 .service-single {
-  @apply p-3 rounded-2xl xl:rounded-3xl shadow-2 md:p-[30px]  block;
+  @apply p-3 rounded-2xl md:rounded-3xl shadow-2 md:p-4  block;
 
   &.onlyhead {
     @apply px-3 py-4 md:p-4 md:pr-10 ;
   }
   &__title {
-    @apply text-but18m xl:text-deskh3 flex-1;
+    @apply text-but18m flex-1;
 
-    .onlyhead & {
-      @apply text-but18m xl:text-but18m;
-    }
+    // .onlyhead & {
+    //   @apply text-but18m xl:text-but18m;
+    // }
   }
   .services-page__header  {
     margin-bottom: 0px !important;
@@ -195,17 +195,18 @@ html.something-opened {
   }
 
   .services-page__body  {
-    @apply flex flex-wrap gap-4 md:gap-6 mt-5 md:mt-[30px];
+    @apply flex flex-wrap gap-4 md:gap-2 mt-5 md:mt-3;
   }
 
   &__mini {
-    @apply text-but16r md:text-body3 xl:text-butsemi md:px-4 md:py-2 xl:py-3 xl:px-5 flex gap-2 items-start rounded-xl md:shadow-2 hover:bg-mcg-b transition-colors;
+    @apply text-but16r md:text-body3  md:px-4 md:py-2 flex gap-2 items-start  rounded-xl md:shadow-2 hover:bg-mcg-b transition-colors;
 
     @screen md {
       &::before {
         content: url("data:image/svg+xml,%3Csvg  viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z' fill='%23005055'/%3E%3Crect x='3.73926' y='3.73926' width='9.85164' height='9.87979' rx='4.92582' fill='%23EAF3F4'/%3E%3C/svg%3E%0A");
         width: 20px;
         height: 20px;
+        margin-top: 3px;
       }
     }
   }
@@ -214,17 +215,17 @@ html.something-opened {
 .service-icon {
   &::before {
     content: url("data:image/svg+xml,%3Csvg  viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z' fill='%23005055'/%3E%3Crect x='3.73926' y='3.73926' width='9.85164' height='9.87979' rx='4.92582' fill='%23EAF3F4'/%3E%3C/svg%3E%0A");
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     display: block;
   }
 
-  &--small {
-    &::before {
-      width: 20px;
-      height: 20px;
-    }
-  }
+  // &--small {
+  //   &::before {
+  //     width: 20px;
+  //     height: 20px;
+  //   }
+  // }
 }
 
 .check-icon {
@@ -480,7 +481,7 @@ html.something-opened {
 
 
 .question-page_acc {
-  a {
+  a:not(.button) {
     @apply underline underline-offset-4;
   }
 }

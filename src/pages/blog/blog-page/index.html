@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div class="container" id="blogPageMainContainer">
+<div class="container xl:grid grid-cols-12 gap-[30px]" id="blogPageMainContainer">
     <div class="mb-10 col-span-8">
         <div class="flex items-center mb-6 gap-6">
             <div class="flex items-center gap-1 text-mcg-pg text-but16m">
@@ -147,11 +147,11 @@
             </ul>
         </div>
     </div>
-    <div class="mb-10 xl:mb-[54px] h-full relative col-span-4" id="blogPageSlider" data-sticky-container>
-        <div  class="sticky-target" data-sticky>
+    <div class="mb-10 xl:mb-[54px] h-full relative col-span-4 " id="blogPageSlider">
+        <div  class="sticky-target">
             <div class="pb-[67px] md:pb-0 relative">
-                <div class=" swiper overflow-visible">
-                    <div class="swiper-wrapper">
+                <div class=" overflow-visible potential-swiper">
+                    <div class=" potential-swiper-wrapper grid md:grid-cols-2 gap-[30px] xl:grid-cols-1 justify-items-center">
                         <a href="/" class="swiper-slide !max-w-[324px] md:!max-w-[392px] relative flex flex-col h-auto">
                             <img class="h-[200px] rounded-[20px] w-full object-cover mb-3 " src="/img/mainpage/reason1.jpg" alt="">
                             <div class="flex justify-between items-center mb-3 ">
@@ -247,89 +247,33 @@
                     </div>
                 </div>
                 <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        if(window.innerWidth < 1366){
-                            const swiper = new Swiper('#blogPageSlider .swiper', {
-                                spaceBetween: 16,
-                                slidesPerView: 'auto',
-                                pagination: defaultFractionPag('#blogPageSlider .swiper-controls .pagination'),
-                                navigation:{
-                                    prevEl: '#blogPageSlider .swiper-controls .prev',
-                                    nextEl: '#blogPageSlider .swiper-controls .next',
-                                },
-                                breakpoints: {
-                                    768: {
-                                        slidesPerView: 'auto',
-                                        spaceBetween: 16,
-                                    },
-                                    1366: {
-                                        spaceBetween: 30,
-                                        slidesPerView: 'auto',
-                                    }
-                                }
-                            })
-                        } else {
-                            const miniBlogContainer = document.getElementById('blogPageSlider'),
-                                miniBlogWrapper = miniBlogContainer.querySelector('.swiper-wrapper')
+                        // if(window.innerWidth < 1294){
+                        //     const miniBlogContainer = document.getElementById('blogPageSlider'),
+                        //         miniBlogWrapper = miniBlogContainer.querySelector('.swiper-wrapper')
                                 
 
+                        //     const blogPageMainContainer = document.getElementById('blogPageMainContainer')
+
+                        //     blogPageMainContainer.classList.add('xl:grid', 'grid-cols-12', 'gap-[30px]')
+                        //     miniBlogContainer.querySelector('.swiper').classList.remove('swiper')
+                        //     miniBlogWrapper.classList.add('grid', 'md:grid-cols-2', 'gap-[30px]', 'xl:grid-cols-1')
+                        //     miniBlogWrapper.classList.remove('swiper-wrapper')
+                        //     miniBlogContainer.querySelectorAll('.swiper-slide').forEach((el) => {
+                        //         el.classList.remove('swiper-wrapper')
+                        //         el.classList.remove('!max-w-[324px]', 'md:!max-w-[392px]')
+                        //     })
+                        // } 
+                        if(window.innerWidth < 1294){
+                            const miniBlogContainer = document.getElementById('blogPageSlider'),
+                                miniBlogWrapper = miniBlogContainer.querySelector('.potential-swiper-wrapper')
+                                miniBlogContainer.classList.add('swiper-container') 
                             const blogPageMainContainer = document.getElementById('blogPageMainContainer')
 
-                            blogPageMainContainer.classList.add('xl:grid', 'grid-cols-12', 'gap-[30px]')
-                            miniBlogContainer.querySelector('.swiper').classList.remove('swiper')
-                            miniBlogWrapper.classList.add('grid', 'md:grid-cols-2', 'gap-[30px]', 'xl:grid-cols-1')
-                            miniBlogWrapper.classList.remove('swiper-wrapper')
-                            miniBlogContainer.querySelectorAll('.swiper-slide').forEach((el) => {
-                                el.classList.remove('swiper-wrapper')
-                                el.classList.remove('!max-w-[324px]', 'md:!max-w-[392px]')
-                            })
-
-
-                            function loadScript(path, callback) {
-                                var done = false;
-                                var scr = document.createElement('script');
-
-                                scr.onload = handleLoad;
-                                scr.onreadystatechange = handleReadyStateChange;
-                                scr.onerror = handleError;
-                                scr.src = path;
-                                document.body.appendChild(scr);
-
-                                function handleLoad() {
-                                    if (!done) {
-                                        done = true;
-                                        callback(path, "ok");
-                                    }
-                                }
-
-                                function handleReadyStateChange() {
-                                    var state;
-                                
-                                    if (!done) {
-                                        state = scr.readyState;
-                                        if (state === "complete") {
-                                            handleLoad();
-                                        }
-                                    }
-                                }
-                                function handleError() {
-                                    if (!done) {
-                                        done = true;
-                                        callback(path, "error");
-                                    }
-                                }
-                            }
-
-
-                            loadScript('https://dentalway.ru/local/templates/dw/js/sticky.min.js', function() {
-                                const sticky = new Sticky('.sticky-target');
-                                sticky.update();
-
-                                console.log(sticky)
-                            })
-        
-                        }
-                    })
+                            blogPageMainContainer.classList.remove('xl:grid', 'grid-cols-12', 'gap-[30px]')
+                            miniBlogContainer.querySelector('.potential-swiper').classList.add('swiper')
+                            miniBlogWrapper.classList.remove('grid', 'md:grid-cols-2', 'gap-[30px]', 'xl:grid-cols-1', 'justify-items-center')
+                            miniBlogWrapper.classList.add('swiper-wrapper')
+                        } 
                 </script>
             </div>
         </div>

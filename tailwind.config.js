@@ -21,8 +21,8 @@ module.exports = {
   theme: {
     screens: {
       md: "768px",
-      xl: "1366px",
-      // xl: "1294px",
+      // xl: "1366px",
+      xl: "1294px",
     },
     fontSize: {
         butsemi: [
@@ -269,8 +269,8 @@ module.exports = {
       padding: {
         DEFAULT: "12px",
         md: "27px",
-        xl: "63px",
-        // xl: "27px",
+        xl: "27px",
+        // xl: "63px",
       },
     },
 

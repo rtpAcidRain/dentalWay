@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     slidesPerView: el.querySelector('.swiper').dataset.sliderMdSpv ?? 2,
                     spaceBetween: el.querySelector('.swiper').dataset.sliderMdSb ?? 16,
                 },
-                1366: {
+                1294: {
                     spaceBetween: el.querySelector('.swiper').dataset.sliderXlSb ?? 30,
                     slidesPerView: el.querySelector('.swiper').dataset.sliderXlSpv ?? 3,
                 }
@@ -710,28 +710,11 @@ function ajaxForm(obForm, link) {
                 if(!obForm.querySelector('.checkbox').checked){
                     return false
                 }
-                const EMAIL_REGEXP =
-                  /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
-                const PHONE_REGEXP = /\+\d{1}\(\d{3}\)\d{3}-\d{2}-\d{2}/g;
+                // const EMAIL_REGEXP =
+                //   /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
-                let check = true;
-
-                function isEmailValid(value) {
-                  if (EMAIL_REGEXP.test(value)) {
-                    check = true;
-                  } else {
-                    check = false;
-                  }
-                }
-            
-                function isPhoneValid(value) {
-                  if (PHONE_REGEXP.test(value)) {
-                    check = true;
-                  } else {
-                    check = false;
-                  }
-                }
+                // const PHONE_REGEXP = /\+\d{1}\(\d{3}\)\d{3}-\d{2}-\d{2}/g;
 
                 function createErrorElement(target, text){
                     const error = document.createElement('div')
@@ -752,8 +735,7 @@ function ajaxForm(obForm, link) {
                     
                         if(inputTarget.value.length > 0 ){
                             if(inputTarget.classList.contains('phone')){
-                                isPhoneValid(inputTarget.value)
-                                if(!check){
+                                if(inputTarget.value.length !== 16){
                                     inp.classList.add('error')
                                     createErrorElement(inp, 'Телефон введен неверно')
                                 }
