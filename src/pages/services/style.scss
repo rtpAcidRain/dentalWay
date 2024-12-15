@@ -281,9 +281,9 @@
     &__list {
         counter-reset: work-secton;
         &-el {
-            @apply pb-5 pl-[46px] md:pl-[67px] flex flex-col relative;
+            @apply pb-5 pl-[46px] md:pl-[67px] flex flex-col relative gap-3;
             &__header {
-                @apply mb-3 text-mobSubtitle md:text-deskSubtitle2 text-text-d;
+                @apply text-mobSubtitle md:text-deskSubtitle2 text-text-d;
             }
             &__body {
                 @apply text-body4 text-text-d;
