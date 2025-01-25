@@ -55,6 +55,11 @@ html.something-opened {
 
 .footer {
   margin-top: auto;
+  padding-bottom: var(--mobileHeaderHeight, 63px);
+
+  @screen md {
+    padding-bottom: 0px;
+  }
 }
 
 .h-fill {

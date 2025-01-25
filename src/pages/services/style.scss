@@ -22,6 +22,7 @@
     }
 }
 
+.mainapge-slider-info,
 .blog-content {
     ul{
         li {
@@ -212,66 +213,6 @@
 
     & > .seo-block__container {
         position: relative;
-        // &::before,
-        // &::after  {
-        //     content: '';
-        //     display: block;
-        //     position: absolute;
-        //     z-index: -1;
-        // }
-
-        // &::before {
-        //     @apply bg-bg-beige;
-        //     height: 65.94202898550725%;
-        //     top: 45px;
-        //     right: 82px;
-        //     width: 100vw;
-        // }
-
-        // &::after {
-        //     @apply border border-el-lg;
-        //     width: 100vw;
-        //     height: 311px;
-        //     bottom: -32px;
-        //     left: 149px;
-        // }
-
-        // @screen md {
-        //     &::before {
-        //         top: auto;
-        //         bottom: -41px;
-        //         right: auto;
-        //         left: -361px;
-        //     }
-    
-        //     &::after {
-        //         width: 841px;
-        //         height: auto;
-        //         top: 25px;
-        //         bottom: -6px;
-        //         left: auto;
-        //         right: -684px;
-        //     }
-        // }
-        // @screen xl {
-        //     &::before {
-        //         width: 737px;
-        //         height: auto;
-        //         top: 226.52px;
-        //         bottom: -22.5px;
-        //         right: auto;
-        //         left: -397px;
-        //     }
-    
-        //     &::after {
-        //         width: 737px;
-        //         height: auto;
-        //         top: 11.52px;
-        //         bottom: -22.52px;
-        //         left: auto;
-        //         right: -526px;
-        //     }
-        // }
     }
 }
 
