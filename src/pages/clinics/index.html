@@ -348,6 +348,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', loadScript("https://api-maps.yandex.ru/v3/?apikey=dc4c9180-39a7-43c6-9063-733b506b26f3&lang=ru_RU", () => {
             const pureSliders = document.querySelectorAll('.pure-slider');
+            
 
             [...pureSliders].forEach((el) => {
                 const togglers = el.querySelectorAll('.tab');
@@ -387,6 +388,7 @@
 
             async function initMap() {
                 // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+                console.log(map,'asdsd');
                 await ymaps3.ready;
                 const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
             
@@ -405,10 +407,9 @@
 
                     }
                 );
-
+                
                 map.addChild(new YMapDefaultSchemeLayer());
                 map.addChild(new YMapDefaultFeaturesLayer())
-              
 
                 // markers
                 

@@ -8,7 +8,8 @@ let modals,
     openedModal,
     header,
     reviewImagesSliderConfig,
-    openVideo;
+    openVideo,
+    changeCurrentSlideFromClick = {};
 
 const defaultFractionPag = (el) => {
     return {
@@ -257,11 +258,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const defaultSliders = document.querySelectorAll('.swiper-container');
 
     [...defaultSliders].forEach((el) => {
+        const sliderDataset = el.querySelector('.swiper').dataset;
         const slider = new Swiper(el.querySelector('.swiper'), {
-            spaceBetween: el.querySelector('.swiper').dataset.sliderSb ?? 16,
-            slidesPerView: el.querySelector('.swiper').dataset.sliderSpv ?? 'auto',
+            spaceBetween: sliderDataset.sliderSb ?? 16,
+            slidesPerView: sliderDataset.sliderSpv ?? 'auto',
             pagination: defaultFractionPag(el.querySelector('.swiper-controls .pagination')),
-            autoHeight: el.querySelector('.swiper').dataset.sliderAh === 'false' ? false : true,
+            autoHeight: sliderDataset.sliderAh === 'false' ? false : true,
+            effect: sliderDataset.sliderEffect ?? undefined,
             onAny(eventName, ...args) {
                 if(eventName === "paginationUpdate" || eventName === "afterInit"){
                     if(this.pagination.el){
@@ -271,8 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             this.el.closest('.swiper-container').classList.remove('remove-pagination')
                         }
                     }
-                }
-                
+                }                
             },
             navigation:{
                 prevEl: el.querySelector('.swiper-controls .prev'),
@@ -280,12 +282,12 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             breakpoints: {
                 768: {
-                    slidesPerView: el.querySelector('.swiper').dataset.sliderMdSpv ?? 2,
-                    spaceBetween: el.querySelector('.swiper').dataset.sliderMdSb ?? 16,
+                    slidesPerView: sliderDataset.sliderMdSpv ?? 2,
+                    spaceBetween: sliderDataset.sliderMdSb ?? 16,
                 },
                 1294: {
-                    spaceBetween: el.querySelector('.swiper').dataset.sliderXlSb ?? 30,
-                    slidesPerView: el.querySelector('.swiper').dataset.sliderXlSpv ?? 3,
+                    slidesPerView: sliderDataset.sliderXlSpv ?? 3,
+                    spaceBetween: sliderDataset.sliderXlSb ?? 30,
                 }
             }
         })
@@ -298,6 +300,12 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         
         }
+        if(sliderDataset.sliderCanChangeFromDoc){
+            changeCurrentSlideFromClick[el.getAttribute('id')] = function(ind) {
+                slider.slideTo(ind)
+            }
+        }
+
     })
 
     // SIMPLE SLIDE TOGGLER 

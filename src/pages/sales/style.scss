@@ -10,65 +10,34 @@
     }
 
     &__container {
-        @apply bg-mcg-b flex flex-col gap-3;
+        @apply bg-mcg-b flex flex-col gap-4;
         border-radius: 16px 0 16px 16px;
         padding: 20px;
     }
 
     &__heading {
-        @apply text-deskSubtitle2 pr-2 md:pr-[5px] xl:pr-2.5;
+        @apply text-mobSubtitle md:text-deskSubtitle2 text-text-th;
     }
 
     &__header {
-        border-radius: 8px;
-        overflow: hidden;
-        display: flex;
-        &__desk {
-            @apply bg-bg-white pt-3 pl-3 pr-[23px] md:pr-0 xl:pr-[2px] flex flex-col gap-[6.5px] xl:gap-4 flex-1;
-
-        }
-        
+        @apply flex flex-col gap-4;
         &__img {
-            position: relative;
-            width: 115px;
-            min-height: 153px;
-            height: auto;
-            
-            img {
-                object-fit: cover;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                height: 100%;
-            }
+            @apply p-3 md:p-4 flex flex-col justify-end gap-3;
+            width: 100%;
+            aspect-ratio: 353/235;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), center / cover var(--saleBackgroundImage) no-repeat;
+            border-radius: 8px;
         }
-    }
-
-    &__prev-price,
-    &__current-price {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 18px;
-        letter-spacing: 0.02em;
     }
 
     &__prev-price {
-        @apply text-text-at;
+        @apply text-el-dg text-mobSubtitle md:text-deskSubtitle;
         text-decoration: line-through;
     }
 
     &__current-price {
-        @apply bg-color1;
-        margin-top: auto;
-        padding: 8px 12px;
-        border-radius: 8px 0;
+        @apply text-mobh3 md:text-deskh3;
         color: #fff;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     &__special {

@@ -250,6 +250,7 @@
             position: relative;
             z-index: -1;
             opacity: 0 !important;
+            transition-property: opacity !important;
         }
 
         &:not(.swiper-fade) .swiper-slide:first-child,

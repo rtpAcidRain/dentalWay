@@ -518,6 +518,27 @@ html.something-opened {
  width: min(80vw, 1024px);
 }
 
+
+.swiper-sub-pug {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  justify-content: center;
+  & > a {
+    @apply border border-mcg-pg transition-colors;
+    display: block;
+    width: 24px;
+    height: 8px;
+    border-radius: 200px;
+    cursor: pointer;
+
+    &:hover,
+    &.current {
+      @apply bg-mcg-pg;
+    }
+  }
+}
+
 @screen md{
   :root {
     --header: 69px;
