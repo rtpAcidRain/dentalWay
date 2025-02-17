@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const slides = el.querySelectorAll('.swiper-slide')
 
             slides.forEach((el, i) => {
-                el.innerHTML += `<span class="absolute right-5 top-5 text-bg-white" style='font-size: 38px; font-weight: 700; line-height: 42px; letter-spacing: 0.02em;' >0${i + 1}</span>`;
+                el.innerHTML += `<span class="absolute right-5 top-5 text-bg-white" style='font-size: 38px; font-weight: 700; line-height: 42px; letter-spacing: 0.02em;' >${i > 9 ? (i + 1) : ('0' + i + 1)}</span>`;
             })
         
         }

@@ -1,41 +1,43 @@
 <!DOCTYPE html>
-	@@include('components/page-blocks/_head.html',{
-	"lang":"en",
-	"title":"Dental way",
-	"description":"Gulp pack for easy html/php markup development",
-	"keywords":"",
-	"favicon":"/img/favicons/favicon",
-	})
-	@@include('components/page-blocks/_scripts.html')
-	<body>
-		<div class="page">
-			@@include('components/page-blocks/header/index.html')
-			<main class="main">
-				<!-- @@include('pages/main/main.html') -->
-				<!-- @@include('pages/services/index.html') -->
-				<!-- @@include('pages/services/serviceDirection.html') -->
-				<!-- @@include('pages/services/allservices.html') -->
-				<!-- @@include('pages/doctors/allDocs.html') -->
-				<!-- @@include('pages/doctors/doc.html') -->
-				<!-- @@include('pages/search/index.html') -->
-				<!-- @@include('pages/blog/index.html') -->
-				<!-- @@include('pages/blog/blog-page/index.html') -->
-				<!-- @@include('pages/prices/index.html') -->
-				<!-- @@include('pages/reviews/index.html') -->
-				<!-- @@include('pages/reviews/windowed/index.html') -->
-				<!-- @@include('pages/reviews/singlepage/index.html') -->
-				<!-- @@include('pages/beforeafter/index.html') -->
-				<!-- @@include('pages/clinics/index.html') -->
-				<!-- @@include('pages/politPage/index.html') -->
-				<!-- @@include('pages/notFound/index.html') -->
-				<!-- @@include('pages/sitemap/index.html') -->
-				@@include('pages/sales/index.html')
-				<!-- @@include('pages/sales/single.html') -->
-				<!-- @@include('pages/docs/index.html') -->
-			</main>
-			<div class="!hidden w-auto">
-			</div>
-			@@include('components/page-blocks/footer/index.html')
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"Dental way",
+"description":"Gulp pack for easy html/php markup development",
+"keywords":"",
+"favicon":"/img/favicons/favicon",
+})
+@@include('components/page-blocks/_scripts.html')
+
+<body>
+	<div class="page">
+		@@include('components/page-blocks/header/index.html')
+		<main class="main">
+			<!-- @@include('pages/main/main.html') -->
+			<!-- @@include('pages/services/index.html') -->
+			<!-- @@include('pages/services/serviceDirection.html') -->
+			<!-- @@include('pages/services/allservices.html') -->
+			<!-- @@include('pages/doctors/allDocs.html') -->
+			@@include('pages/doctors/doc.html')
+			<!-- @@include('pages/search/index.html') -->
+			<!-- @@include('pages/blog/index.html') -->
+			<!-- @@include('pages/blog/blog-page/index.html') -->
+			<!-- @@include('pages/prices/index.html') -->
+			<!-- @@include('pages/reviews/index.html') -->
+			<!-- @@include('pages/reviews/windowed/index.html') -->
+			<!-- @@include('pages/reviews/singlepage/index.html') -->
+			<!-- @@include('pages/beforeafter/index.html') -->
+			<!-- @@include('pages/clinics/index.html') -->
+			<!-- @@include('pages/politPage/index.html') -->
+			<!-- @@include('pages/notFound/index.html') -->
+			<!-- @@include('pages/sitemap/index.html') -->
+			<!-- @@include('pages/sales/index.html') -->
+			<!-- @@include('pages/sales/single.html') -->
+			<!-- @@include('pages/docs/index.html') -->
+		</main>
+		<div class="!hidden w-auto">
 		</div>
-	</body>
+		@@include('components/page-blocks/footer/index.html')
+	</div>
+</body>
+
 </html>

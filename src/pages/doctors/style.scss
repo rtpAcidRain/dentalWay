@@ -1,18 +1,21 @@
 .doctor-chars {
-    @apply flex flex-col gap-5 xl:gap-[30px];
-    
-    .list{
-        @apply flex flex-col gap-5; 
+    @apply flex flex-col gap-5 xl:gap-[30px] max-w-[624px] xl:max-w-[816px];
+
+    .list {
+        @apply flex flex-col gap-5;
     }
-    
+
     .item {
         @apply text-text-d flex flex-col gap-2;
-        &:not(.socials) a{
+
+        &:not(.socials) a {
             @apply underline underline-offset-[3px];
         }
+
         ul {
             @apply list-disc pl-6 flex flex-col gap-1;
         }
+
         &__header {
             @apply text-body2;
         }
@@ -21,8 +24,9 @@
             @apply text-body3;
         }
 
-        &.socials .item__body{
+        &.socials .item__body {
             @apply flex gap-5 flex-wrap;
+
             a {
                 @apply flex gap-2 items-center shadow-2 rounded-[200px] py-1.5 px-3;
             }
