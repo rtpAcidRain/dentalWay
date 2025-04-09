@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 @layer utilities {
+
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
   /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 }
 
@@ -48,10 +52,27 @@ button:active {
 }
 
 textarea {
-  resize: none ;
+  resize: none;
 }
 
 @import "base/*.scss";
 @import "global/*.scss";
 @import "**/_*.scss";
 @import "../components/**/*.scss";
+
+
+.something-opened {
+
+  .medflex-round-widget,
+  #CalltouchWidgetFrame {
+    display: none !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+}
+
+#justSlider {
+  a {
+    @apply underline underline-offset-2;
+  }
+}
