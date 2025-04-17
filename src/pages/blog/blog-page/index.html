@@ -26,7 +26,7 @@
     </div>
 </div>
 
-<div class="container xl:grid grid-cols-12 gap-[30px]" id="blogPageMainContainer">
+<div class="container xl:grid grid-cols-12 gap-[30px] ">
     <div class="mb-10 col-span-8">
         <div class="flex items-center mb-6 gap-6">
             <div class="flex items-center gap-1 text-mcg-pg text-but16m">
@@ -335,159 +335,211 @@
             </ul>
         </div>
     </div>
-    <div class="mb-10 xl:mb-[54px] h-full relative col-span-4 " id="blogPageSlider">
+    <div class="col-span-4 hidden xl:block  rounded-2xl p-5 bg-mcg-b h-fit">
+        <h3 class="text-deskSubtitle mb-5 text-text-th">Другие рубрики</h3>
+        <form action="" class="filter !flex-col !items-start">
+            <label class="filter__item">
+                <input type="radio">
+                <span>Все рубрики</span>
+            </label>
+            <label class="filter__item ">
+                <input type="radio">
+                <span>Имплантация</span>
+            </label>
+            <label class="filter__item ">
+                <input type="radio">
+                <span>Хирургия</span>
+            </label>
+            <label class="filter__item ">
+                <input type="radio">
+                <span>Терапевтическая стоматология</span>
+            </label>
+            <label class="filter__item ">
+                <input type="radio">
+                <span>Ортопедия</span>
+            </label>
+            <label class="filter__item ">
+                <input type="radio">
+                <span>Ортодонтия</span>
+            </label>
+            <label class="filter__item ">
+                <input type="radio">
+                <span>Профилактика и отбеливание</span>
+            </label>
+            <label class="filter__item ">
+                <input type="radio">
+                <span>Диагностика</span>
+            </label>
+            <label class="filter__item ">
+                <input type="radio">
+                <span>Полезное</span>
+            </label>
+            <label class="filter__item ">
+                <input type="radio">
+                <span>Рекомендации</span>
+            </label>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="mb-10 xl:mb-[54px] h-full relative col-span-4 swiper-container" id="blogPageSlider">
         <div class="sticky-target">
             <div class="pb-[67px] md:pb-0 relative">
-                <div class=" overflow-visible potential-swiper">
-                    <div
-                        class=" potential-swiper-wrapper grid md:grid-cols-2 gap-[30px] xl:grid-cols-1 justify-items-center">
-                        <a href="/" class="swiper-slide !max-w-[324px] md:!max-w-[392px] relative flex flex-col h-auto">
-                            <img class="h-[200px] rounded-[20px] w-full object-cover mb-3 "
-                                src="/img/mainpage/reason1.jpg" alt="">
-                            <div class="flex justify-between items-center mb-3 ">
-                                <div class="flex items-center gap-1 text-mcg-pg text-but16m">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z"
-                                            fill="#005055" />
-                                        <rect x="3.73926" y="3.73926" width="9.85164" height="9.87979" rx="4.92582"
-                                            fill="#EAF3F4" />
-                                    </svg>
-                                    Ортодонтия
-                                </div>
-                                <span class="text-body3 text-[#666]">
-                                    29.05.2024
+                <div class="potential-swiper swiper">
+                    <div class="swiper-wrapper">
+                        <a href="/"
+                            class="swiper-slide h-auto p-4 rounded-2xl bg-mcg-pg min-h-[259px] md:min-h-[276px] xl:min-h-[352px] flex">
+                            <span class="p-4 rounded-2xl border border-mcg-salat w-full h-auto flex flex-col gap-3">
+                                <span class="flex items-center justify-between text-body3">
+                                    <span class="flex items-center gap-1 text-mcg-salat">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z"
+                                                fill="#D2E049" />
+                                            <rect x="3.73938" y="3.73926" width="9.85164" height="9.87979" rx="4.92582"
+                                                fill="#F7FFA5" />
+                                        </svg>
+                                        <span>Ортодонтия</span>
+                                    </span>
+                                    <span class="text-el-dg">29.05.2024</span>
                                 </span>
-                            </div>
-                            <div class="flex-1 h-auto flex flex-col">
-                                <h4 class="mb-4 text-mobh2 line-clamp-3">Самолигирующие брекеты: конструкция,
-                                    разновидности, преимущества</h4>
-                                <div class="mt-auto">
-                                    <div href="/" class="button button-link button-link--revers w-fit">
-                                        <span>Подробнее</span>
-                                    </div>
-                                </div>
-                            </div>
+                                <span class="text-bg-white text-mobh2 xl:text-deskh4 flex-1 flex items-center">
+                                    Самолигирующие брекеты: конструкция, разновидности, преимущества
+                                </span>
+                                <span class="text-bg-white text-but18r block pt-1 md:ml-auto">
+                                    Подробнее
+                                </span>
+                            </span>
                         </a>
-                        <a href="/" class="swiper-slide !max-w-[324px] md:!max-w-[392px] relative flex flex-col h-auto">
-                            <img class="h-[200px] rounded-[20px] w-full object-cover mb-3 "
-                                src="/img/mainpage/reason1.jpg" alt="">
-                            <div class="flex justify-between items-center mb-3 ">
-                                <div class="flex items-center gap-1 text-mcg-pg text-but16m">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z"
-                                            fill="#005055" />
-                                        <rect x="3.73926" y="3.73926" width="9.85164" height="9.87979" rx="4.92582"
-                                            fill="#EAF3F4" />
-                                    </svg>
-                                    Ортодонтия
-                                </div>
-                                <span class="text-body3 text-[#666]">
-                                    29.05.2024
+                        <a href="/"
+                            class="swiper-slide h-auto p-4 rounded-2xl bg-mcg-pg min-h-[259px] md:min-h-[276px] xl:min-h-[352px] flex">
+                            <span class="p-4 rounded-2xl border border-mcg-salat w-full h-auto flex flex-col gap-3">
+                                <span class="flex items-center justify-between text-body3">
+                                    <span class="flex items-center gap-1 text-mcg-salat">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z"
+                                                fill="#D2E049" />
+                                            <rect x="3.73938" y="3.73926" width="9.85164" height="9.87979" rx="4.92582"
+                                                fill="#F7FFA5" />
+                                        </svg>
+                                        <span>Ортодонтия</span>
+                                    </span>
+                                    <span class="text-el-dg">29.05.2024</span>
                                 </span>
-                            </div>
-                            <div class="flex-1 h-auto flex flex-col">
-                                <h4 class="mb-4 text-mobh2 line-clamp-3">Самолигирующие брекеты: конструкция,
-                                    разновидности, преимущества</h4>
-                                <div class="mt-auto">
-                                    <div href="/" class="button button-link button-link--revers w-fit">
-                                        <span>Подробнее</span>
-                                    </div>
-                                </div>
-                            </div>
+                                <span class="text-bg-white text-mobh2 xl:text-deskh4 flex-1 flex items-center">
+                                    Самолигирующие брекеты: конструкция, разновидности, преимущества
+                                </span>
+                                <span class="text-bg-white text-but18r block pt-1 md:ml-auto">
+                                    Подробнее
+                                </span>
+                            </span>
                         </a>
-                        <a href="/" class="swiper-slide !max-w-[324px] md:!max-w-[392px] relative flex flex-col h-auto">
-                            <img class="h-[200px] rounded-[20px] w-full object-cover mb-3 "
-                                src="/img/mainpage/reason1.jpg" alt="">
-                            <div class="flex justify-between items-center mb-3 ">
-                                <div class="flex items-center gap-1 text-mcg-pg text-but16m">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z"
-                                            fill="#005055" />
-                                        <rect x="3.73926" y="3.73926" width="9.85164" height="9.87979" rx="4.92582"
-                                            fill="#EAF3F4" />
-                                    </svg>
-                                    Ортодонтия
-                                </div>
-                                <span class="text-body3 text-[#666]">
-                                    29.05.2024
+                        <a href="/"
+                            class="swiper-slide h-auto p-4 rounded-2xl bg-mcg-pg min-h-[259px] md:min-h-[276px] xl:min-h-[352px] flex">
+                            <span class="p-4 rounded-2xl border border-mcg-salat w-full h-auto flex flex-col gap-3">
+                                <span class="flex items-center justify-between text-body3">
+                                    <span class="flex items-center gap-1 text-mcg-salat">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z"
+                                                fill="#D2E049" />
+                                            <rect x="3.73938" y="3.73926" width="9.85164" height="9.87979" rx="4.92582"
+                                                fill="#F7FFA5" />
+                                        </svg>
+                                        <span>Ортодонтия</span>
+                                    </span>
+                                    <span class="text-el-dg">29.05.2024</span>
                                 </span>
-                            </div>
-                            <div class="flex-1 h-auto flex flex-col">
-                                <h4 class="mb-4 text-mobh2 line-clamp-3">Самолигирующие брекеты: конструкция,
-                                    разновидности, преимущества</h4>
-                                <div class="mt-auto">
-                                    <div href="/" class="button button-link button-link--revers w-fit">
-                                        <span>Подробнее</span>
-                                    </div>
-                                </div>
-                            </div>
+                                <span class="text-bg-white text-mobh2 xl:text-deskh4 flex-1 flex items-center">
+                                    Самолигирующие брекеты: конструкция, разновидности, преимущества
+                                </span>
+                                <span class="text-bg-white text-but18r block pt-1 md:ml-auto">
+                                    Подробнее
+                                </span>
+                            </span>
                         </a>
-                        <a href="/" class="swiper-slide !max-w-[324px] md:!max-w-[392px] relative flex flex-col h-auto">
-                            <img class="h-[200px] rounded-[20px] w-full object-cover mb-3 "
-                                src="/img/mainpage/reason1.jpg" alt="">
-                            <div class="flex justify-between items-center mb-3 ">
-                                <div class="flex items-center gap-1 text-mcg-pg text-but16m">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z"
-                                            fill="#005055" />
-                                        <rect x="3.73926" y="3.73926" width="9.85164" height="9.87979" rx="4.92582"
-                                            fill="#EAF3F4" />
-                                    </svg>
-                                    Ортодонтия
-                                </div>
-                                <span class="text-body3 text-[#666]">
-                                    29.05.2024
+                        <a href="/"
+                            class="swiper-slide h-auto p-4 rounded-2xl bg-mcg-pg min-h-[259px] md:min-h-[276px] xl:min-h-[352px] flex">
+                            <span class="p-4 rounded-2xl border border-mcg-salat w-full h-auto flex flex-col gap-3">
+                                <span class="flex items-center justify-between text-body3">
+                                    <span class="flex items-center gap-1 text-mcg-salat">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z"
+                                                fill="#D2E049" />
+                                            <rect x="3.73938" y="3.73926" width="9.85164" height="9.87979" rx="4.92582"
+                                                fill="#F7FFA5" />
+                                        </svg>
+                                        <span>Ортодонтия</span>
+                                    </span>
+                                    <span class="text-el-dg">29.05.2024</span>
                                 </span>
-                            </div>
-                            <div class="flex-1 h-auto flex flex-col">
-                                <h4 class="mb-4 text-mobh2 line-clamp-3">Самолигирующие брекеты: конструкция,
-                                    разновидности, преимущества</h4>
-                                <div class="mt-auto">
-                                    <div href="/" class="button button-link button-link--revers w-fit">
-                                        <span>Подробнее</span>
-                                    </div>
-                                </div>
-                            </div>
+                                <span class="text-bg-white text-mobh2 xl:text-deskh4 flex-1 flex items-center">
+                                    Самолигирующие брекеты: конструкция, разновидности, преимущества
+                                </span>
+                                <span class="text-bg-white text-but18r block pt-1 md:ml-auto">
+                                    Подробнее
+                                </span>
+                            </span>
+                        </a>
+                        <a href="/"
+                            class="swiper-slide h-auto p-4 rounded-2xl bg-mcg-pg min-h-[259px] md:min-h-[276px] xl:min-h-[352px] flex">
+                            <span class="p-4 rounded-2xl border border-mcg-salat w-full h-auto flex flex-col gap-3">
+                                <span class="flex items-center justify-between text-body3">
+                                    <span class="flex items-center gap-1 text-mcg-salat">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z"
+                                                fill="#D2E049" />
+                                            <rect x="3.73938" y="3.73926" width="9.85164" height="9.87979" rx="4.92582"
+                                                fill="#F7FFA5" />
+                                        </svg>
+                                        <span>Ортодонтия</span>
+                                    </span>
+                                    <span class="text-el-dg">29.05.2024</span>
+                                </span>
+                                <span class="text-bg-white text-mobh2 xl:text-deskh4 flex-1 flex items-center">
+                                    Самолигирующие брекеты: конструкция, разновидности, преимущества
+                                </span>
+                                <span class="text-bg-white text-but18r block pt-1 md:ml-auto">
+                                    Подробнее
+                                </span>
+                            </span>
+                        </a>
+                        <a href="/"
+                            class="swiper-slide h-auto p-4 rounded-2xl bg-mcg-pg min-h-[259px] md:min-h-[276px] xl:min-h-[352px] flex">
+                            <span class="p-4 rounded-2xl border border-mcg-salat w-full h-auto flex flex-col gap-3">
+                                <span class="flex items-center justify-between text-body3">
+                                    <span class="flex items-center gap-1 text-mcg-salat">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z"
+                                                fill="#D2E049" />
+                                            <rect x="3.73938" y="3.73926" width="9.85164" height="9.87979" rx="4.92582"
+                                                fill="#F7FFA5" />
+                                        </svg>
+                                        <span>Ортодонтия</span>
+                                    </span>
+                                    <span class="text-el-dg">29.05.2024</span>
+                                </span>
+                                <span class="text-bg-white text-mobh2 xl:text-deskh4 flex-1 flex items-center">
+                                    Самолигирующие брекеты: конструкция, разновидности, преимущества
+                                </span>
+                                <span class="text-bg-white text-but18r block pt-1 md:ml-auto">
+                                    Подробнее
+                                </span>
+                            </span>
                         </a>
                     </div>
                 </div>
-                <script>
-                    // if(window.innerWidth < 1294){
-                    //     const miniBlogContainer = document.getElementById('blogPageSlider'),
-                    //         miniBlogWrapper = miniBlogContainer.querySelector('.swiper-wrapper')
 
-
-                    //     const blogPageMainContainer = document.getElementById('blogPageMainContainer')
-
-                    //     blogPageMainContainer.classList.add('xl:grid', 'grid-cols-12', 'gap-[30px]')
-                    //     miniBlogContainer.querySelector('.swiper').classList.remove('swiper')
-                    //     miniBlogWrapper.classList.add('grid', 'md:grid-cols-2', 'gap-[30px]', 'xl:grid-cols-1')
-                    //     miniBlogWrapper.classList.remove('swiper-wrapper')
-                    //     miniBlogContainer.querySelectorAll('.swiper-slide').forEach((el) => {
-                    //         el.classList.remove('swiper-wrapper')
-                    //         el.classList.remove('!max-w-[324px]', 'md:!max-w-[392px]')
-                    //     })
-                    // } 
-                    if (window.innerWidth < 1294) {
-                        const miniBlogContainer = document.getElementById('blogPageSlider'),
-                            miniBlogWrapper = miniBlogContainer.querySelector('.potential-swiper-wrapper')
-                        miniBlogContainer.classList.add('swiper-container')
-                        const blogPageMainContainer = document.getElementById('blogPageMainContainer')
-
-                        blogPageMainContainer.classList.remove('xl:grid', 'grid-cols-12', 'gap-[30px]')
-                        miniBlogContainer.querySelector('.potential-swiper').classList.add('swiper')
-                        miniBlogWrapper.classList.remove('grid', 'md:grid-cols-2', 'gap-[30px]', 'xl:grid-cols-1', 'justify-items-center')
-                        miniBlogWrapper.classList.add('swiper-wrapper')
-                    } 
-                </script>
             </div>
         </div>
     </div>

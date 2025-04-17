@@ -76,3 +76,10 @@ textarea {
     @apply underline underline-offset-2;
   }
 }
+
+
+// BAD PRACTICE
+
+h2.text-mobh1.md\:text-deskh2.xl\:text-deskh1 {
+  @apply text-mobh2 md:text-deskh3 xl:text-deskh2;
+}

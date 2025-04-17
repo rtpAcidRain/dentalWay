@@ -53,24 +53,18 @@ html.something-opened {
   z-index: 200;
 }
 
-.footer {
-  margin-top: auto;
-  padding-bottom: var(--mobileHeaderHeight, 63px);
-
-  @screen md {
-    padding-bottom: 0px;
-  }
-}
 
 .h-fill {
   height: 100%;
-  height: -moz-available;          /* WebKit-based browsers will ignore this. */
-  height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  height: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  height: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
   height: fill-available;
 }
 
 // .main {
-  
+
 //   padding-top: var(--headerSummonHeight);
 //   @apply md:pt-0;
 // }
@@ -89,15 +83,15 @@ html.something-opened {
 // Tabs
 
 .tabs {
-  @apply bg-mcg-bs rounded-[14px] md:rounded-[20px] text-text-th p-[6px] md:p-2 flex md:grid ;
+  @apply bg-mcg-bs rounded-[14px] md:rounded-[20px] text-text-th p-[6px] md:p-2 flex md:grid;
   flex-wrap: wrap;
   gap: 8px;
   justify-items: center;
 
   .tab {
-    @apply text-but16m md:text-but18m px-3 md:px-4  md:w-full py-[6px] md:py-[10px] h-[38px] md:h-[41px]  border rounded-lg md:rounded-xl  bg-mcg-bs border-mcg-bs transition-colors flex items-center justify-center xl:flex-1 xl:w-full;
+    @apply text-but16m md:text-but18m px-3 md:px-4 md:w-full py-[6px] md:py-[10px] h-[38px] md:h-[41px] border rounded-lg md:rounded-xl bg-mcg-bs border-mcg-bs transition-colors flex items-center justify-center xl:flex-1 xl:w-full;
 
-    &:not(.selected):hover{
+    &:not(.selected):hover {
       @apply border-bg-white bg-bg-white text-text-th;
     }
 
@@ -107,7 +101,8 @@ html.something-opened {
   }
 
   &.site-theme-toggler {
-    @apply  rounded-[10px] md:rounded-[14px] xl:rounded-[20px] p-1 md:p-[6px] xl:p-2 md:flex xl:grid flex-nowrap;
+    @apply rounded-[10px] md:rounded-[14px] xl:rounded-[20px] p-1 md:p-[6px] xl:p-2 md:flex xl:grid flex-nowrap;
+
     .tab {
       @apply text-but14m md:text-but18m px-2 py-1 rounded-md md:px-3 md:py-[6px] md:rounded-lg xl:px-[17.5px] xl:py-[10px] xl:rounded-xl;
     }
@@ -123,14 +118,15 @@ html.something-opened {
 // Accordion
 
 .accardeon-item {
-  & > &__list {
+  &>&__list {
     transition-property: grid-template-rows;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;
-    & > div {
+
+    &>div {
       min-height: 0;
     }
   }
@@ -138,40 +134,42 @@ html.something-opened {
   &__but {
     cursor: pointer;
 
-    & > .accardeon-item__default-title,
-    & > .accardeon-item__default-icon {
+    &>.accardeon-item__default-title,
+    &>.accardeon-item__default-icon {
       @apply transition-colors;
 
       path {
-        @apply fill-el-ia;;
+        @apply fill-el-ia;
+        ;
       }
-      
+
     }
   }
 
   &--default-anim {
     @apply bg-bg-beige transition-all;
   }
-  
+
 
   &.opened {
     &.accardeon-item--default-anim {
       @apply bg-bg-white shadow-2;
     }
 
-    & > .accardeon-item__list {
+    &>.accardeon-item__list {
       grid-template-rows: 1fr;
     }
 
-    & > .accardeon-item__but {
-      & > .accardeon-item__default-title {
+    &>.accardeon-item__but {
+      &>.accardeon-item__default-title {
         @apply text-mcg-pg text-butsemi;
       }
 
-      & > .accardeon-item__default-icon {
-        @apply  rotate-180 bg-mcg-bs;
+      &>.accardeon-item__default-icon {
+        @apply rotate-180 bg-mcg-bs;
+
         path {
-            @apply fill-mcg-pg;
+          @apply fill-mcg-pg;
         }
       }
     }
@@ -182,11 +180,12 @@ html.something-opened {
 // Accordion---------------->
 
 .service-single {
-  @apply p-3 rounded-2xl md:rounded-3xl shadow-2 md:p-4  block;
+  @apply p-3 rounded-2xl md:rounded-3xl shadow-2 md:p-4 block;
 
   &.onlyhead {
-    @apply px-3 py-4 md:p-4 md:pr-10 ;
+    @apply px-3 py-4 md:p-4 md:pr-10;
   }
+
   &__title {
     @apply text-but18m flex-1;
 
@@ -194,17 +193,18 @@ html.something-opened {
     //   @apply text-but18m xl:text-but18m;
     // }
   }
-  .services-page__header  {
+
+  .services-page__header {
     margin-bottom: 0px !important;
     justify-content: start;
   }
 
-  .services-page__body  {
+  .services-page__body {
     @apply flex flex-wrap gap-4 md:gap-2 mt-5 md:mt-3;
   }
 
   &__mini {
-    @apply text-but16r md:text-body3  md:px-4 md:py-2 flex gap-2 items-start  rounded-xl md:shadow-2 hover:bg-mcg-b transition-colors;
+    @apply text-but16r md:text-body3 md:px-4 md:py-2 flex gap-2 items-start rounded-xl md:shadow-2 hover:bg-mcg-b transition-colors;
 
     @screen md {
       &::before {
@@ -253,7 +253,7 @@ html.something-opened {
   @apply flex items-center gap-4 w-fit mx-auto;
 
   &__item {
-    @apply text-body3 text-text-at transition-colors rounded-full border border-trans flex items-center justify-center;    
+    @apply text-body3 text-text-at transition-colors rounded-full border border-trans flex items-center justify-center;
     padding: 0 4.5px;
 
     &.active {
@@ -272,7 +272,7 @@ html.something-opened {
   }
 
   &__before {
-    @apply text-body3 text-text-at transition-colors rounded-full border border-trans flex items-center justify-center;    
+    @apply text-body3 text-text-at transition-colors rounded-full border border-trans flex items-center justify-center;
     padding: 0 4.5px;
   }
 
@@ -284,7 +284,7 @@ html.something-opened {
     }
 
 
-    &.disabled, 
+    &.disabled,
     &:disabled {
       border-color: transparent !important;
       background-color: transparent !important;
@@ -320,13 +320,15 @@ html.something-opened {
 }
 
 .custom-select select {
-  display: none; /*hide original SELECT element: */
+  display: none;
+  /*hide original SELECT element: */
 }
 
 .select-selected {
   @apply text-but18r text-el-it border border-el-lg px-5 flex items-center gap-3 transition-colors hover:border-el-ia cursor-pointer;
   height: 53px;
   border-radius: 200px;
+
   span {
     @apply flex-1 whitespace-nowrap;
     text-overflow: ellipsis;
@@ -348,9 +350,11 @@ html.something-opened {
 
   &.select-arrow-active {
     @apply border-el-ih;
+
     span {
       @apply text-text-d;
     }
+
     svg {
       @apply rotate-180 fill-text-d;
     }
@@ -373,24 +377,24 @@ html.something-opened {
     &::-webkit-scrollbar {
       width: 6px;
     }
-    
+
     /* Track */
     &::-webkit-scrollbar-track {
       @apply bg-bg-white;
     }
-    
+
     /* Handle */
     &::-webkit-scrollbar-thumb {
       @apply bg-el-ia rounded-[20px];
     }
-    
+
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
       @apply bg-el-ia;
     }
 
 
-    & > div {
+    &>div {
       @apply text-text-d text-but14r relative pl-7 cursor-pointer;
 
       &::before {
@@ -403,7 +407,7 @@ html.something-opened {
         left: 0;
       }
 
-      &::after  {
+      &::after {
         content: '';
         @apply transition-colors rounded-full bg-trans;
         content: '';
@@ -443,7 +447,8 @@ html.something-opened {
 
 
 .filter {
-  @apply flex  items-center gap-3 no-scrollbar overflow-auto md:flex-wrap;
+  @apply flex items-center gap-3 no-scrollbar overflow-auto md:flex-wrap;
+
   &__item {
     @apply flex items-center justify-center whitespace-nowrap text-but16m py-1.5 px-3 border rounded-[10px] text-el-it border-el-lg transition-colors cursor-pointer;
 
@@ -452,7 +457,7 @@ html.something-opened {
       height: 0;
       visibility: hidden;
     }
-    
+
     &:not(.active):hover {
       @apply text-el-ih border-el-ih;
     }
@@ -467,17 +472,17 @@ html.something-opened {
   &::-webkit-scrollbar {
     width: 6px;
   }
-  
+
   /* Track */
   &::-webkit-scrollbar-track {
     @apply bg-bg-white;
   }
-  
+
   /* Handle */
   &::-webkit-scrollbar-thumb {
     @apply bg-el-ia rounded-[20px];
   }
-  
+
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     @apply bg-el-ia;
@@ -491,12 +496,12 @@ html.something-opened {
   }
 }
 
-.drop-shadow-shadow-3{
-  filter: drop-shadow(0px 0px 30px  rgba(116, 116, 116, 0.7));
+.drop-shadow-shadow-3 {
+  filter: drop-shadow(0px 0px 30px rgba(116, 116, 116, 0.7));
 }
 
-.sst{
-  &-slides > *:not(.selected){
+.sst {
+  &-slides>*:not(.selected) {
     display: none !important;
   }
 }
@@ -504,18 +509,19 @@ html.something-opened {
 #bx-panel.bx-panel-fixed {
   z-index: 99995 !important;
 }
+
 .bx-core-popup-menu {
   z-index: 99995 !important;
 }
 
-.table-container table{
+.table-container table {
   max-width: 100%;
 }
 
 #videoIframe {
- @apply aspect-video;
+  @apply aspect-video;
 
- width: min(80vw, 1024px);
+  width: min(80vw, 1024px);
 }
 
 
@@ -524,7 +530,8 @@ html.something-opened {
   gap: 13px;
   align-items: center;
   justify-content: center;
-  & > a {
+
+  &>a {
     @apply border border-mcg-pg transition-colors;
     display: block;
     width: 24px;
@@ -539,19 +546,19 @@ html.something-opened {
   }
 }
 
-@screen md{
+@screen md {
   :root {
     --header: 69px;
     --subheader: 60px;
   }
 
-  .header-close{
-      --headerSummonHeight: calc(var(--subheader));
-  } 
+  .header-close {
+    --headerSummonHeight: calc(var(--subheader));
+  }
 }
 
 
-@screen xl{
+@screen xl {
   :root {
     --header: 90.85px !important;
     --subheader: 68px !important;

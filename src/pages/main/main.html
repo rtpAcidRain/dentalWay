@@ -1,42 +1,48 @@
 <!-- MAINPAGE -->
 <section class="mt-4 md:mt-2 xl:mt-3 mb-10 xl:mb-[54px] swiper-container" id="fBlockSlider">
-    <div class="w-full justify-end items-center hidden xl:flex container">
-        <div class="swiper-controls ">
-            <button class="but prev">
-                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
-                </svg>
-            </button>
-            <div class="pagination">
-                
-            </div>
-            <button class="but next">
-                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
-                </svg>
-            </button>
-        </div>
-   </div>
     <div class="swiper container overflow-visible mt-4"
         data-slider-spv="1"
         data-slider-md-spv="1"
         data-slider-xl-spv="1"
         data-slider-effect="fade"
         data-slider-can-change-from-doc="true"
+        data-remove-native-controls="true"
     >
         <div class="swiper-wrapper">
-            <div  class=" swiper-slide bg-bg-white md:grid md:gap-x-4  grid-cols-[min-content_max-content] xl:grid-cols-[max-content_max-content] justify-between">
-                 <div class="md:flex flex-col col-span-1" style="max-width: 510px;">
-                    <div class="relative">
+            <div  class=" swiper-slide bg-bg-white">
+                 <div class="grid gap-5 md:gap-6 xl:gap-[30px] col-span-1 mx-auto xl:grid-cols-[auto_568px] grid-rows-" >
+                    <div class="relative xl:col-start-1">
                         <div class="w-[462px] h-[335px] xl:w-[537px] xl:h-[389px] bg-mcg-b absolute top-[23px] -left-[225px] md:-left-[191px] md:-top-[27px] xl:-top-2 xl:-left-[143px] -z-10"></div>
-                        <h1 class="text-mobh1 md:text-deskh2 xl:text-deskh1 mb-5 md:mb-6 xl:mb-[30px] md:max-w-[393px] xl:max-w-[510px]">Дарим 10 000 бонусов всем новым пациентам</h1>
+                        <h1 class="text-mobh1 md:text-deskh2 xl:text-deskh1 xl:max-w-[510px] xl:pt-[50px]">Дарим 10 000 бонусов всем новым пациентам</h1>
                     </div>
-                     <p class="text-body3 md:text-body1 text-text-d mb-5 md:mb-6 xl:mb-[30px]">
+                     <p class="text-body3 md:text-body1 text-text-d md:row-start-3 xl:row-start-2 xl:col-start-1 xl:max-w-[510px]">
                          Бонусы можно потратить на оплату лечения. <br>
                          1 бонус = 1 рубль
                      </p>
-                     <div class="gap-3 hidden md:flex items-center relative z-10">
-                         <a href="/" class="button button-main button-main--small-on-tab " data-modal="formModalSimple">
+                     <div class="mx-auto max-w-[488px] xl:max-w-[586px] relative my-auto overflow-hidden xl:col-start-2 xl:row-span-3">
+                        <div class="hidden md:block">
+                            <div class="!hidden swiper-controls absolute top-3 right-3 xl:top-4 z-10">
+                                <button class="but prev">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
+                                    </svg>
+                                </button>
+                                <div class="pagination swiper-pagination-fraction swiper-pagination-horizontal">
+                                    <span class="swiper-pagination-current text-text-d px-[4.5px]">01</span>
+                                    <span>|</span>
+                                    <span class="swiper-pagination-total text-text-at px-[4.5px]">03</span>
+                                </div>
+                                <button class="but next">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <img class="aspect-[351/234] w-full object-cover object-top" src="/img/mainpage/firstsec.jpg" alt="">
+                     </div>
+                     <div class="gap-3 md:flex items-center relative z-10 xl:col-start-1 xl:max-w-[510px] xl:h-fit xl:pb-[50px]">
+                         <a href="/" class="button button-main button-main--small-on-tab mb-3 md:mb-0" data-modal="formModalSimple">
                              <span>Записаться</span>
                          </a>
                          <a href="/" class="button button-main button-main--secondary button-main--small-on-tab ">
@@ -44,52 +50,90 @@
                          </a>
                      </div>
                  </div>
-                 <div class="mb-5 md:mb-auto md:w-[305px] md:h-[389px] xl:w-[593px] xl:h-[410px] relative my-auto overflow-hidden col-span-1" >
-                    <img class="aspect-[351/300] md:aspect-auto w-full object-cover object-top" src="/img/mainpage/firstsec.jpg" alt="">
-                 </div>
-                 <div class="swiper-sub-pug col-span-2 mt-5">
-                 </div>
-                 <div class="flex flex-col gap-3 md:hidden mt-3 md:mt-6">
-                     <a href="/" class="button button-main">
-                         <span>Записаться</span>
-                     </a>
-                     <a href="/" class="button button-main button-main--secondary">
-                         <span>Подробнее</span>
-                     </a>
-                 </div>
             </div>
+        </div>
+        <div class="swiper-sub-pug pt-5 md:pt-6 xl:pt-3 !hidden">
         </div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const slides = document.querySelectorAll("#fBlockSlider .swiper-slide");
-            const slidesCount = slides.length;
-            const subPag = document.querySelector("#fBlockSlider .swiper-sub-pug");
+            var slides = document.querySelectorAll("#fBlockSlider .swiper-slide");
+            var slidesCount = slides.length;
+            var subPag = document.querySelector("#fBlockSlider .swiper-sub-pug");
+            var controls = document.querySelectorAll("#fBlockSlider .swiper-controls");
 
             if(slidesCount < 2){
                 subPag.remove()
+                controls.remove()
             } else {
-                for (let i = 0; i < slidesCount; i++){
-                    const currentPags = slides[i].querySelector("#fBlockSlider .swiper-sub-pug")
-                    for (let a = 0; a < slidesCount; a++) {
-                        const pag = document.createElement('a')
-                        pag.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            if(changeCurrentSlideFromClick.fBlockSlider){
-                                changeCurrentSlideFromClick.fBlockSlider(a)
-                            }
-                        })
-                        if(a === i){
-                            pag.classList.add('current')
+                controls.forEach(
+                    (el, i) => {
+                        var fraction = el.querySelector(".swiper-pagination-current")
+                        var fractionTotal = el.querySelector(".swiper-pagination-total");
+                        var butPrev = el.querySelector(".prev");
+                        var butNext = el.querySelector(".next");
+
+                        el.classList.remove('!hidden');
+                        if(slidesCount < 10) {
+                            fractionTotal.textContent = `0${slidesCount}`
+                        } else {
+                            fractionTotal.textContent = `${slidesCount}`
                         }
-                        currentPags.appendChild(pag)
-                        
+                        if(i < 9) {
+                            fraction.textContent = `0${i + 1}`;
+                        } else {
+                            fraction.textContent = `${i + 1}`;
+                        }
+
+                        if(i > 0) {
+                            butPrev.addEventListener('click', function() {
+                                if(changeCurrentSlideFromClick.fBlockSlider){
+                                    changeCurrentSlideFromClick.fBlockSlider(i - 1)
+                                }
+                            })
+                        } else {
+                            butPrev.classList.add('swiper-button-disabled')
+                            butPrev.setAttribute('disabled', 'true')
+
+                        }
+
+                        if(i < slidesCount - 1) {
+                            butNext.addEventListener('click', function() {
+                                if(changeCurrentSlideFromClick.fBlockSlider){
+                                    changeCurrentSlideFromClick.fBlockSlider(i + 1)
+                                }
+                            })
+                           
+                        } else {
+                            butNext.classList.add('swiper-button-disabled')
+                            butNext.setAttribute('disabled', 'true')
+                        }
                     }
+                )
+ 
+                for (let a = 0; a < slidesCount; a++) {
+                    const pag = document.createElement('a')
+                    if(a === 0){
+                        pag.classList.add('current')
+                    }
+                    subPag.appendChild(pag)
                 }
+
+                var pags = subPag.querySelectorAll('a')
+
+                pags.forEach((el, i) => {
+                    el.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        pags.forEach(el => el.classList.remove('current'))
+                        el.classList.add('current')
+                        if(changeCurrentSlideFromClick.fBlockSlider){
+                            changeCurrentSlideFromClick.fBlockSlider(i)
+                        }
+                    })
+                })
 
                 subPag.classList.remove('!hidden')
             }
-            
         })
     </script>
 </section>
@@ -120,7 +164,7 @@
                                 <li class="service-slide__body-el"><a href="/"><span>Искусственный интеллект Diagnocat</span></a></li>
                             </ul>
                             <div class="service-slide__footer flex justify-center">
-                                <a href="/" class="button button-link"> 
+                                <a href="/" class="button button-link !text-but14m"> 
                                     <span>Еще услуги</span>
                                 </a>
                             </div>
@@ -177,7 +221,7 @@
                                 <li class="service-slide__body-el"><a href="/"><span>Искусственный интеллект Diagnocat</span></a></li>
                             </ul>
                             <div class="service-slide__footer flex justify-center">
-                                <a href="/" class="button button-link"> 
+                                <a href="/" class="button button-link--revers"> 
                                     <span>Еще услуги</span>
                                 </a>
                             </div>
@@ -393,14 +437,18 @@
         </div>
     </div>
 </div>
-<section class="mb-10 xl:mb-[54px]">   
-    <div class="container relative pb-[98px] md:pb-[38px] xl:pb-[76px]" id="reasonsSlider">
-        <div class="mb-5 md:flex justify-between items-end">
-            <h2 class="text-mobh1 md:text-deskh2 xl:text-deskh1 md:max-w-[456px] xl:max-w-[717px]">6 причин доверить лечение Dental Way</h2>
+<section class="container mb-10 xl:mb-[54px] relative">
+    <span
+        class="w-[314px] md:w-[567px] xl:w-[947px] bg-bg-beige absolute -top-6 -left-4 bottom-0 md:-left-[30px] md:top-[46px] xl:-left-[63px] -z-10"></span>
+    <div class=" relative pb-[98px] md:pb-[38px] xl:pb-[76px] swiper-container swiper-with-count" id="reasonsSlider">
+        <div class="mb-5  md:flex justify-between items-end">
+            <h2 class="text-mobh1 md:text-deskh2 xl:text-deskh1 md:max-w-[456px] xl:max-w-[717px]">6 причин доверить
+                лечение Dental Way</h2>
             <div class="swiper-controls absolute left-1/2 bottom-[31px] -translate-x-1/2 md:static md:translate-x-0">
                 <button class="but prev">
                     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z" />
                     </svg>
                 </button>
                 <div class="pagination">
@@ -408,71 +456,52 @@
                 </div>
                 <button class="but next">
                     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z" />
                     </svg>
                 </button>
             </div>
         </div>
-        <div class="swiper">
+        <div class="swiper " >
             <div class="swiper-wrapper">
-                <div class="swiper-slide relative">
-                    <img class="aspect-[351/200] md:aspect-auto md:h-[349px] rounded-[20px] w-full object-cover mb-3 md:mb-4 xl:mb-5" src="/img/mainpage/reason1.jpg" alt="">
+                <div class="swiper-slide ">
+                    <img class="aspect-[351/200] rounded-[20px] w-full object-cover mb-3"
+                        src="/img/mainpage/reason1.jpg" alt="">
                     <div>
-                        <h4 class="mb-3 md:mb-4 text-mobh2 md:text-deskh3 xl:text-deskh2 line-clamp-2">Довольные постоянные клиенты</h4>
-                        <p class="text-text-d tetx-body3 line-clamp-2">Работаем с 2011 года, у нас проходят лечение 40 000 пациентов</p>
+                        <h4 class="mb-3 xl:mb-4 text-mobh2 xl:text-deskSubtitle">Довольные постоянные клиенты</h4>
+                        <p class="text-text-d tetx-body3">Работаем с 2011 года, у нас проходят лечение 40 000 пациентов
+                        </p>
                     </div>
                 </div>
-                <div class="swiper-slide relative">
-                    <img class="aspect-[351/200] md:aspect-auto md:h-[349px] rounded-[20px] w-full object-cover mb-3 md:mb-4 xl:mb-5" src="/img/mainpage/reason2.jpg" alt="">
+                <div class="swiper-slide ">
+                    <img class="aspect-[351/200] rounded-[20px] w-full object-cover mb-3"
+                        src="/img/mainpage/reason1.jpg" alt="">
                     <div>
-                        <h4 class="mb-3 md:mb-4 text-mobh2 md:text-deskh3 xl:text-deskh2 line-clamp-2">Официальная деятельность</h4>
-                        <p class="text-text-d tetx-body3 line-clamp-2">Работаем в соответствии с лицензиями, выдаем чеки, оформляем налоговый вычет</p>
+                        <h4 class="mb-3 xl:mb-4 text-mobh2 xl:text-deskSubtitle">Довольные постоянные клиенты</h4>
+                        <p class="text-text-d tetx-body3">Работаем с 2011 года, у нас проходят лечение 40 000 пациентов
+                        </p>
                     </div>
                 </div>
-                <div class="swiper-slide relative">
-                    <img class="aspect-[351/200] md:aspect-auto md:h-[349px] rounded-[20px] w-full object-cover mb-3 md:mb-4 xl:mb-5" src="/img/mainpage/reason1.jpg" alt="">
+                <div class="swiper-slide ">
+                    <img class="aspect-[351/200] rounded-[20px] w-full object-cover mb-3"
+                        src="/img/mainpage/reason1.jpg" alt="">
                     <div>
-                        <h4 class="mb-3 md:mb-4 text-mobh2 md:text-deskh3 xl:text-deskh2 line-clamp-2">Довольные постоянные клиенты</h4>
-                        <p class="text-text-d tetx-body3 line-clamp-2">Работаем с 2011 года, у нас проходят лечение 40 000 пациентов</p>
+                        <h4 class="mb-3 xl:mb-4 text-mobh2 xl:text-deskSubtitle">Довольные постоянные клиенты</h4>
+                        <p class="text-text-d tetx-body3">Работаем с 2011 года, у нас проходят лечение 40 000 пациентов
+                        </p>
                     </div>
                 </div>
-                <div class="swiper-slide relative">
-                    <img class="aspect-[351/200] md:aspect-auto md:h-[349px] rounded-[20px] w-full object-cover mb-3 md:mb-4 xl:mb-5" src="/img/mainpage/reason2.jpg" alt="">
+                <div class="swiper-slide ">
+                    <img class="aspect-[351/200] rounded-[20px] w-full object-cover mb-3"
+                        src="/img/mainpage/reason1.jpg" alt="">
                     <div>
-                        <h4 class="mb-3 md:mb-4 text-mobh2 md:text-deskh3 xl:text-deskh2  line-clamp-2">Официальная деятельность</h4>
-                        <p class="text-text-d tetx-body3 line-clamp-2">Работаем в соответствии с лицензиями, выдаем чеки, оформляем налоговый вычет</p>
+                        <h4 class="mb-3 xl:mb-4 text-mobh2 xl:text-deskSubtitle">Довольные постоянные клиенты</h4>
+                        <p class="text-text-d tetx-body3">Работаем с 2011 года, у нас проходят лечение 40 000 пациентов
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const slides = document.querySelectorAll('#reasonsSlider .swiper-slide')
-
-                const swiper = new Swiper('#reasonsSlider .swiper', {
-                    spaceBetween: 16,
-                    pagination: defaultFractionPag('#reasonsSlider .swiper-controls .pagination'),
-                    autoHeight: true,
-                    navigation:{
-                        prevEl: '#reasonsSlider .swiper-controls .prev',
-                        nextEl: '#reasonsSlider .swiper-controls .next',
-                    },
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        1366: {
-                            spaceBetween: 30,
-                            slidesPerView: 2,
-                        }
-                    }
-                })
-
-                slides.forEach((el, i) => {
-                    el.innerHTML += `<span class="absolute right-5 top-5 text-bg-white" style='font-size: 38px; font-weight: 700; line-height: 42px; letter-spacing: 0.02em;' >0${i + 1}</span>`;
-                })
-            })
-        </script>
     </div>
 </section>
 <section class="mb-10 xl:mb-[54px]">
@@ -812,7 +841,7 @@
                                 <a href="/" class="button button-main button-main--small-on-desk ">
                                     <span>Записаться</span>
                                 </a>
-                                <a href="/" class="button button-link ">
+                                <a href="/" class="button button-link !text-but14m">
                                     <span>Подробнее</span>
                                 </a>
                             </div>
@@ -964,8 +993,8 @@
         Наши отличные стоматологии: <br> Солнцево, Подольск, Мытищи
     </h2>
     <div class="container mb-5 md:mb-2 flex gap-4 items-center md:flex-wrap xl:gap-5 no-scrollbar overflow-auto">
-            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap">
-                <div class="w-10 h-10 xl:w-[52px] xl:h-[52px] flex items-center justify-center">
+            <div class="flex items-center gap-2 text-but14m w-fit whitespace-nowrap">
+                <div class="w-8 h-8 flex items-center justify-center">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" fill="#005055"/>
                         <rect x="6.26123" y="6.26086" width="16.8057" height="16.8537" rx="8.40286" fill="#EAF3F4"/>
@@ -975,8 +1004,8 @@
                     Премиальное оборудование
                 </span>
             </div>
-            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap">
-                <div class="w-10 h-10 xl:w-[52px] xl:h-[52px] flex items-center justify-center">
+            <div class="flex items-center gap-2 text-but14m w-fit whitespace-nowrap">
+                <div class="w-8 h-8 flex items-center justify-center">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" fill="#005055"/>
                         <rect x="6.26123" y="6.26086" width="16.8057" height="16.8537" rx="8.40286" fill="#EAF3F4"/>
@@ -986,8 +1015,8 @@
                     Опытные стоматологи
                 </span>
             </div>
-            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap">
-                <div class="w-10 h-10 xl:w-[52px] xl:h-[52px] flex items-center justify-center">
+            <div class="flex items-center gap-2 text-but14m w-fit whitespace-nowrap">
+                <div class="w-8 h-8 flex items-center justify-center">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" fill="#005055"/>
                         <rect x="6.26123" y="6.26086" width="16.8057" height="16.8537" rx="8.40286" fill="#EAF3F4"/>
@@ -997,8 +1026,8 @@
                     Передовые методики 
                 </span>
             </div>
-            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap">
-                <div class="w-10 h-10 xl:w-[52px] xl:h-[52px] flex items-center justify-center">
+            <div class="flex items-center gap-2 text-but14m w-fit whitespace-nowrap">
+                <div class="w-8 h-8 flex items-center justify-center">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" fill="#005055"/>
                         <rect x="6.26123" y="6.26086" width="16.8057" height="16.8537" rx="8.40286" fill="#EAF3F4"/>
@@ -1008,8 +1037,8 @@
                     Индвидуальный подход
                 </span>
             </div>
-            <div class="flex items-center gap-2 text-body3 md:text-but18m w-fit whitespace-nowrap">
-                <div class="w-10 h-10 xl:w-[52px] xl:h-[52px] flex items-center justify-center">
+            <div class="flex items-center gap-2 text-but14m w-fit whitespace-nowrap">
+                <div class="w-8 h-8 flex items-center justify-center">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" fill="#005055"/>
                         <rect x="6.26123" y="6.26086" width="16.8057" height="16.8537" rx="8.40286" fill="#EAF3F4"/>
@@ -1180,9 +1209,9 @@
         </a>
     </div>
 </section>
-<section class="mb-10 xl:mb-[54px]" id="blogSlider">
-    <div class="pb-[67px] md:pb-0 relative">
-        <div class="container flex items-center justify-between mb-5">
+<section class="mb-10 xl:mb-[54px] swiper-container pb-0-on-remove-pagination">
+    <div class="pb-[67px] md:pb-0 relative container">
+        <div class=" flex items-center justify-between mb-5">
             <h2 class="text-mobh1 md:text-deskh2 xl:deskh1">Наш блог</h2>
             <div class="swiper-controls absolute left-1/2 bottom-0 -translate-x-1/2 md:static md:translate-x-0 ">
                 <button class="but prev">
@@ -1200,111 +1229,30 @@
                 </button>
             </div>
         </div>
-        <div class="container swiper overflow-visible">
+        <div class="swiper" data-slider-spv="1" >
             <div class="swiper-wrapper">
-                <a href="/" class="swiper-slide relative flex flex-col h-auto">
-                    <img class="aspect-[351/200] md:aspect-auto md:h-[349px] rounded-[20px] w-full object-cover mb-3 md:mb-5" src="/img/mainpage/reason1.jpg" alt="">
-                    <div class="flex justify-between items-center mb-3 md:mb-5">
-                        <div class="flex items-center gap-1 text-mcg-pg text-but16m">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z" fill="#005055"/>
-                                <rect x="3.73926" y="3.73926" width="9.85164" height="9.87979" rx="4.92582" fill="#EAF3F4"/>
-                            </svg>
-                            Ортодонтия
-                        </div>
-                        <span class="text-body3 text-[#666]">
-                            29.05.2024
+                <a href="/" class="swiper-slide h-auto p-4 rounded-2xl bg-mcg-pg min-h-[259px] md:min-h-[276px] xl:min-h-[352px] flex">
+                    <span class="p-4 rounded-2xl border border-mcg-salat w-full h-auto flex flex-col gap-3">
+                        <span class="flex items-center justify-between text-body3">
+                            <span class="flex items-center gap-1 text-mcg-salat">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z" fill="#D2E049"/>
+                                    <rect x="3.73938" y="3.73926" width="9.85164" height="9.87979" rx="4.92582" fill="#F7FFA5"/>
+                                </svg>
+                                <span>Ортодонтия</span>
+                            </span>
+                            <span class="text-el-dg">29.05.2024</span>
                         </span>
-                    </div>
-                    <div class="flex-1 h-auto flex flex-col">
-                        <h4 class="mb-4 text-mobh2 md:text-deskh3 xl:text-deskh2 line-clamp-3">Самолигирующие брекеты: конструкция, разновидности, преимущества</h4>
-                        <div class="mt-auto">
-                            <p class="text-text-d tetx-body3 hidden mb-4 md:line-clamp-4">
-                                Почему популярны? Основные преимущества самолигирующихся брекетов заключаются в простоте установки, уменьшении количества посещений стоматолога, сокращении времени лечения, а также почти нулевой вероятности получения травм во время ношения.
-                            </p>
-                            <div href="/" class="button button-link button-link--revers w-fit">
-                                <span>Подробнее</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="/" class="swiper-slide relative flex flex-col h-auto">
-                    <img class="aspect-[351/200] md:aspect-auto md:h-[349px] rounded-[20px] w-full object-cover mb-3 md:mb-5" src="/img/mainpage/reason1.jpg" alt="">
-                    <div class="flex justify-between items-center mb-3 md:mb-5">
-                        <div class="flex items-center gap-1 text-mcg-pg text-but16m">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z" fill="#005055"/>
-                                <rect x="3.73926" y="3.73926" width="9.85164" height="9.87979" rx="4.92582" fill="#EAF3F4"/>
-                            </svg>
-                            Ортопедия
-                        </div>
-                        <span class="text-body3 text-[#666]">
-                            27.05.2024
+                        <span class="text-bg-white text-mobh2 xl:text-deskh4 flex-1 flex items-center">
+                            Самолигирующие брекеты: конструкция, разновидности, преимущества
                         </span>
-                    </div>
-                    <div class="flex-1 h-auto flex flex-col">
-                        <h4 class="mb-4 text-mobh2 md:text-deskh3 xl:text-deskh2 line-clamp-3">Производители имплантов: подборка надежных брендов</h4>
-                        <div class="mt-auto">
-                            <p class="text-text-d tetx-body3 hidden mb-4 md:line-clamp-4 mt-auto">
-                                О чем речь? Производители имплантов непрерывно оттачивают технологии создания искусственных зубов. Постоянно ведется работа над увеличением процента приживаемости, а также повышением скорости установки и остеоинтеграции (срастания с костью)..
-                            </p>
-                            <div href="/" class="button button-link button-link--revers w-fit">
-                                <span>Подробнее</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="/" class="swiper-slide relative flex flex-col h-auto">
-                    <img class="aspect-[351/200] md:aspect-auto md:h-[349px] rounded-[20px] w-full object-cover mb-3 md:mb-5" src="/img/mainpage/reason1.jpg" alt="">
-                    <div class="flex justify-between items-center mb-3 md:mb-5">
-                        <div class="flex items-center gap-1 text-mcg-pg text-but16m">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z" fill="#005055"/>
-                                <rect x="3.73926" y="3.73926" width="9.85164" height="9.87979" rx="4.92582" fill="#EAF3F4"/>
-                            </svg>
-                            Ортодонтия
-                        </div>
-                        <span class="text-body3 text-[#666]">
-                            29.05.2024
+                        <span class="text-bg-white text-but18r block pt-1 md:ml-auto">
+                            Подробнее
                         </span>
-                    </div>
-                    <div class="flex-1 h-auto flex flex-col">
-                        <h4 class="mb-4 text-mobh2 md:text-deskh3 xl:text-deskh2 line-clamp-3">Самолигирующие брекеты: конструкция, разновидности, преимущества</h4>
-                        <div class="mt-auto">
-                            <p class="text-text-d tetx-body3 hidden mb-4 md:line-clamp-4 mt-auto">
-                                Почему популярны? Основные преимущества самолигирующихся брекетов заключаются в простоте установки, уменьшении количества посещений стоматолога, сокращении времени лечения, а также почти нулевой вероятности получения травм во время ношения.
-                            </p>
-                            <div href="/" class="button button-link button-link--revers w-fit">
-                                <span>Подробнее</span>
-                            </div>
-                        </div>
-                    </div>
+                    </span>
                 </a>
             </div>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const swiper = new Swiper('#blogSlider .swiper', {
-                    spaceBetween: 16,
-                    slidesPerView: 'auto',
-                    pagination: defaultFractionPag('#blogSlider .swiper-controls .pagination'),
-                    navigation:{
-                        prevEl: '#blogSlider .swiper-controls .prev',
-                        nextEl: '#blogSlider .swiper-controls .next',
-                    },
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 'auto',
-                            spaceBetween: 16,
-                        },
-                        1366: {
-                            spaceBetween: 30,
-                            slidesPerView: 2,
-                        }
-                    }
-                })
-            })
-        </script>
     </div>
     <div class="container hidden md:block mt-6">
         <a href="/" class="w-full md:w-fit button button-main button-main--secondary ml-auto button-main--small-on-tab">
